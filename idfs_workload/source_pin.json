@@ -1,0 +1,47 @@
+{
+  "repository": "https://github.com/ChrisLzt/ceph-test",
+  "commit": "303e43e2e1c98cb74ec156af75ce2546faaa72eb",
+  "model_files": {
+    "baleen": {
+      "kind": "trace_profile",
+      "path": "idfs_workload/sources/baleen_region7.json",
+      "sha256": "f6f7cb462fc2b407a4d6dd7de2f3027e156b7e7ace44066168f03e284b566741",
+      "trace_url": "https://ftp.pdl.cmu.edu/pub/datasets/Baleen24/storage/20230325/Region7/full_0_0.1.trace",
+      "trace_sha256": "019ba3162716d6d3623df7bfd69be206ae00aff054d521933d102eee23a486a2"
+    },
+    "graphchi": {
+      "path": "SINGLE_workload/graph_graphchi_psw_v2/rendered/model.json",
+      "sha256": "0cfbbb3c4e62df715ecbe3e3e29591e20a1b19193c264a0f9dbc8fbc903213df"
+    },
+    "wrf": {
+      "path": "SINGLE_workload/hpc_wrf_continuous_v2/rendered/model.json",
+      "sha256": "8f0b871ba503fe9477a52f99052ffdf174854ffbec999310f50880e6d6c88de2"
+    },
+    "ai_training": {
+      "path": "SINGLE_workload/ai_training_ses_v2/rendered/model.json",
+      "sha256": "df1154c2a1b5fc569eac95ac9541552a700b513b8fb0f0e2cdf8a67bf4bae6e8"
+    },
+    "ai_inference": {
+      "path": "SINGLE_workload/ai_inference_ses_v2/rendered/model.json",
+      "sha256": "04fed5bee8bf6ad04f7f0c7687fb4caea5644eac0436536fe01b0117b3ea5148"
+    }
+  },
+  "support_files": {
+    "core.py": {
+      "path": "workload_common/single_v2/core.py",
+      "sha256": "81d1b848ea8d0e964512735cebbc56901a56e283512ad9608420246434222661"
+    },
+    "lifecycle.py": {
+      "path": "workload_common/single_v2/lifecycle.py",
+      "sha256": "0b72701d6ca5234d29b78ccb0dc5ec86409e5005f19badc9be99381d3a3b3681"
+    },
+    "parser_check.py": {
+      "path": "workload_common/single_v2/parser_check.py",
+      "sha256": "ddf6832ff9a673eaa85e115b320ee173fbbf25de3d55cc9355d1e38d5b34e2ae"
+    },
+    "validate_vdbench.py": {
+      "path": "workload_common/validate_vdbench.py",
+      "sha256": "87057f0c764ae00b210b18feaed16e522d975301ecea6d7e15deefd0352d8325"
+    }
+  }
+}

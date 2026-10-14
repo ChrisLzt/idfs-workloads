@@ -1,0 +1,589 @@
+{
+  "bins": [
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_000",
+      "files": 4,
+      "id": "zipf_000",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_001",
+      "files": 4,
+      "id": "zipf_001",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_002",
+      "files": 4,
+      "id": "zipf_002",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_003",
+      "files": 4,
+      "id": "zipf_003",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_004",
+      "files": 4,
+      "id": "zipf_004",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_005",
+      "files": 4,
+      "id": "zipf_005",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_006",
+      "files": 4,
+      "id": "zipf_006",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_007",
+      "files": 4,
+      "id": "zipf_007",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_008",
+      "files": 4,
+      "id": "zipf_008",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_009",
+      "files": 4,
+      "id": "zipf_009",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_010",
+      "files": 4,
+      "id": "zipf_010",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_011",
+      "files": 4,
+      "id": "zipf_011",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_012",
+      "files": 4,
+      "id": "zipf_012",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_013",
+      "files": 4,
+      "id": "zipf_013",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_014",
+      "files": 8,
+      "id": "zipf_014",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_015",
+      "files": 12,
+      "id": "zipf_015",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_016",
+      "files": 8,
+      "id": "zipf_016",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_017",
+      "files": 12,
+      "id": "zipf_017",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_018",
+      "files": 20,
+      "id": "zipf_018",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_019",
+      "files": 24,
+      "id": "zipf_019",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_020",
+      "files": 28,
+      "id": "zipf_020",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_021",
+      "files": 28,
+      "id": "zipf_021",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_022",
+      "files": 40,
+      "id": "zipf_022",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_023",
+      "files": 44,
+      "id": "zipf_023",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_024",
+      "files": 52,
+      "id": "zipf_024",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_025",
+      "files": 64,
+      "id": "zipf_025",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_026",
+      "files": 72,
+      "id": "zipf_026",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_027",
+      "files": 88,
+      "id": "zipf_027",
+      "size_bytes": 268435456
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_028",
+      "files": 4,
+      "id": "zipf_028",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_029",
+      "files": 4,
+      "id": "zipf_029",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_030",
+      "files": 4,
+      "id": "zipf_030",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_031",
+      "files": 4,
+      "id": "zipf_031",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_032",
+      "files": 4,
+      "id": "zipf_032",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_033",
+      "files": 4,
+      "id": "zipf_033",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_034",
+      "files": 4,
+      "id": "zipf_034",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_035",
+      "files": 4,
+      "id": "zipf_035",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_036",
+      "files": 4,
+      "id": "zipf_036",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_037",
+      "files": 4,
+      "id": "zipf_037",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_038",
+      "files": 4,
+      "id": "zipf_038",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_039",
+      "files": 4,
+      "id": "zipf_039",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_040",
+      "files": 4,
+      "id": "zipf_040",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_041",
+      "files": 4,
+      "id": "zipf_041",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_042",
+      "files": 4,
+      "id": "zipf_042",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_043",
+      "files": 4,
+      "id": "zipf_043",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_044",
+      "files": 4,
+      "id": "zipf_044",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_045",
+      "files": 4,
+      "id": "zipf_045",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_046",
+      "files": 12,
+      "id": "zipf_046",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_047",
+      "files": 12,
+      "id": "zipf_047",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_048",
+      "files": 8,
+      "id": "zipf_048",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_049",
+      "files": 12,
+      "id": "zipf_049",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_050",
+      "files": 20,
+      "id": "zipf_050",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_051",
+      "files": 12,
+      "id": "zipf_051",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_052",
+      "files": 12,
+      "id": "zipf_052",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_053",
+      "files": 12,
+      "id": "zipf_053",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_054",
+      "files": 16,
+      "id": "zipf_054",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_055",
+      "files": 12,
+      "id": "zipf_055",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_056",
+      "files": 20,
+      "id": "zipf_056",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_057",
+      "files": 36,
+      "id": "zipf_057",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_058",
+      "files": 20,
+      "id": "zipf_058",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_059",
+      "files": 24,
+      "id": "zipf_059",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_060",
+      "files": 24,
+      "id": "zipf_060",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_061",
+      "files": 28,
+      "id": "zipf_061",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_062",
+      "files": 28,
+      "id": "zipf_062",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_063",
+      "files": 36,
+      "id": "zipf_063",
+      "size_bytes": 536870912
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_064",
+      "files": 4,
+      "id": "zipf_064",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_065",
+      "files": 4,
+      "id": "zipf_065",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_066",
+      "files": 4,
+      "id": "zipf_066",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_067",
+      "files": 4,
+      "id": "zipf_067",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_068",
+      "files": 4,
+      "id": "zipf_068",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_069",
+      "files": 4,
+      "id": "zipf_069",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_070",
+      "files": 4,
+      "id": "zipf_070",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_071",
+      "files": 4,
+      "id": "zipf_071",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_072",
+      "files": 12,
+      "id": "zipf_072",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_073",
+      "files": 8,
+      "id": "zipf_073",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_074",
+      "files": 12,
+      "id": "zipf_074",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_075",
+      "files": 20,
+      "id": "zipf_075",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_076",
+      "files": 12,
+      "id": "zipf_076",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_077",
+      "files": 20,
+      "id": "zipf_077",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_078",
+      "files": 20,
+      "id": "zipf_078",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_079",
+      "files": 24,
+      "id": "zipf_079",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_080",
+      "files": 28,
+      "id": "zipf_080",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_081",
+      "files": 32,
+      "id": "zipf_081",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_082",
+      "files": 80,
+      "id": "zipf_082",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_083",
+      "files": 52,
+      "id": "zipf_083",
+      "size_bytes": 134217728
+    },
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/zipf_084",
+      "files": 64,
+      "id": "zipf_084",
+      "size_bytes": 134217728
+    }
+  ],
+  "capacity_bytes": 428422987776,
+  "config_sha256": {
+    "prepare_data.vdb": "905f7118c384ae771341cc74097f872214d133529c1efaea58ce88ee3aabdfad",
+    "run_baseline.vdb": "7eb2a52c5385da935fa5d7b461d3c3427f1969fbdfe0816450ec10c125f87302",
+    "run_current.vdb": "caf4c236f21d4d06655300871d31d40aebe01f872ea99c8d1ba59573bd7da4d5"
+  },
+  "data_root": "/mnt/idfs/workloads_400g/ai_inference_ses",
+  "file_count": 1388,
+  "id": "ai_inference_ses",
+  "layout_sha256": "20053a8f1ddef30535046ef33ac6899b298a5bbd5a1cd3861309f64808cdcaf2",
+  "max_prepare_fwd": 20,
+  "max_run_fwd": 255,
+  "model_sha256": "05fd8ab46198dacaf2f71884feec7a2d343ba1dc66fe510787df579d4183b10d",
+  "profiles": {
+    "baseline": [
+      {
+        "fwd_count": 255,
+        "name": "measure",
+        "read_share": 0.8,
+        "seconds": 600,
+        "target_iops": "max",
+        "write_share": 0.19999999999999996
+      }
+    ],
+    "current": [
+      {
+        "fwd_count": 255,
+        "name": "measure",
+        "read_share": 0.8,
+        "seconds": 600,
+        "target_iops": "max",
+        "write_share": 0.19999999999999996
+      }
+    ]
+  },
+  "provenance": {
+    "adaptation": "SES 1.2.0 template-based storage workload with original read/write shares and added conditional Zipf; not standard SES certification",
+    "current_suite": {
+      "baseline_semantics": "uniform within compatible groups",
+      "design": "phase_zipf",
+      "revision": "2026-09-17",
+      "source_profile": "phase_zipf099"
+    },
+    "idfs_expansion": {
+      "actual_bytes": 428422987776,
+      "baleen_method": null,
+      "coverage": "600s timed access, not complete scans; generated probabilities do not guarantee measured object heat or classifier metrics",
+      "method": "increase logical file counts; keep logical size classes, timing, business shares and source read/write types; rebuild conditional Zipf bins",
+      "original_bytes": 123480309760,
+      "runtime": "unmodified Vdbench 5.04.07; integer transfer percentages; no SES framework",
+      "source_commit": "303e43e2e1c98cb74ec156af75ce2546faaa72eb",
+      "source_model_sha256": "04fed5bee8bf6ad04f7f0c7687fb4caea5644eac0436536fe01b0117b3ea5148",
+      "target_bytes": 429496729600
+    },
+    "operation_mapping": "preserve source reads and writes; overwrite prepared synthetic files",
+    "ses_build": "1.2.0.25061615",
+    "ses_version": "1.2.0",
+    "source_case": "PERF_003",
+    "source_read_write_ratio": "80:20",
+    "source_write_to_read": false,
+    "templates": {
+      "inference": {
+        "path": "resource/io_model_param_file/vdbench/multi_thread_large_io_rw_as_infer.txt",
+        "sha256": "a7fdd9992c8dae7d6a2ea0768ab23107403d6ce7c5d93fdcecfc525eccb6682c"
+      },
+      "training": {
+        "path": "resource/io_model_param_file/vdbench/multi_thread_large_io_rw_as_mix.txt",
+        "sha256": "c2ec3a654ba3a354d457a935e1ba7a9823cb880bff04b65cc7e1c2bd4392f3c4"
+      }
+    },
+    "wheel_path": "storage_evaluation_system-1.2.0-py3-none-any.whl",
+    "wheel_sha256": "e21b30c18073becb34fca202b83d19b4507729f9d79414dedb1a98b2fca43813"
+  },
+  "rate": "max",
+  "schema": 1
+}

@@ -1,0 +1,6902 @@
+{
+  "bins": [
+    {
+      "files": 1,
+      "group": "boundary_0",
+      "id": "zipf_000",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_0",
+      "id": "zipf_001",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_0",
+      "id": "zipf_002",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_0",
+      "id": "zipf_003",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_0",
+      "id": "zipf_004",
+      "rank_end": 5,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "boundary_0",
+      "id": "zipf_005",
+      "rank_end": 8,
+      "rank_start": 6,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "boundary_0",
+      "id": "zipf_006",
+      "rank_end": 11,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 5,
+      "group": "boundary_0",
+      "id": "zipf_007",
+      "rank_end": 16,
+      "rank_start": 12,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "boundary_0",
+      "id": "zipf_008",
+      "rank_end": 23,
+      "rank_start": 17,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "boundary_0",
+      "id": "zipf_009",
+      "rank_end": 32,
+      "rank_start": 24,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 12,
+      "group": "boundary_0",
+      "id": "zipf_010",
+      "rank_end": 44,
+      "rank_start": 33,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 16,
+      "group": "boundary_0",
+      "id": "zipf_011",
+      "rank_end": 60,
+      "rank_start": 45,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 23,
+      "group": "boundary_0",
+      "id": "zipf_012",
+      "rank_end": 83,
+      "rank_start": 61,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 32,
+      "group": "boundary_0",
+      "id": "zipf_013",
+      "rank_end": 115,
+      "rank_start": 84,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_1",
+      "id": "zipf_014",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_1",
+      "id": "zipf_015",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_1",
+      "id": "zipf_016",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_1",
+      "id": "zipf_017",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 4,
+      "group": "boundary_1",
+      "id": "zipf_018",
+      "rank_end": 8,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "boundary_1",
+      "id": "zipf_019",
+      "rank_end": 11,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 5,
+      "group": "boundary_1",
+      "id": "zipf_020",
+      "rank_end": 16,
+      "rank_start": 12,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "boundary_1",
+      "id": "zipf_021",
+      "rank_end": 23,
+      "rank_start": 17,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "boundary_1",
+      "id": "zipf_022",
+      "rank_end": 32,
+      "rank_start": 24,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 28,
+      "group": "boundary_1",
+      "id": "zipf_023",
+      "rank_end": 60,
+      "rank_start": 33,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 55,
+      "group": "boundary_1",
+      "id": "zipf_024",
+      "rank_end": 115,
+      "rank_start": 61,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_2",
+      "id": "zipf_025",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_2",
+      "id": "zipf_026",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_2",
+      "id": "zipf_027",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_2",
+      "id": "zipf_028",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 4,
+      "group": "boundary_2",
+      "id": "zipf_029",
+      "rank_end": 8,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "boundary_2",
+      "id": "zipf_030",
+      "rank_end": 11,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 5,
+      "group": "boundary_2",
+      "id": "zipf_031",
+      "rank_end": 16,
+      "rank_start": 12,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "boundary_2",
+      "id": "zipf_032",
+      "rank_end": 23,
+      "rank_start": 17,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "boundary_2",
+      "id": "zipf_033",
+      "rank_end": 32,
+      "rank_start": 24,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 28,
+      "group": "boundary_2",
+      "id": "zipf_034",
+      "rank_end": 60,
+      "rank_start": 33,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 55,
+      "group": "boundary_2",
+      "id": "zipf_035",
+      "rank_end": 115,
+      "rank_start": 61,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_3",
+      "id": "zipf_036",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_3",
+      "id": "zipf_037",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_3",
+      "id": "zipf_038",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_3",
+      "id": "zipf_039",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "boundary_3",
+      "id": "zipf_040",
+      "rank_end": 5,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "boundary_3",
+      "id": "zipf_041",
+      "rank_end": 8,
+      "rank_start": 6,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "boundary_3",
+      "id": "zipf_042",
+      "rank_end": 11,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 5,
+      "group": "boundary_3",
+      "id": "zipf_043",
+      "rank_end": 16,
+      "rank_start": 12,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 15,
+      "group": "boundary_3",
+      "id": "zipf_044",
+      "rank_end": 31,
+      "rank_start": 17,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 28,
+      "group": "boundary_3",
+      "id": "zipf_045",
+      "rank_end": 59,
+      "rank_start": 32,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 55,
+      "group": "boundary_3",
+      "id": "zipf_046",
+      "rank_end": 114,
+      "rank_start": 60,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_047",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_048",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_049",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_050",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_051",
+      "rank_end": 5,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_052",
+      "rank_end": 6,
+      "rank_start": 6,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_053",
+      "rank_end": 7,
+      "rank_start": 7,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_054",
+      "rank_end": 8,
+      "rank_start": 8,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_055",
+      "rank_end": 9,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_01_04",
+      "id": "zipf_056",
+      "rank_end": 10,
+      "rank_start": 10,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 2,
+      "group": "history_01_04",
+      "id": "zipf_057",
+      "rank_end": 12,
+      "rank_start": 11,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "history_01_04",
+      "id": "zipf_058",
+      "rank_end": 15,
+      "rank_start": 13,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "history_01_04",
+      "id": "zipf_059",
+      "rank_end": 18,
+      "rank_start": 16,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 4,
+      "group": "history_01_04",
+      "id": "zipf_060",
+      "rank_end": 22,
+      "rank_start": 19,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 6,
+      "group": "history_01_04",
+      "id": "zipf_061",
+      "rank_end": 28,
+      "rank_start": 23,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "history_01_04",
+      "id": "zipf_062",
+      "rank_end": 35,
+      "rank_start": 29,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "history_01_04",
+      "id": "zipf_063",
+      "rank_end": 44,
+      "rank_start": 36,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 12,
+      "group": "history_01_04",
+      "id": "zipf_064",
+      "rank_end": 56,
+      "rank_start": 45,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 15,
+      "group": "history_01_04",
+      "id": "zipf_065",
+      "rank_end": 71,
+      "rank_start": 57,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 19,
+      "group": "history_01_04",
+      "id": "zipf_066",
+      "rank_end": 90,
+      "rank_start": 72,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 24,
+      "group": "history_01_04",
+      "id": "zipf_067",
+      "rank_end": 114,
+      "rank_start": 91,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 31,
+      "group": "history_01_04",
+      "id": "zipf_068",
+      "rank_end": 145,
+      "rank_start": 115,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 38,
+      "group": "history_01_04",
+      "id": "zipf_069",
+      "rank_end": 183,
+      "rank_start": 146,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 47,
+      "group": "history_01_04",
+      "id": "zipf_070",
+      "rank_end": 230,
+      "rank_start": 184,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 59,
+      "group": "history_01_04",
+      "id": "zipf_071",
+      "rank_end": 289,
+      "rank_start": 231,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 76,
+      "group": "history_01_04",
+      "id": "zipf_072",
+      "rank_end": 365,
+      "rank_start": 290,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 94,
+      "group": "history_01_04",
+      "id": "zipf_073",
+      "rank_end": 459,
+      "rank_start": 366,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 119,
+      "group": "history_01_04",
+      "id": "zipf_074",
+      "rank_end": 578,
+      "rank_start": 460,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 149,
+      "group": "history_01_04",
+      "id": "zipf_075",
+      "rank_end": 727,
+      "rank_start": 579,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 187,
+      "group": "history_01_04",
+      "id": "zipf_076",
+      "rank_end": 914,
+      "rank_start": 728,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_077",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_078",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_079",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_080",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_081",
+      "rank_end": 5,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_082",
+      "rank_end": 6,
+      "rank_start": 6,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_083",
+      "rank_end": 7,
+      "rank_start": 7,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_084",
+      "rank_end": 8,
+      "rank_start": 8,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_085",
+      "rank_end": 9,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_05_08",
+      "id": "zipf_086",
+      "rank_end": 10,
+      "rank_start": 10,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 2,
+      "group": "history_05_08",
+      "id": "zipf_087",
+      "rank_end": 12,
+      "rank_start": 11,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "history_05_08",
+      "id": "zipf_088",
+      "rank_end": 15,
+      "rank_start": 13,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "history_05_08",
+      "id": "zipf_089",
+      "rank_end": 18,
+      "rank_start": 16,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 4,
+      "group": "history_05_08",
+      "id": "zipf_090",
+      "rank_end": 22,
+      "rank_start": 19,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 6,
+      "group": "history_05_08",
+      "id": "zipf_091",
+      "rank_end": 28,
+      "rank_start": 23,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "history_05_08",
+      "id": "zipf_092",
+      "rank_end": 35,
+      "rank_start": 29,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "history_05_08",
+      "id": "zipf_093",
+      "rank_end": 44,
+      "rank_start": 36,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 12,
+      "group": "history_05_08",
+      "id": "zipf_094",
+      "rank_end": 56,
+      "rank_start": 45,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 15,
+      "group": "history_05_08",
+      "id": "zipf_095",
+      "rank_end": 71,
+      "rank_start": 57,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 19,
+      "group": "history_05_08",
+      "id": "zipf_096",
+      "rank_end": 90,
+      "rank_start": 72,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 24,
+      "group": "history_05_08",
+      "id": "zipf_097",
+      "rank_end": 114,
+      "rank_start": 91,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 31,
+      "group": "history_05_08",
+      "id": "zipf_098",
+      "rank_end": 145,
+      "rank_start": 115,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 38,
+      "group": "history_05_08",
+      "id": "zipf_099",
+      "rank_end": 183,
+      "rank_start": 146,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 47,
+      "group": "history_05_08",
+      "id": "zipf_100",
+      "rank_end": 230,
+      "rank_start": 184,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 59,
+      "group": "history_05_08",
+      "id": "zipf_101",
+      "rank_end": 289,
+      "rank_start": 231,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 76,
+      "group": "history_05_08",
+      "id": "zipf_102",
+      "rank_end": 365,
+      "rank_start": 290,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 94,
+      "group": "history_05_08",
+      "id": "zipf_103",
+      "rank_end": 459,
+      "rank_start": 366,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 119,
+      "group": "history_05_08",
+      "id": "zipf_104",
+      "rank_end": 578,
+      "rank_start": 460,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 149,
+      "group": "history_05_08",
+      "id": "zipf_105",
+      "rank_end": 727,
+      "rank_start": 579,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 187,
+      "group": "history_05_08",
+      "id": "zipf_106",
+      "rank_end": 914,
+      "rank_start": 728,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_107",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_108",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_109",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_110",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_111",
+      "rank_end": 5,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_112",
+      "rank_end": 6,
+      "rank_start": 6,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_113",
+      "rank_end": 7,
+      "rank_start": 7,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_114",
+      "rank_end": 8,
+      "rank_start": 8,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_115",
+      "rank_end": 9,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_09_12",
+      "id": "zipf_116",
+      "rank_end": 10,
+      "rank_start": 10,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 2,
+      "group": "history_09_12",
+      "id": "zipf_117",
+      "rank_end": 12,
+      "rank_start": 11,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "history_09_12",
+      "id": "zipf_118",
+      "rank_end": 15,
+      "rank_start": 13,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "history_09_12",
+      "id": "zipf_119",
+      "rank_end": 18,
+      "rank_start": 16,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 4,
+      "group": "history_09_12",
+      "id": "zipf_120",
+      "rank_end": 22,
+      "rank_start": 19,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 6,
+      "group": "history_09_12",
+      "id": "zipf_121",
+      "rank_end": 28,
+      "rank_start": 23,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "history_09_12",
+      "id": "zipf_122",
+      "rank_end": 35,
+      "rank_start": 29,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "history_09_12",
+      "id": "zipf_123",
+      "rank_end": 44,
+      "rank_start": 36,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 12,
+      "group": "history_09_12",
+      "id": "zipf_124",
+      "rank_end": 56,
+      "rank_start": 45,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 15,
+      "group": "history_09_12",
+      "id": "zipf_125",
+      "rank_end": 71,
+      "rank_start": 57,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 19,
+      "group": "history_09_12",
+      "id": "zipf_126",
+      "rank_end": 90,
+      "rank_start": 72,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 24,
+      "group": "history_09_12",
+      "id": "zipf_127",
+      "rank_end": 114,
+      "rank_start": 91,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 31,
+      "group": "history_09_12",
+      "id": "zipf_128",
+      "rank_end": 145,
+      "rank_start": 115,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 38,
+      "group": "history_09_12",
+      "id": "zipf_129",
+      "rank_end": 183,
+      "rank_start": 146,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 47,
+      "group": "history_09_12",
+      "id": "zipf_130",
+      "rank_end": 230,
+      "rank_start": 184,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 59,
+      "group": "history_09_12",
+      "id": "zipf_131",
+      "rank_end": 289,
+      "rank_start": 231,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 76,
+      "group": "history_09_12",
+      "id": "zipf_132",
+      "rank_end": 365,
+      "rank_start": 290,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 94,
+      "group": "history_09_12",
+      "id": "zipf_133",
+      "rank_end": 459,
+      "rank_start": 366,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 119,
+      "group": "history_09_12",
+      "id": "zipf_134",
+      "rank_end": 578,
+      "rank_start": 460,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 149,
+      "group": "history_09_12",
+      "id": "zipf_135",
+      "rank_end": 727,
+      "rank_start": 579,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 187,
+      "group": "history_09_12",
+      "id": "zipf_136",
+      "rank_end": 914,
+      "rank_start": 728,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_137",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_138",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_139",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_140",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_141",
+      "rank_end": 5,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_142",
+      "rank_end": 6,
+      "rank_start": 6,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_143",
+      "rank_end": 7,
+      "rank_start": 7,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_144",
+      "rank_end": 8,
+      "rank_start": 8,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_145",
+      "rank_end": 9,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "history_13_16",
+      "id": "zipf_146",
+      "rank_end": 10,
+      "rank_start": 10,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 2,
+      "group": "history_13_16",
+      "id": "zipf_147",
+      "rank_end": 12,
+      "rank_start": 11,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "history_13_16",
+      "id": "zipf_148",
+      "rank_end": 15,
+      "rank_start": 13,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "history_13_16",
+      "id": "zipf_149",
+      "rank_end": 18,
+      "rank_start": 16,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 4,
+      "group": "history_13_16",
+      "id": "zipf_150",
+      "rank_end": 22,
+      "rank_start": 19,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 6,
+      "group": "history_13_16",
+      "id": "zipf_151",
+      "rank_end": 28,
+      "rank_start": 23,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "history_13_16",
+      "id": "zipf_152",
+      "rank_end": 35,
+      "rank_start": 29,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "history_13_16",
+      "id": "zipf_153",
+      "rank_end": 44,
+      "rank_start": 36,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 12,
+      "group": "history_13_16",
+      "id": "zipf_154",
+      "rank_end": 56,
+      "rank_start": 45,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 15,
+      "group": "history_13_16",
+      "id": "zipf_155",
+      "rank_end": 71,
+      "rank_start": 57,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 19,
+      "group": "history_13_16",
+      "id": "zipf_156",
+      "rank_end": 90,
+      "rank_start": 72,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 24,
+      "group": "history_13_16",
+      "id": "zipf_157",
+      "rank_end": 114,
+      "rank_start": 91,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 31,
+      "group": "history_13_16",
+      "id": "zipf_158",
+      "rank_end": 145,
+      "rank_start": 115,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 38,
+      "group": "history_13_16",
+      "id": "zipf_159",
+      "rank_end": 183,
+      "rank_start": 146,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 47,
+      "group": "history_13_16",
+      "id": "zipf_160",
+      "rank_end": 230,
+      "rank_start": 184,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 59,
+      "group": "history_13_16",
+      "id": "zipf_161",
+      "rank_end": 289,
+      "rank_start": 231,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 76,
+      "group": "history_13_16",
+      "id": "zipf_162",
+      "rank_end": 365,
+      "rank_start": 290,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 94,
+      "group": "history_13_16",
+      "id": "zipf_163",
+      "rank_end": 459,
+      "rank_start": 366,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 119,
+      "group": "history_13_16",
+      "id": "zipf_164",
+      "rank_end": 578,
+      "rank_start": 460,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 149,
+      "group": "history_13_16",
+      "id": "zipf_165",
+      "rank_end": 727,
+      "rank_start": 579,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 187,
+      "group": "history_13_16",
+      "id": "zipf_166",
+      "rank_end": 914,
+      "rank_start": 728,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "input",
+      "id": "zipf_167",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "input",
+      "id": "zipf_168",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "input",
+      "id": "zipf_169",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "input",
+      "id": "zipf_170",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "input",
+      "id": "zipf_171",
+      "rank_end": 5,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "input",
+      "id": "zipf_172",
+      "rank_end": 6,
+      "rank_start": 6,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "input",
+      "id": "zipf_173",
+      "rank_end": 7,
+      "rank_start": 7,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "input",
+      "id": "zipf_174",
+      "rank_end": 8,
+      "rank_start": 8,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "input",
+      "id": "zipf_175",
+      "rank_end": 9,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "input",
+      "id": "zipf_176",
+      "rank_end": 12,
+      "rank_start": 10,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 2,
+      "group": "input",
+      "id": "zipf_177",
+      "rank_end": 14,
+      "rank_start": 13,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "input",
+      "id": "zipf_178",
+      "rank_end": 17,
+      "rank_start": 15,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 4,
+      "group": "input",
+      "id": "zipf_179",
+      "rank_end": 21,
+      "rank_start": 18,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 5,
+      "group": "input",
+      "id": "zipf_180",
+      "rank_end": 26,
+      "rank_start": 22,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 6,
+      "group": "input",
+      "id": "zipf_181",
+      "rank_end": 32,
+      "rank_start": 27,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "input",
+      "id": "zipf_182",
+      "rank_end": 39,
+      "rank_start": 33,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "input",
+      "id": "zipf_183",
+      "rank_end": 48,
+      "rank_start": 40,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 11,
+      "group": "input",
+      "id": "zipf_184",
+      "rank_end": 59,
+      "rank_start": 49,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 13,
+      "group": "input",
+      "id": "zipf_185",
+      "rank_end": 72,
+      "rank_start": 60,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 17,
+      "group": "input",
+      "id": "zipf_186",
+      "rank_end": 89,
+      "rank_start": 73,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 20,
+      "group": "input",
+      "id": "zipf_187",
+      "rank_end": 109,
+      "rank_start": 90,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 25,
+      "group": "input",
+      "id": "zipf_188",
+      "rank_end": 134,
+      "rank_start": 110,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 30,
+      "group": "input",
+      "id": "zipf_189",
+      "rank_end": 164,
+      "rank_start": 135,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 38,
+      "group": "input",
+      "id": "zipf_190",
+      "rank_end": 202,
+      "rank_start": 165,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 46,
+      "group": "input",
+      "id": "zipf_191",
+      "rank_end": 248,
+      "rank_start": 203,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 56,
+      "group": "input",
+      "id": "zipf_192",
+      "rank_end": 304,
+      "rank_start": 249,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 69,
+      "group": "input",
+      "id": "zipf_193",
+      "rank_end": 373,
+      "rank_start": 305,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 84,
+      "group": "input",
+      "id": "zipf_194",
+      "rank_end": 457,
+      "rank_start": 374,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_195",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_196",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_197",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_198",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_199",
+      "rank_end": 5,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_200",
+      "rank_end": 6,
+      "rank_start": 6,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_201",
+      "rank_end": 7,
+      "rank_start": 7,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_202",
+      "rank_end": 8,
+      "rank_start": 8,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_203",
+      "rank_end": 9,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_08h",
+      "id": "zipf_204",
+      "rank_end": 10,
+      "rank_start": 10,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 2,
+      "group": "restart_08h",
+      "id": "zipf_205",
+      "rank_end": 12,
+      "rank_start": 11,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "restart_08h",
+      "id": "zipf_206",
+      "rank_end": 15,
+      "rank_start": 13,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "restart_08h",
+      "id": "zipf_207",
+      "rank_end": 18,
+      "rank_start": 16,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 4,
+      "group": "restart_08h",
+      "id": "zipf_208",
+      "rank_end": 22,
+      "rank_start": 19,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 6,
+      "group": "restart_08h",
+      "id": "zipf_209",
+      "rank_end": 28,
+      "rank_start": 23,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "restart_08h",
+      "id": "zipf_210",
+      "rank_end": 35,
+      "rank_start": 29,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "restart_08h",
+      "id": "zipf_211",
+      "rank_end": 44,
+      "rank_start": 36,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 12,
+      "group": "restart_08h",
+      "id": "zipf_212",
+      "rank_end": 56,
+      "rank_start": 45,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 15,
+      "group": "restart_08h",
+      "id": "zipf_213",
+      "rank_end": 71,
+      "rank_start": 57,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 19,
+      "group": "restart_08h",
+      "id": "zipf_214",
+      "rank_end": 90,
+      "rank_start": 72,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 24,
+      "group": "restart_08h",
+      "id": "zipf_215",
+      "rank_end": 114,
+      "rank_start": 91,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 31,
+      "group": "restart_08h",
+      "id": "zipf_216",
+      "rank_end": 145,
+      "rank_start": 115,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 38,
+      "group": "restart_08h",
+      "id": "zipf_217",
+      "rank_end": 183,
+      "rank_start": 146,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 47,
+      "group": "restart_08h",
+      "id": "zipf_218",
+      "rank_end": 230,
+      "rank_start": 184,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 59,
+      "group": "restart_08h",
+      "id": "zipf_219",
+      "rank_end": 289,
+      "rank_start": 231,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 76,
+      "group": "restart_08h",
+      "id": "zipf_220",
+      "rank_end": 365,
+      "rank_start": 290,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 94,
+      "group": "restart_08h",
+      "id": "zipf_221",
+      "rank_end": 459,
+      "rank_start": 366,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 119,
+      "group": "restart_08h",
+      "id": "zipf_222",
+      "rank_end": 578,
+      "rank_start": 460,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 149,
+      "group": "restart_08h",
+      "id": "zipf_223",
+      "rank_end": 727,
+      "rank_start": 579,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 187,
+      "group": "restart_08h",
+      "id": "zipf_224",
+      "rank_end": 914,
+      "rank_start": 728,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_225",
+      "rank_end": 1,
+      "rank_start": 1,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_226",
+      "rank_end": 2,
+      "rank_start": 2,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_227",
+      "rank_end": 3,
+      "rank_start": 3,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_228",
+      "rank_end": 4,
+      "rank_start": 4,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_229",
+      "rank_end": 5,
+      "rank_start": 5,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_230",
+      "rank_end": 6,
+      "rank_start": 6,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_231",
+      "rank_end": 7,
+      "rank_start": 7,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_232",
+      "rank_end": 8,
+      "rank_start": 8,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_233",
+      "rank_end": 9,
+      "rank_start": 9,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 1,
+      "group": "restart_16h",
+      "id": "zipf_234",
+      "rank_end": 10,
+      "rank_start": 10,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 2,
+      "group": "restart_16h",
+      "id": "zipf_235",
+      "rank_end": 12,
+      "rank_start": 11,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "restart_16h",
+      "id": "zipf_236",
+      "rank_end": 15,
+      "rank_start": 13,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 3,
+      "group": "restart_16h",
+      "id": "zipf_237",
+      "rank_end": 18,
+      "rank_start": 16,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 4,
+      "group": "restart_16h",
+      "id": "zipf_238",
+      "rank_end": 22,
+      "rank_start": 19,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 6,
+      "group": "restart_16h",
+      "id": "zipf_239",
+      "rank_end": 28,
+      "rank_start": 23,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 7,
+      "group": "restart_16h",
+      "id": "zipf_240",
+      "rank_end": 35,
+      "rank_start": 29,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 9,
+      "group": "restart_16h",
+      "id": "zipf_241",
+      "rank_end": 44,
+      "rank_start": 36,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 12,
+      "group": "restart_16h",
+      "id": "zipf_242",
+      "rank_end": 56,
+      "rank_start": 45,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 15,
+      "group": "restart_16h",
+      "id": "zipf_243",
+      "rank_end": 71,
+      "rank_start": 57,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 19,
+      "group": "restart_16h",
+      "id": "zipf_244",
+      "rank_end": 90,
+      "rank_start": 72,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 24,
+      "group": "restart_16h",
+      "id": "zipf_245",
+      "rank_end": 114,
+      "rank_start": 91,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 31,
+      "group": "restart_16h",
+      "id": "zipf_246",
+      "rank_end": 145,
+      "rank_start": 115,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 38,
+      "group": "restart_16h",
+      "id": "zipf_247",
+      "rank_end": 183,
+      "rank_start": 146,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 47,
+      "group": "restart_16h",
+      "id": "zipf_248",
+      "rank_end": 230,
+      "rank_start": 184,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 59,
+      "group": "restart_16h",
+      "id": "zipf_249",
+      "rank_end": 289,
+      "rank_start": 231,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 76,
+      "group": "restart_16h",
+      "id": "zipf_250",
+      "rank_end": 365,
+      "rank_start": 290,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 94,
+      "group": "restart_16h",
+      "id": "zipf_251",
+      "rank_end": 459,
+      "rank_start": 366,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 119,
+      "group": "restart_16h",
+      "id": "zipf_252",
+      "rank_end": 578,
+      "rank_start": 460,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 149,
+      "group": "restart_16h",
+      "id": "zipf_253",
+      "rank_end": 727,
+      "rank_start": 579,
+      "size_bytes": 67108864
+    },
+    {
+      "files": 187,
+      "group": "restart_16h",
+      "id": "zipf_254",
+      "rank_end": 914,
+      "rank_start": 728,
+      "size_bytes": 67108864
+    }
+  ],
+  "fragmentation": null,
+  "id": "hpc_wrf_continuous",
+  "phase_zipf": {
+    "alpha": 0.99,
+    "group_tv_distances": {
+      "boundary_0": 0.023832586652704383,
+      "boundary_1": 0.03838077305773087,
+      "boundary_2": 0.03838077305773087,
+      "boundary_3": 0.03837643495602321,
+      "history_01_04": 0.01690604424921191,
+      "history_05_08": 0.01690604424921191,
+      "history_09_12": 0.01690604424921191,
+      "history_13_16": 0.01690604424921191,
+      "input": 0.01470916994419782,
+      "restart_08h": 0.01690604424921191,
+      "restart_16h": 0.01690604424921191
+    },
+    "max_bins": 255,
+    "max_fwd_per_rd": 256,
+    "min_files_per_group": {
+      "boundary_0": 1,
+      "boundary_1": 1,
+      "boundary_2": 1,
+      "boundary_3": 1,
+      "history_01_04": 1,
+      "history_05_08": 1,
+      "history_09_12": 1,
+      "history_13_16": 1,
+      "input": 1,
+      "restart_08h": 1,
+      "restart_16h": 1
+    },
+    "phases": [
+      {
+        "fwd_count": 42,
+        "group_weights": {
+          "boundary_0": 0.2000000000000001,
+          "input": 0.7999999999999998
+        },
+        "name": "cold_start",
+        "tv_distance": 0.016533853285899132
+      },
+      {
+        "fwd_count": 30,
+        "group_weights": {
+          "history_01_04": 1.0
+        },
+        "name": "history_01_04",
+        "tv_distance": 0.01690604424921191
+      },
+      {
+        "fwd_count": 41,
+        "group_weights": {
+          "boundary_1": 0.11111111111111123,
+          "history_05_08": 0.8888888888888888
+        },
+        "name": "history_05_08",
+        "tv_distance": 0.019292125227936243
+      },
+      {
+        "fwd_count": 30,
+        "group_weights": {
+          "restart_08h": 1.0
+        },
+        "name": "restart_08h_output",
+        "tv_distance": 0.01690604424921191
+      },
+      {
+        "fwd_count": 41,
+        "group_weights": {
+          "boundary_2": 0.11111111111111123,
+          "history_09_12": 0.8888888888888888
+        },
+        "name": "history_09_12",
+        "tv_distance": 0.019292125227936243
+      },
+      {
+        "fwd_count": 41,
+        "group_weights": {
+          "boundary_3": 0.11111111111111123,
+          "history_13_16": 0.8888888888888888
+        },
+        "name": "history_13_16",
+        "tv_distance": 0.01929164321663539
+      },
+      {
+        "fwd_count": 30,
+        "group_weights": {
+          "restart_16h": 1.0
+        },
+        "name": "restart_16h_output",
+        "tv_distance": 0.01690604424921191
+      }
+    ],
+    "scope": "fixed ranks within original business group or logical size class",
+    "tv_limit": 0.06
+  },
+  "profiles": {
+    "baseline": [
+      {
+        "end_s": 80,
+        "lanes": [
+          {
+            "bin": "zipf_000",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017391304347826096,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_001",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017391304347826096,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_002",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017391304347826096,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_003",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017391304347826096,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_004",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017391304347826096,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_005",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005217391304347828,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_006",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005217391304347828,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_007",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.008695652173913047,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_008",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.012173913043478268,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_009",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.015652173913043486,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_010",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.020869565217391313,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_011",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.027826086956521754,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_012",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.04000000000000002,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_013",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.05565217391304351,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_167",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017505470459518596,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_168",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017505470459518596,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_169",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017505470459518596,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_170",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017505470459518596,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_171",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017505470459518596,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_172",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017505470459518596,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_173",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017505470459518596,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_174",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017505470459518596,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_175",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017505470459518596,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_176",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005251641137855578,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_177",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003501094091903719,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_178",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005251641137855578,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_179",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007002188183807438,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_180",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.008752735229759298,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_181",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.010503282275711156,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_182",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.012253829321663016,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_183",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.015754923413566737,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_184",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.019256017505470457,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_185",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.022757111597374174,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_186",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.029759299781181612,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_187",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.03501094091903719,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_188",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.04376367614879649,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_189",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.05251641137855578,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_190",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.06652078774617066,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_191",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.08052516411378555,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_192",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.09803063457330413,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_193",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.1207877461706783,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_194",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.1470459518599562,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "cold_start",
+        "rate_multiplier": 1,
+        "seconds": 80,
+        "start_s": 0
+      },
+      {
+        "end_s": 180,
+        "lanes": [
+          {
+            "bin": "zipf_047",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_048",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_049",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_050",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_051",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_052",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002188183807439825,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0032822757111597373,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0032822757111597373,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00437636761487965,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.006564551422319475,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.007658643326039387,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.009846827133479213,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01312910284463895,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.016411378555798686,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.020787746170678335,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0262582056892779,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03391684901531729,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.04157549234135667,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.05142231947483589,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.06455142231947483,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.08315098468271334,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.10284463894967177,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.1301969365426696,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.16301969365426697,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.20459518599562362,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "history_01_04",
+        "rate_multiplier": 1,
+        "seconds": 100,
+        "start_s": 80
+      },
+      {
+        "end_s": 280,
+        "lanes": [
+          {
+            "bin": "zipf_014",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009661835748792281,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_015",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009661835748792281,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_016",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009661835748792281,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_017",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009661835748792281,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_018",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0038647342995169125,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_019",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0028985507246376842,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_020",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00483091787439614,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_021",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006763285024154597,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.008695652173913054,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.027053140096618387,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.053140096618357544,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_079",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_080",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_081",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_082",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_083",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_084",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_085",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_086",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_087",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0019450522732798441,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_088",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002917578409919766,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_089",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002917578409919766,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_090",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0038901045465596883,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_091",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.005835156819839532,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_092",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0068076829564794545,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_093",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0087527352297593,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_094",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011670313639679065,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_095",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01458789204959883,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_096",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01847799659615852,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_097",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02334062727935813,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_098",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.030148310235837587,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_099",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03695599319231704,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_100",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.04570872842207634,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_101",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.057379042061755405,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_102",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.07391198638463407,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_103",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.09141745684415269,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_104",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.11573061026015075,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_105",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.1449063943593484,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_106",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.18186238755166542,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "history_05_08",
+        "rate_multiplier": 1,
+        "seconds": 100,
+        "start_s": 180
+      },
+      {
+        "end_s": 340,
+        "lanes": [
+          {
+            "bin": "zipf_195",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_196",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_197",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_198",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_199",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_200",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_201",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_202",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_203",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_204",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_205",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002188183807439825,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_206",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0032822757111597373,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_207",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0032822757111597373,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_208",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00437636761487965,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_209",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.006564551422319475,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_210",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.007658643326039387,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_211",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.009846827133479213,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_212",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01312910284463895,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_213",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.016411378555798686,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_214",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.020787746170678335,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_215",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0262582056892779,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_216",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03391684901531729,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_217",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.04157549234135667,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_218",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.05142231947483589,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_219",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.06455142231947483,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_220",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.08315098468271334,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_221",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.10284463894967177,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_222",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.1301969365426696,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_223",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.16301969365426697,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_224",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.20459518599562362,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "restart_08h_output",
+        "rate_multiplier": 1,
+        "seconds": 60,
+        "start_s": 280
+      },
+      {
+        "end_s": 440,
+        "lanes": [
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009661835748792281,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009661835748792281,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009661835748792281,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009661835748792281,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0038647342995169125,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0028985507246376842,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00483091787439614,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006763285024154597,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.008695652173913054,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.027053140096618387,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.053140096618357544,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_107",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_108",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_109",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_110",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_111",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_112",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_113",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_114",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_115",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_116",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_117",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0019450522732798441,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_118",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002917578409919766,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_119",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002917578409919766,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_120",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0038901045465596883,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_121",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.005835156819839532,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_122",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0068076829564794545,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_123",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0087527352297593,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_124",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011670313639679065,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_125",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01458789204959883,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_126",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01847799659615852,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_127",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02334062727935813,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_128",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.030148310235837587,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_129",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03695599319231704,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_130",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.04570872842207634,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_131",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.057379042061755405,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_132",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.07391198638463407,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_133",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.09141745684415269,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_134",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.11573061026015075,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_135",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.1449063943593484,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_136",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.18186238755166542,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "history_09_12",
+        "rate_multiplier": 1,
+        "seconds": 100,
+        "start_s": 340
+      },
+      {
+        "end_s": 540,
+        "lanes": [
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009746588693957125,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009746588693957125,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_038",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009746588693957125,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_039",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009746588693957125,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_040",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0009746588693957125,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_041",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0029239766081871374,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_042",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0029239766081871374,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_043",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0048732943469785624,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_044",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.014619883040935687,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_045",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.02729044834307995,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_046",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.05360623781676419,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_137",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_138",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_139",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_140",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_141",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_142",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_143",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_144",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_145",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_146",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0009725261366399221,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_147",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0019450522732798441,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_148",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002917578409919766,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_149",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002917578409919766,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_150",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0038901045465596883,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_151",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.005835156819839532,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_152",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0068076829564794545,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_153",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0087527352297593,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_154",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011670313639679065,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_155",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01458789204959883,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_156",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01847799659615852,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_157",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02334062727935813,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_158",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.030148310235837587,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_159",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03695599319231704,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_160",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.04570872842207634,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_161",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.057379042061755405,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_162",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.07391198638463407,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_163",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.09141745684415269,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_164",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.11573061026015075,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_165",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.1449063943593484,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_166",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.18186238755166542,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "history_13_16",
+        "rate_multiplier": 1,
+        "seconds": 100,
+        "start_s": 440
+      },
+      {
+        "end_s": 600,
+        "lanes": [
+          {
+            "bin": "zipf_225",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_226",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_227",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_228",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_229",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_230",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_231",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_232",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_233",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_234",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010940919037199124,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_235",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002188183807439825,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_236",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0032822757111597373,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_237",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0032822757111597373,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_238",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00437636761487965,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_239",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.006564551422319475,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_240",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.007658643326039387,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_241",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.009846827133479213,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_242",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01312910284463895,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_243",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.016411378555798686,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_244",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.020787746170678335,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_245",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0262582056892779,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_246",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03391684901531729,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_247",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.04157549234135667,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_248",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.05142231947483589,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_249",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.06455142231947483,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_250",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.08315098468271334,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_251",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.10284463894967177,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_252",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.1301969365426696,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_253",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.16301969365426697,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_254",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.20459518599562362,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "restart_16h_output",
+        "rate_multiplier": 1,
+        "seconds": 60,
+        "start_s": 540
+      }
+    ],
+    "current": [
+      {
+        "end_s": 80,
+        "lanes": [
+          {
+            "bin": "zipf_000",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.03676237158186002,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_001",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.018509037048800674,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_002",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.012389491391876579,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_003",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00931888879124763,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_004",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007471765206958651,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_005",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.01628464978635623,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_006",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011360459945340545,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_007",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013618406927658396,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_008",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013391035650240185,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_009",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.012320749890750498,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_010",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011979919788598298,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_011",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011746196043292172,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_012",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.01236071744452934,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_013",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.012486310502490766,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_167",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.11604663232999639,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_168",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.05842690024504068,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_169",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.03910952124259043,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_170",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.029416645737176988,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_171",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.023585888301500053,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_172",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.019690774737643798,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_173",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.01690384423527926,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_174",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.014810627344551361,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_175",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013180517358531405,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_176",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.03259455984964256,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_177",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.017669300000184313,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_178",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.022428074319749577,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_179",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.024601969203978852,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_180",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.025042924847626664,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_181",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.02449625664818384,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_182",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0234593833254582,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_183",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.024736401152906845,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_184",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.024684762542136158,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_185",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.023911566921842813,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_186",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.025541924136703816,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_187",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.024505339755762984,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_188",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.025036736487078843,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_189",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.02456400860102405,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_190",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.025406878207168044,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_191",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.025076376501091152,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_192",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.024946565915520753,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_193",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.02512275145808482,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_194",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.02500286859354412,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "cold_start",
+        "rate_multiplier": 1,
+        "seconds": 80,
+        "start_s": 0
+      },
+      {
+        "end_s": 180,
+        "lanes": [
+          {
+            "bin": "zipf_047",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.13101540297935613,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_048",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.06596334358649011,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_049",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.044154229925060934,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_050",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03321107746235727,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_051",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.026628214868484046,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_052",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.022230673440760296,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.019084258801131293,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.016721039387042114,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01488066270026539,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.013406714374961437,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023392194028447943,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02892257299974188,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023839015399459595,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02642547564295722,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03198367542904079,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02978524766231838,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.030712662205702568,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03252791356458129,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03215559746494845,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03225845326064147,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.032275998136154116,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0329547291977178,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03198996782857644,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03151061805959532,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.031564308938571095,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03235992671028909,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.031845056532815,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.032117257586457004,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0320339981201343,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.032049713705941674,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "history_01_04",
+        "rate_multiplier": 1,
+        "seconds": 100,
+        "start_s": 80
+      },
+      {
+        "end_s": 280,
+        "lanes": [
+          {
+            "bin": "zipf_014",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.020423539767700023,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_015",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.010282798360444824,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_016",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00688305077326477,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_017",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00517716043958202,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_018",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013198008329619385,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_019",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006311366636300306,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_020",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007565781626476891,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_021",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007439464250133441,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006844861050416948,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.01318117546216138,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013803904415011179,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.11645813598164989,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.05863408318799121,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_079",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03924820437783194,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_080",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02952095774431757,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_081",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023669524327541373,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_082",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01976059861400915,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_083",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.016963785601005595,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_084",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.014863146121815211,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_085",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.013227255733569235,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_086",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011917079444410165,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_087",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.020793061358620392,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_088",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.025708953777548338,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_089",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02119023591063075,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_090",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023489311682628636,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_091",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028429933714702926,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_092",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02647577569983856,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_093",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.027300144182846726,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_094",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028913700946294477,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_095",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028582753302176397,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_096",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028674180676125753,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_097",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02868977612102588,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_098",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0292930926201936,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_099",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028435526958734608,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_100",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028009438275195836,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_101",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02805716350095208,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_102",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028764379298034742,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_103",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028306716918057775,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_104",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028548673410184,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_105",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02847466499567493,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_106",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028488634405281488,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "history_05_08",
+        "rate_multiplier": 1,
+        "seconds": 100,
+        "start_s": 180
+      },
+      {
+        "end_s": 340,
+        "lanes": [
+          {
+            "bin": "zipf_195",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.13101540297935613,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_196",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.06596334358649011,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_197",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.044154229925060934,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_198",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03321107746235727,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_199",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.026628214868484046,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_200",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.022230673440760296,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_201",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.019084258801131293,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_202",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.016721039387042114,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_203",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01488066270026539,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_204",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.013406714374961437,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_205",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023392194028447943,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_206",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02892257299974188,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_207",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023839015399459595,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_208",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02642547564295722,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_209",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03198367542904079,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_210",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02978524766231838,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_211",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.030712662205702568,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_212",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03252791356458129,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_213",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03215559746494845,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_214",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03225845326064147,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_215",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.032275998136154116,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_216",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0329547291977178,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_217",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03198996782857644,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_218",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03151061805959532,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_219",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.031564308938571095,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_220",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03235992671028909,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_221",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.031845056532815,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_222",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.032117257586457004,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_223",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0320339981201343,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_224",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.032049713705941674,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "restart_08h_output",
+        "rate_multiplier": 1,
+        "seconds": 60,
+        "start_s": 280
+      },
+      {
+        "end_s": 440,
+        "lanes": [
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.020423539767700023,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.010282798360444824,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00688305077326477,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00517716043958202,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013198008329619385,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006311366636300306,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007565781626476891,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007439464250133441,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006844861050416948,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.01318117546216138,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013803904415011179,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_107",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.11645813598164989,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_108",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.05863408318799121,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_109",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03924820437783194,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_110",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02952095774431757,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_111",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023669524327541373,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_112",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01976059861400915,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_113",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.016963785601005595,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_114",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.014863146121815211,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_115",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.013227255733569235,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_116",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011917079444410165,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_117",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.020793061358620392,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_118",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.025708953777548338,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_119",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02119023591063075,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_120",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023489311682628636,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_121",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028429933714702926,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_122",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02647577569983856,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_123",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.027300144182846726,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_124",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028913700946294477,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_125",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028582753302176397,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_126",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028674180676125753,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_127",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02868977612102588,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_128",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0292930926201936,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_129",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028435526958734608,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_130",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028009438275195836,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_131",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02805716350095208,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_132",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028764379298034742,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_133",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028306716918057775,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_134",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028548673410184,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_135",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02847466499567493,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_136",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028488634405281488,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "history_09_12",
+        "rate_multiplier": 1,
+        "seconds": 100,
+        "start_s": 340
+      },
+      {
+        "end_s": 540,
+        "lanes": [
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.02045782776984627,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.010300061607475586,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_038",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006894606363645812,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_039",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005185852100786832,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_040",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.004157949532725874,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_041",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.009062216235960359,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_042",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0063219624563801155,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_043",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007578483417625603,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_044",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013646454265172121,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_045",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013509943116557439,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_046",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013995754244935219,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_137",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.11645813598164989,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_138",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.05863408318799121,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_139",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03924820437783194,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_140",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02952095774431757,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_141",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023669524327541373,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_142",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01976059861400915,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_143",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.016963785601005595,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_144",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.014863146121815211,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_145",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.013227255733569235,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_146",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011917079444410165,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_147",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.020793061358620392,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_148",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.025708953777548338,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_149",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02119023591063075,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_150",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023489311682628636,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_151",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028429933714702926,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_152",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02647577569983856,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_153",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.027300144182846726,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_154",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028913700946294477,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_155",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028582753302176397,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_156",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028674180676125753,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_157",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02868977612102588,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_158",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0292930926201936,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_159",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028435526958734608,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_160",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028009438275195836,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_161",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02805716350095208,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_162",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028764379298034742,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_163",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028306716918057775,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_164",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028548673410184,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_165",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02847466499567493,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_166",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.028488634405281488,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "history_13_16",
+        "rate_multiplier": 1,
+        "seconds": 100,
+        "start_s": 440
+      },
+      {
+        "end_s": 600,
+        "lanes": [
+          {
+            "bin": "zipf_225",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.13101540297935613,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_226",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.06596334358649011,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_227",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.044154229925060934,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_228",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03321107746235727,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_229",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.026628214868484046,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_230",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.022230673440760296,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_231",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.019084258801131293,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_232",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.016721039387042114,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_233",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01488066270026539,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_234",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.013406714374961437,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_235",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023392194028447943,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_236",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02892257299974188,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_237",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.023839015399459595,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_238",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02642547564295722,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_239",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03198367542904079,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_240",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.02978524766231838,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_241",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.030712662205702568,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_242",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03252791356458129,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_243",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03215559746494845,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_244",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03225845326064147,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_245",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.032275998136154116,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_246",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0329547291977178,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_247",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03198996782857644,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_248",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03151061805959532,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_249",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.031564308938571095,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_250",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03235992671028909,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_251",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.031845056532815,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_252",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.032117257586457004,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_253",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0320339981201343,
+            "xfersize": 4194304
+          },
+          {
+            "bin": "zipf_254",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.032049713705941674,
+            "xfersize": 4194304
+          }
+        ],
+        "name": "restart_16h_output",
+        "rate_multiplier": 1,
+        "seconds": 60,
+        "start_s": 540
+      }
+    ]
+  },
+  "provenance": {
+    "current_suite": {
+      "baseline_semantics": "uniform within compatible groups",
+      "design": "phase_zipf",
+      "revision": "2026-09-17",
+      "source_profile": "phase_zipf099"
+    },
+    "design": "2026-09-14-wrf-continuous-design-candidate.md",
+    "event_order_scope": "Boundary read and history output share an RD; their internal call order is not reproduced.",
+    "group_adaptation": "seven event groups; four history outputs share one Zipf group; role request mass proportional to synthetic bytes",
+    "idfs_expansion": {
+      "actual_bytes": 429496729600,
+      "baleen_method": null,
+      "coverage": "600s timed access, not complete scans; generated probabilities do not guarantee measured object heat or classifier metrics",
+      "method": "increase logical file counts; keep logical size classes, timing, business shares and source read/write types; rebuild conditional Zipf bins",
+      "original_bytes": 120259084288,
+      "runtime": "unmodified Vdbench 5.04.07; integer transfer percentages; no SES framework",
+      "source_commit": "303e43e2e1c98cb74ec156af75ce2546faaa72eb",
+      "source_model_sha256": "8f0b871ba503fe9477a52f99052ffdf174854ffbec999310f50880e6d6c88de2",
+      "target_bytes": 429496729600
+    },
+    "model_scope": "Engineering lifecycle and capacities; not a WRF trace, NetCDF replay, or MPI simulation.",
+    "namelist_semantics": {
+      "frames_per_outfile": 1,
+      "history_begin": 60,
+      "history_interval": 60,
+      "interval_seconds": 14400,
+      "restart": false,
+      "restart_interval": 480
+    },
+    "operation_mapping": "preserve source reads and writes; overwrite prepared synthetic files",
+    "source_urls": [
+      "https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/running_wrf.html",
+      "https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/namelist_variables.html",
+      "https://www2.mmm.ucar.edu/wrf/site/online_tutorial/restart_exercise.html"
+    ],
+    "source_write_to_read": false,
+    "write_mapping": "input/boundary are read; history/restart are write at their output events"
+  }
+}

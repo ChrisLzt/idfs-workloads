@@ -1,0 +1,5405 @@
+{
+  "bins": [
+    {
+      "files": 2,
+      "group": "size_1048576",
+      "id": "zipf_000",
+      "rank_end": 2,
+      "rank_start": 1,
+      "size_bytes": 1048576
+    },
+    {
+      "files": 2,
+      "group": "size_1048576",
+      "id": "zipf_001",
+      "rank_end": 4,
+      "rank_start": 3,
+      "size_bytes": 1048576
+    },
+    {
+      "files": 3,
+      "group": "size_1048576",
+      "id": "zipf_002",
+      "rank_end": 7,
+      "rank_start": 5,
+      "size_bytes": 1048576
+    },
+    {
+      "files": 5,
+      "group": "size_1048576",
+      "id": "zipf_003",
+      "rank_end": 12,
+      "rank_start": 8,
+      "size_bytes": 1048576
+    },
+    {
+      "files": 20,
+      "group": "size_1048576",
+      "id": "zipf_004",
+      "rank_end": 32,
+      "rank_start": 13,
+      "size_bytes": 1048576
+    },
+    {
+      "files": 56,
+      "group": "size_1048576",
+      "id": "zipf_005",
+      "rank_end": 88,
+      "rank_start": 33,
+      "size_bytes": 1048576
+    },
+    {
+      "files": 152,
+      "group": "size_1048576",
+      "id": "zipf_006",
+      "rank_end": 240,
+      "rank_start": 89,
+      "size_bytes": 1048576
+    },
+    {
+      "files": 409,
+      "group": "size_1048576",
+      "id": "zipf_007",
+      "rank_end": 649,
+      "rank_start": 241,
+      "size_bytes": 1048576
+    },
+    {
+      "files": 1092,
+      "group": "size_1048576",
+      "id": "zipf_008",
+      "rank_end": 1741,
+      "rank_start": 650,
+      "size_bytes": 1048576
+    },
+    {
+      "files": 2,
+      "group": "size_1073741824",
+      "id": "zipf_009",
+      "rank_end": 2,
+      "rank_start": 1,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 3,
+      "group": "size_1073741824",
+      "id": "zipf_010",
+      "rank_end": 5,
+      "rank_start": 3,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 3,
+      "group": "size_1073741824",
+      "id": "zipf_011",
+      "rank_end": 8,
+      "rank_start": 6,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 2,
+      "group": "size_1073741824",
+      "id": "zipf_012",
+      "rank_end": 10,
+      "rank_start": 9,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 3,
+      "group": "size_1073741824",
+      "id": "zipf_013",
+      "rank_end": 13,
+      "rank_start": 11,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 7,
+      "group": "size_1073741824",
+      "id": "zipf_014",
+      "rank_end": 20,
+      "rank_start": 14,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 10,
+      "group": "size_1073741824",
+      "id": "zipf_015",
+      "rank_end": 30,
+      "rank_start": 21,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 16,
+      "group": "size_1073741824",
+      "id": "zipf_016",
+      "rank_end": 46,
+      "rank_start": 31,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 22,
+      "group": "size_1073741824",
+      "id": "zipf_017",
+      "rank_end": 68,
+      "rank_start": 47,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 35,
+      "group": "size_1073741824",
+      "id": "zipf_018",
+      "rank_end": 103,
+      "rank_start": 69,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 51,
+      "group": "size_1073741824",
+      "id": "zipf_019",
+      "rank_end": 154,
+      "rank_start": 104,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 78,
+      "group": "size_1073741824",
+      "id": "zipf_020",
+      "rank_end": 232,
+      "rank_start": 155,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 116,
+      "group": "size_1073741824",
+      "id": "zipf_021",
+      "rank_end": 348,
+      "rank_start": 233,
+      "size_bytes": 1073741824
+    },
+    {
+      "files": 4,
+      "group": "size_131072",
+      "id": "zipf_022",
+      "rank_end": 4,
+      "rank_start": 1,
+      "size_bytes": 131072
+    },
+    {
+      "files": 4,
+      "group": "size_131072",
+      "id": "zipf_023",
+      "rank_end": 8,
+      "rank_start": 5,
+      "size_bytes": 131072
+    },
+    {
+      "files": 7,
+      "group": "size_131072",
+      "id": "zipf_024",
+      "rank_end": 15,
+      "rank_start": 9,
+      "size_bytes": 131072
+    },
+    {
+      "files": 12,
+      "group": "size_131072",
+      "id": "zipf_025",
+      "rank_end": 27,
+      "rank_start": 16,
+      "size_bytes": 131072
+    },
+    {
+      "files": 21,
+      "group": "size_131072",
+      "id": "zipf_026",
+      "rank_end": 48,
+      "rank_start": 28,
+      "size_bytes": 131072
+    },
+    {
+      "files": 37,
+      "group": "size_131072",
+      "id": "zipf_027",
+      "rank_end": 85,
+      "rank_start": 49,
+      "size_bytes": 131072
+    },
+    {
+      "files": 31,
+      "group": "size_131072",
+      "id": "zipf_028",
+      "rank_end": 116,
+      "rank_start": 86,
+      "size_bytes": 131072
+    },
+    {
+      "files": 41,
+      "group": "size_131072",
+      "id": "zipf_029",
+      "rank_end": 157,
+      "rank_start": 117,
+      "size_bytes": 131072
+    },
+    {
+      "files": 56,
+      "group": "size_131072",
+      "id": "zipf_030",
+      "rank_end": 213,
+      "rank_start": 158,
+      "size_bytes": 131072
+    },
+    {
+      "files": 75,
+      "group": "size_131072",
+      "id": "zipf_031",
+      "rank_end": 288,
+      "rank_start": 214,
+      "size_bytes": 131072
+    },
+    {
+      "files": 238,
+      "group": "size_131072",
+      "id": "zipf_032",
+      "rank_end": 526,
+      "rank_start": 289,
+      "size_bytes": 131072
+    },
+    {
+      "files": 432,
+      "group": "size_131072",
+      "id": "zipf_033",
+      "rank_end": 958,
+      "rank_start": 527,
+      "size_bytes": 131072
+    },
+    {
+      "files": 784,
+      "group": "size_131072",
+      "id": "zipf_034",
+      "rank_end": 1742,
+      "rank_start": 959,
+      "size_bytes": 131072
+    },
+    {
+      "files": 1418,
+      "group": "size_131072",
+      "id": "zipf_035",
+      "rank_end": 3160,
+      "rank_start": 1743,
+      "size_bytes": 131072
+    },
+    {
+      "files": 2562,
+      "group": "size_131072",
+      "id": "zipf_036",
+      "rank_end": 5722,
+      "rank_start": 3161,
+      "size_bytes": 131072
+    },
+    {
+      "files": 4618,
+      "group": "size_131072",
+      "id": "zipf_037",
+      "rank_end": 10340,
+      "rank_start": 5723,
+      "size_bytes": 131072
+    },
+    {
+      "files": 2,
+      "group": "size_134217728",
+      "id": "zipf_038",
+      "rank_end": 2,
+      "rank_start": 1,
+      "size_bytes": 134217728
+    },
+    {
+      "files": 3,
+      "group": "size_134217728",
+      "id": "zipf_039",
+      "rank_end": 5,
+      "rank_start": 3,
+      "size_bytes": 134217728
+    },
+    {
+      "files": 8,
+      "group": "size_134217728",
+      "id": "zipf_040",
+      "rank_end": 13,
+      "rank_start": 6,
+      "size_bytes": 134217728
+    },
+    {
+      "files": 17,
+      "group": "size_134217728",
+      "id": "zipf_041",
+      "rank_end": 30,
+      "rank_start": 14,
+      "size_bytes": 134217728
+    },
+    {
+      "files": 38,
+      "group": "size_134217728",
+      "id": "zipf_042",
+      "rank_end": 68,
+      "rank_start": 31,
+      "size_bytes": 134217728
+    },
+    {
+      "files": 86,
+      "group": "size_134217728",
+      "id": "zipf_043",
+      "rank_end": 154,
+      "rank_start": 69,
+      "size_bytes": 134217728
+    },
+    {
+      "files": 194,
+      "group": "size_134217728",
+      "id": "zipf_044",
+      "rank_end": 348,
+      "rank_start": 155,
+      "size_bytes": 134217728
+    },
+    {
+      "files": 2,
+      "group": "size_2097152",
+      "id": "zipf_045",
+      "rank_end": 2,
+      "rank_start": 1,
+      "size_bytes": 2097152
+    },
+    {
+      "files": 2,
+      "group": "size_2097152",
+      "id": "zipf_046",
+      "rank_end": 4,
+      "rank_start": 3,
+      "size_bytes": 2097152
+    },
+    {
+      "files": 6,
+      "group": "size_2097152",
+      "id": "zipf_047",
+      "rank_end": 10,
+      "rank_start": 5,
+      "size_bytes": 2097152
+    },
+    {
+      "files": 12,
+      "group": "size_2097152",
+      "id": "zipf_048",
+      "rank_end": 22,
+      "rank_start": 11,
+      "size_bytes": 2097152
+    },
+    {
+      "files": 31,
+      "group": "size_2097152",
+      "id": "zipf_049",
+      "rank_end": 53,
+      "rank_start": 23,
+      "size_bytes": 2097152
+    },
+    {
+      "files": 72,
+      "group": "size_2097152",
+      "id": "zipf_050",
+      "rank_end": 125,
+      "rank_start": 54,
+      "size_bytes": 2097152
+    },
+    {
+      "files": 171,
+      "group": "size_2097152",
+      "id": "zipf_051",
+      "rank_end": 296,
+      "rank_start": 126,
+      "size_bytes": 2097152
+    },
+    {
+      "files": 400,
+      "group": "size_2097152",
+      "id": "zipf_052",
+      "rank_end": 696,
+      "rank_start": 297,
+      "size_bytes": 2097152
+    },
+    {
+      "files": 4,
+      "group": "size_65536",
+      "id": "zipf_053",
+      "rank_end": 4,
+      "rank_start": 1,
+      "size_bytes": 65536
+    },
+    {
+      "files": 4,
+      "group": "size_65536",
+      "id": "zipf_054",
+      "rank_end": 8,
+      "rank_start": 5,
+      "size_bytes": 65536
+    },
+    {
+      "files": 4,
+      "group": "size_65536",
+      "id": "zipf_055",
+      "rank_end": 12,
+      "rank_start": 9,
+      "size_bytes": 65536
+    },
+    {
+      "files": 4,
+      "group": "size_65536",
+      "id": "zipf_056",
+      "rank_end": 16,
+      "rank_start": 13,
+      "size_bytes": 65536
+    },
+    {
+      "files": 7,
+      "group": "size_65536",
+      "id": "zipf_057",
+      "rank_end": 23,
+      "rank_start": 17,
+      "size_bytes": 65536
+    },
+    {
+      "files": 9,
+      "group": "size_65536",
+      "id": "zipf_058",
+      "rank_end": 32,
+      "rank_start": 24,
+      "size_bytes": 65536
+    },
+    {
+      "files": 13,
+      "group": "size_65536",
+      "id": "zipf_059",
+      "rank_end": 45,
+      "rank_start": 33,
+      "size_bytes": 65536
+    },
+    {
+      "files": 18,
+      "group": "size_65536",
+      "id": "zipf_060",
+      "rank_end": 63,
+      "rank_start": 46,
+      "size_bytes": 65536
+    },
+    {
+      "files": 25,
+      "group": "size_65536",
+      "id": "zipf_061",
+      "rank_end": 88,
+      "rank_start": 64,
+      "size_bytes": 65536
+    },
+    {
+      "files": 35,
+      "group": "size_65536",
+      "id": "zipf_062",
+      "rank_end": 123,
+      "rank_start": 89,
+      "size_bytes": 65536
+    },
+    {
+      "files": 47,
+      "group": "size_65536",
+      "id": "zipf_063",
+      "rank_end": 170,
+      "rank_start": 124,
+      "size_bytes": 65536
+    },
+    {
+      "files": 66,
+      "group": "size_65536",
+      "id": "zipf_064",
+      "rank_end": 236,
+      "rank_start": 171,
+      "size_bytes": 65536
+    },
+    {
+      "files": 91,
+      "group": "size_65536",
+      "id": "zipf_065",
+      "rank_end": 327,
+      "rank_start": 237,
+      "size_bytes": 65536
+    },
+    {
+      "files": 126,
+      "group": "size_65536",
+      "id": "zipf_066",
+      "rank_end": 453,
+      "rank_start": 328,
+      "size_bytes": 65536
+    },
+    {
+      "files": 173,
+      "group": "size_65536",
+      "id": "zipf_067",
+      "rank_end": 626,
+      "rank_start": 454,
+      "size_bytes": 65536
+    },
+    {
+      "files": 238,
+      "group": "size_65536",
+      "id": "zipf_068",
+      "rank_end": 864,
+      "rank_start": 627,
+      "size_bytes": 65536
+    },
+    {
+      "files": 328,
+      "group": "size_65536",
+      "id": "zipf_069",
+      "rank_end": 1192,
+      "rank_start": 865,
+      "size_bytes": 65536
+    },
+    {
+      "files": 452,
+      "group": "size_65536",
+      "id": "zipf_070",
+      "rank_end": 1644,
+      "rank_start": 1193,
+      "size_bytes": 65536
+    },
+    {
+      "files": 620,
+      "group": "size_65536",
+      "id": "zipf_071",
+      "rank_end": 2264,
+      "rank_start": 1645,
+      "size_bytes": 65536
+    },
+    {
+      "files": 854,
+      "group": "size_65536",
+      "id": "zipf_072",
+      "rank_end": 3118,
+      "rank_start": 2265,
+      "size_bytes": 65536
+    },
+    {
+      "files": 1173,
+      "group": "size_65536",
+      "id": "zipf_073",
+      "rank_end": 4291,
+      "rank_start": 3119,
+      "size_bytes": 65536
+    },
+    {
+      "files": 1610,
+      "group": "size_65536",
+      "id": "zipf_074",
+      "rank_end": 5901,
+      "rank_start": 4292,
+      "size_bytes": 65536
+    },
+    {
+      "files": 2209,
+      "group": "size_65536",
+      "id": "zipf_075",
+      "rank_end": 8110,
+      "rank_start": 5902,
+      "size_bytes": 65536
+    },
+    {
+      "files": 3032,
+      "group": "size_65536",
+      "id": "zipf_076",
+      "rank_end": 11142,
+      "rank_start": 8111,
+      "size_bytes": 65536
+    },
+    {
+      "files": 4156,
+      "group": "size_65536",
+      "id": "zipf_077",
+      "rank_end": 15298,
+      "rank_start": 11143,
+      "size_bytes": 65536
+    },
+    {
+      "files": 5696,
+      "group": "size_65536",
+      "id": "zipf_078",
+      "rank_end": 20994,
+      "rank_start": 15299,
+      "size_bytes": 65536
+    },
+    {
+      "files": 2,
+      "group": "size_8388608",
+      "id": "zipf_079",
+      "rank_end": 2,
+      "rank_start": 1,
+      "size_bytes": 8388608
+    },
+    {
+      "files": 3,
+      "group": "size_8388608",
+      "id": "zipf_080",
+      "rank_end": 5,
+      "rank_start": 3,
+      "size_bytes": 8388608
+    },
+    {
+      "files": 8,
+      "group": "size_8388608",
+      "id": "zipf_081",
+      "rank_end": 13,
+      "rank_start": 6,
+      "size_bytes": 8388608
+    },
+    {
+      "files": 17,
+      "group": "size_8388608",
+      "id": "zipf_082",
+      "rank_end": 30,
+      "rank_start": 14,
+      "size_bytes": 8388608
+    },
+    {
+      "files": 38,
+      "group": "size_8388608",
+      "id": "zipf_083",
+      "rank_end": 68,
+      "rank_start": 31,
+      "size_bytes": 8388608
+    },
+    {
+      "files": 86,
+      "group": "size_8388608",
+      "id": "zipf_084",
+      "rank_end": 154,
+      "rank_start": 69,
+      "size_bytes": 8388608
+    },
+    {
+      "files": 194,
+      "group": "size_8388608",
+      "id": "zipf_085",
+      "rank_end": 348,
+      "rank_start": 155,
+      "size_bytes": 8388608
+    }
+  ],
+  "fragmentation": null,
+  "id": "ai_training_ses",
+  "phase_zipf": {
+    "alpha": 0.99,
+    "group_tv_distances": {
+      "size_1048576": 0.11752853761504375,
+      "size_1073741824": 0.07957222650531456,
+      "size_131072": 0.10006718026800619,
+      "size_134217728": 0.11472783576168351,
+      "size_2097152": 0.11295447753349498,
+      "size_65536": 0.07794712230476102,
+      "size_8388608": 0.11472783576168351
+    },
+    "max_bins": 255,
+    "max_fwd_per_rd": 256,
+    "min_files_per_group": {
+      "size_1048576": 2,
+      "size_1073741824": 2,
+      "size_131072": 4,
+      "size_134217728": 2,
+      "size_2097152": 2,
+      "size_65536": 4,
+      "size_8388608": 2
+    },
+    "phases": [
+      {
+        "fwd_count": 256,
+        "group_weights": {
+          "size_1048576": 0.0017108639863130885,
+          "size_1073741824": 0.3503849443969203,
+          "size_131072": 0.2977443609022558,
+          "size_134217728": 0.04379811804961505,
+          "size_2097152": 0.0013686911890504695,
+          "size_65536": 0.30225563909774433,
+          "size_8388608": 0.0027373823781009403
+        },
+        "name": "measure",
+        "tv_distance": 0.08692989845453997
+      }
+    ],
+    "scope": "fixed ranks within original business group or logical size class",
+    "tv_limit": 0.12
+  },
+  "profiles": {
+    "baseline": [
+      {
+        "end_s": 600,
+        "lanes": [
+          {
+            "bin": "zipf_000",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 9.826903999500795e-07,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_000",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 9.826903999500795e-07,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_001",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 9.826903999500795e-07,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_001",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 9.826903999500795e-07,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_002",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.4740355999251193e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_002",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 1.4740355999251193e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_003",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 2.456725999875199e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_003",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 2.456725999875199e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_004",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 9.826903999500796e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_004",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 9.826903999500796e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_005",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 2.7515331198602228e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_005",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 2.7515331198602228e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_006",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 7.468447039620604e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_006",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 7.468447039620604e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_007",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00020096018678979126,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_007",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00020096018678979126,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_008",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0005365489583727434,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_008",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0005365489583727434,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_009",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0010068532884968974,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_009",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010068532884968974,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_010",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001510279932745346,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_010",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001510279932745346,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_011",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001510279932745346,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_011",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001510279932745346,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_012",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0010068532884968974,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_012",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010068532884968974,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_013",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001510279932745346,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_013",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001510279932745346,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_014",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003523986509739141,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_014",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.003523986509739141,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_015",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005034266442484487,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_015",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.005034266442484487,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_016",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00805482630797518,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_016",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00805482630797518,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_017",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011075386173465873,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_017",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011075386173465873,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_018",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.017619932548695705,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_018",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.017619932548695705,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_019",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.025674758856670882,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_019",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.025674758856670882,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_020",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.039267278251379004,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_020",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.039267278251379004,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_021",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.05839749073282005,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_021",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.05839749073282005,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.8393856982882746e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.8393856982882746e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196928491441373e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 1.9196928491441373e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.8393856982882746e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.8393856982882746e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196928491441373e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 1.9196928491441373e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 6.718924972004481e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 6.718924972004481e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.3594624860022405e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 3.3594624860022405e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00011518157094864822,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00011518157094864822,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 5.759078547432411e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 5.759078547432411e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00020156774916013442,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00020156774916013442,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00010078387458006721,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00010078387458006721,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00035514317709166537,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00035514317709166537,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00017757158854583269,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00017757158854583269,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0002975523916173413,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0002975523916173413,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00014877619580867064,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00014877619580867064,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00039353703407454815,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00039353703407454815,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00019676851703727408,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00019676851703727408,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0005375139977603585,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0005375139977603585,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00026875699888017924,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00026875699888017924,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0007198848184290515,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0007198848184290515,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00035994240921452574,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00035994240921452574,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002284434490481523,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002284434490481523,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0011422172452407616,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0011422172452407616,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.004146536554151336,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.004146536554151336,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002073268277075668,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002073268277075668,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007525195968645018,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007525195968645018,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003762597984322509,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.003762597984322509,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013610622300431934,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013610622300431934,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006805311150215967,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.006805311150215967,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.024591265397536397,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.024591265397536397,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.012295632698768199,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.012295632698768199,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.04432570788673813,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.04432570788673813,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.022162853943369067,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.022162853943369067,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_038",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0001258566610621122,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_038",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0001258566610621122,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_039",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00018878499159316833,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_039",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00018878499159316833,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_040",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0005034266442484488,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_040",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0005034266442484488,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_041",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001069781619027954,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_041",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001069781619027954,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_042",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0023912765601801322,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_042",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0023912765601801322,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_043",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005411836425670826,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_043",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.005411836425670826,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_044",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.012208096123024885,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_044",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.012208096123024885,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_045",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.966510329095502e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_045",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 1.966510329095502e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_046",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.966510329095502e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_046",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 1.966510329095502e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_047",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 5.899530987286506e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_047",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 5.899530987286506e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_048",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.1799061974573012e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_048",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 1.1799061974573012e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_049",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.0480910100980285e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_049",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 3.0480910100980285e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_050",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 7.079437184743808e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_050",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 7.079437184743808e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_051",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00016813663313766544,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_051",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00016813663313766544,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_052",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0003933020658191004,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_052",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0003933020658191004,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196318890968492e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196318890968492e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 9.598159445484246e-06,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 9.598159445484246e-06,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196318890968492e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196318890968492e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 9.598159445484246e-06,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 9.598159445484246e-06,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196318890968492e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196318890968492e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 9.598159445484246e-06,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 9.598159445484246e-06,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196318890968492e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.9196318890968492e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 9.598159445484246e-06,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 9.598159445484246e-06,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.3593558059194865e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.3593558059194865e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.6796779029597433e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 1.6796779029597433e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 4.319171750467911e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 4.319171750467911e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 2.1595858752339556e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 2.1595858752339556e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 6.23880363956476e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 6.23880363956476e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.11940181978238e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 3.11940181978238e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 8.638343500935822e-05,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 8.638343500935822e-05,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 4.319171750467911e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 4.319171750467911e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00011997699306855308,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00011997699306855308,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 5.998849653427654e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 5.998849653427654e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00016796779029597432,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00016796779029597432,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 8.398389514798716e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 8.398389514798716e-05,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0002255567469688798,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0002255567469688798,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0001127783734844399,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0001127783734844399,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00031673926170098013,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00031673926170098013,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00015836963085049007,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00015836963085049007,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00043671625476953324,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00043671625476953324,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00021835812738476662,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00021835812738476662,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0006046840450655076,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0006046840450655076,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0003023420225327538,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0003023420225327538,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0008302407920343873,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0008302407920343873,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00041512039601719364,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00041512039601719364,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0011421809740126253,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0011421809740126253,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0005710904870063127,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0005710904870063127,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015740981490594164,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015740981490594164,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0007870490745297082,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0007870490745297082,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0021691840346794397,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0021691840346794397,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0010845920173397198,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0010845920173397198,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002975429428100117,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002975429428100117,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0014877147140500585,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0014877147140500585,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.004098414083221774,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.004098414083221774,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002049207041610887,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002049207041610887,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0056293205147765115,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0056293205147765115,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0028146602573882558,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0028146602573882558,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00772651835361482,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00772651835361482,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00386325917680741,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00386325917680741,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.010601167107537349,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.010601167107537349,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005300583553768674,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.005300583553768674,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.014550809719354118,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.014550809719354118,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.007275404859677059,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.007275404859677059,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.019944975327716264,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.019944975327716264,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.009972487663858132,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.009972487663858132,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.027335558100739135,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.027335558100739135,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.013667779050369568,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.013667779050369568,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_079",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 7.866041316382013e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_079",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 7.866041316382013e-06,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_080",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1.179906197457302e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_080",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 1.179906197457302e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_081",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 3.146416526552805e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_081",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 3.146416526552805e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_082",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 6.686135118924711e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_082",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 6.686135118924711e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_083",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00014945478501125824,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_083",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00014945478501125824,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_084",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00033823977660442654,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_084",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00033823977660442654,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_085",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0007630060076890552,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_085",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0007630060076890552,
+            "xfersize": 1048576
+          }
+        ],
+        "name": "measure",
+        "rate_multiplier": 1,
+        "seconds": 600,
+        "start_s": 0
+      }
+    ],
+    "current": [
+      {
+        "end_s": 600,
+        "lanes": [
+          {
+            "bin": "zipf_000",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0001544986886891926,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_000",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0001544986886891926,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_001",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 6.068085389809716e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_001",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 6.068085389809716e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_002",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 5.3290658596311764e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_002",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 5.3290658596311764e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_003",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 5.3649466303327224e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_003",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 5.3649466303327224e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_004",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00010115976935208794,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_004",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00010115976935208794,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_005",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00010712083255125587,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_005",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00010712083255125587,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_006",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00010798047437826079,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_006",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00010798047437826079,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_007",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00010838223545396447,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_007",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00010838223545396447,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_008",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0001086690139340453,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_008",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0001086690139340453,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_009",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.03987952035522862,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_009",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.03987952035522862,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_010",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.021054107917322127,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_010",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.021054107917322127,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_011",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011749728091288547,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_011",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011749728091288547,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_012",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005726947955222362,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_012",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.005726947955222362,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_013",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0068292734491151195,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_013",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0068292734491151195,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_014",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011392849037539982,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_014",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011392849037539982,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_015",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.010881669086172096,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_015",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.010881669086172096,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_016",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011598881710265683,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_016",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011598881710265683,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_017",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.010697843335778345,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_017",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.010697843335778345,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_018",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011443938671754264,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_018",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011443938671754264,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_019",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.01115335635662475,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_019",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.01115335635662475,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_020",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011424296790432551,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_020",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011424296790432551,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_021",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.011360059441715593,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_021",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.011360059441715593,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.020253714512789206,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.020253714512789206,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.010126857256394603,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_022",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.010126857256394603,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006250415265309005,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006250415265309005,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031252076326545026,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_023",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0031252076326545026,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005950531065883421,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005950531065883421,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0029752655329417107,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_024",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0029752655329417107,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005714904874176085,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005714904874176085,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0028574524370880423,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_025",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0028574524370880423,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0056885504432878,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0056885504432878,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0028442752216439,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_026",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0028442752216439,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005716869583129443,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005716869583129443,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0028584347915647213,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_027",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0028584347915647213,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031333186134543506,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031333186134543506,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015666593067271753,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_028",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015666593067271753,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0030632628900983346,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0030632628900983346,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015316314450491673,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_029",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015316314450491673,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003099841017488728,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003099841017488728,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001549920508744364,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_030",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001549920508744364,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0030770129339205993,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0030770129339205993,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015385064669602997,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_031",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015385064669602997,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00617612185722887,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00617612185722887,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003088060928614435,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_032",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.003088060928614435,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00618813174837362,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00618813174837362,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00309406587418681,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_033",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00309406587418681,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006210605943186128,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006210605943186128,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003105302971593064,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_034",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.003105302971593064,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006223754286659636,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006223754286659636,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003111877143329818,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_035",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.003111877143329818,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006242635553132401,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006242635553132401,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031213177765662004,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_036",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0031213177765662004,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006258449712634405,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.006258449712634405,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031292248563172024,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_037",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0031292248563172024,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_038",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.004984940044403579,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_038",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.004984940044403579,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_039",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0026317634896652663,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_039",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0026317634896652663,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_040",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0030382436869532546,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_040",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0030382436869532546,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_041",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0027843147654640107,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_041",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0027843147654640107,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_042",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002787090630755504,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_042",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002787090630755504,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_043",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0028246618785473777,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_043",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0028246618785473777,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_044",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002848044529018519,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_044",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.002848044529018519,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_045",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0001401470581276944,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_045",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0001401470581276944,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_046",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 5.504411222287371e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_046",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 5.504411222287371e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_047",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 8.036313369644563e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_047",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 8.036313369644563e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_048",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 7.298341315575074e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_048",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 7.298341315575074e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_049",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 8.364864471515898e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_049",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 8.364864471515898e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_050",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 8.305674618654507e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_050",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 8.305674618654507e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_051",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 8.44711572670522e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_051",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 8.44711572670522e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_052",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 8.463132915371364e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_052",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 8.463132915371364e-05,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.019108879384651195,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.019108879384651195,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.009554439692325598,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_053",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.009554439692325598,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005897112420210769,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.005897112420210769,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0029485562101053847,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_054",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0029485562101053847,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0035996358464501594,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0035996358464501594,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0017998179232250797,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_055",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0017998179232250797,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002600928764035267,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.002600928764035267,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0013004643820176335,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_056",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0013004643820176335,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003324089205999255,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003324089205999255,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0016620446029996276,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_057",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0016620446029996276,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0030584095802123723,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0030584095802123723,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015292047901061861,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_058",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015292047901061861,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003184464283169369,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003184464283169369,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015922321415846846,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_059",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015922321415846846,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003165372574712084,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003165372574712084,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001582686287356042,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_060",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001582686287356042,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031629590342977013,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031629590342977013,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015814795171488507,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_061",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015814795171488507,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031857174995592315,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031857174995592315,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015928587497796157,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_062",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015928587497796157,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003093137850074584,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003093137850074584,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001546568925037292,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_063",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001546568925037292,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003148614764837969,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003148614764837969,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015743073824189846,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_064",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015743073824189846,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031427592634427843,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031427592634427843,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015713796317213921,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_065",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015713796317213921,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031526919176191872,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031526919176191872,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015763459588095936,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_066",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015763459588095936,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003140063624398941,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003140063624398941,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015700318121994706,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_067",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015700318121994706,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031389894812763096,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031389894812763096,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015694947406381548,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_068",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015694947406381548,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031457183734789292,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031457183734789292,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015728591867394646,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_069",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015728591867394646,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031531853799367316,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031531853799367316,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015765926899683658,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_070",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015765926899683658,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003148874560448408,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003148874560448408,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001574437280224204,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_071",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001574437280224204,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031597610351905485,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031597610351905485,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015798805175952742,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_072",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015798805175952742,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003162804988778756,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003162804988778756,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001581402494389378,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_073",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001581402494389378,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031658130010406875,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031658130010406875,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015829065005203437,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_074",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015829065005203437,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031697508916270667,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031697508916270667,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015848754458135334,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_075",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015848754458135334,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003176380858269118,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003176380858269118,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001588190429134559,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_076",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001588190429134559,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031802656783570886,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0031802656783570886,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0015901328391785443,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_077",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0015901328391785443,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003185499437173516,
+            "xfersize": 8192
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.003185499437173516,
+            "xfersize": 32768
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.001592749718586758,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_078",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.001592749718586758,
+            "xfersize": 65536
+          },
+          {
+            "bin": "zipf_079",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00031155875277522364,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_079",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00031155875277522364,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_080",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00016448521810407914,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_080",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00016448521810407914,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_081",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.0001898902304345784,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_081",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.0001898902304345784,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_082",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00017401967284150064,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_082",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00017401967284150064,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_083",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00017419316442221898,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_083",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00017419316442221898,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_084",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00017654136740921108,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_084",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00017654136740921108,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_085",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 0.00017800278306365742,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "zipf_085",
+            "fileio": "sequential",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 0.00017800278306365742,
+            "xfersize": 1048576
+          }
+        ],
+        "name": "measure",
+        "rate_multiplier": 1,
+        "seconds": 600,
+        "start_s": 0
+      }
+    ]
+  },
+  "provenance": {
+    "adaptation": "SES 1.2.0 template-based storage workload with original read/write shares and added conditional Zipf; not standard SES certification",
+    "current_suite": {
+      "baseline_semantics": "uniform within compatible groups",
+      "design": "phase_zipf",
+      "revision": "2026-09-17",
+      "source_profile": "phase_zipf099"
+    },
+    "idfs_expansion": {
+      "actual_bytes": 429305495552,
+      "baleen_method": null,
+      "coverage": "600s timed access, not complete scans; generated probabilities do not guarantee measured object heat or classifier metrics",
+      "method": "increase logical file counts; keep logical size classes, timing, business shares and source read/write types; rebuild conditional Zipf bins",
+      "original_bytes": 123363000320,
+      "runtime": "unmodified Vdbench 5.04.07; integer transfer percentages; no SES framework",
+      "source_commit": "303e43e2e1c98cb74ec156af75ce2546faaa72eb",
+      "source_model_sha256": "df1154c2a1b5fc569eac95ac9541552a700b513b8fb0f0e2cdf8a67bf4bae6e8",
+      "target_bytes": 429496729600
+    },
+    "operation_mapping": "preserve source reads and writes; overwrite prepared synthetic files",
+    "ses_build": "1.2.0.25061615",
+    "ses_version": "1.2.0",
+    "source_case": "PERF_002",
+    "source_read_write_ratio": "70:30",
+    "source_write_to_read": false,
+    "templates": {
+      "inference": {
+        "path": "resource/io_model_param_file/vdbench/multi_thread_large_io_rw_as_infer.txt",
+        "sha256": "a7fdd9992c8dae7d6a2ea0768ab23107403d6ce7c5d93fdcecfc525eccb6682c"
+      },
+      "training": {
+        "path": "resource/io_model_param_file/vdbench/multi_thread_large_io_rw_as_mix.txt",
+        "sha256": "c2ec3a654ba3a354d457a935e1ba7a9823cb880bff04b65cc7e1c2bd4392f3c4"
+      }
+    },
+    "wheel_path": "storage_evaluation_system-1.2.0-py3-none-any.whl",
+    "wheel_sha256": "e21b30c18073becb34fca202b83d19b4507729f9d79414dedb1a98b2fca43813"
+  }
+}
