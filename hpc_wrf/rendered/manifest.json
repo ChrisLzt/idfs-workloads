@@ -1,0 +1,728 @@
+{
+  "access_engine": "user",
+  "asset_sha256": {
+    "file-map.csv": "a48bf1425e44a34e62fa33ed99a1fa67511f30dffe52f6602ce3e08df9ca3d06",
+    "vdbench": "9c5a2e9a9a5b729e2508e9d35ad396843906d1a34aa3db7bab6f07f8ed022c14",
+    "wrf-user.jar": "fafef09a042a454b53983e931c05c01592874fa69585f629547106ddefb8e457",
+    "wrf.timeline": "df9bc9d62fe456df8ebc4b52a3238f8904085d1596cb8341347b29771734678f"
+  },
+  "bins": [
+    {
+      "anchor": "/mnt/idfs/workloads_400g/hpc_wrf/container",
+      "files": 1,
+      "id": "container",
+      "size_bytes": 3417015582720
+    }
+  ],
+  "capacity_bytes": 3417015582720,
+  "config_sha256": {
+    "prepare_data.vdb": "9024932546de07743a5089af0743df14a68f6630860ff674703aac22ed004a4f",
+    "run_baseline.vdb": "f055d94f394ad6b810f4e0a834e021c885dcb602092866619988ac4509f10cd8",
+    "run_current.vdb": "f055d94f394ad6b810f4e0a834e021c885dcb602092866619988ac4509f10cd8"
+  },
+  "data_root": "/mnt/idfs/workloads_400g/hpc_wrf",
+  "file_count": 1,
+  "id": "hpc_wrf",
+  "layout_sha256": "5477dff1e73db564d3f2bff5bc1736ff4c3d47363bcf1d93121061fbf6eab0e4",
+  "max_prepare_fwd": 1,
+  "max_run_fwd": 0,
+  "max_run_wd": 1,
+  "model_sha256": "7503a3c95474213fd8ed5f9a899a7891495ba0baf430c970734101f3aecd9ac5",
+  "profiles": {
+    "baseline": [
+      {
+        "business_phases": [
+          {
+            "channels": [
+              {
+                "file": "member_01_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_02_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_03_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_04_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_05_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_06_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_07_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_08_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "lookup_qs",
+                "operation": "read",
+                "weight": 350126080
+              },
+              {
+                "file": "lookup_freeze",
+                "operation": "read",
+                "weight": 2039578624
+              }
+            ],
+            "end_s": 60,
+            "name": "startup",
+            "read_share": 1.0,
+            "seconds": 60,
+            "start_s": 0,
+            "write_share": 0.0
+          },
+          {
+            "channels": [
+              {
+                "file": "member_01_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_02_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_03_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_04_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_05_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_06_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_07_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_08_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_01_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_02_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_03_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_04_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_05_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_06_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_07_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_08_boundary",
+                "operation": "read",
+                "weight": 833781760
+              }
+            ],
+            "end_s": 150,
+            "name": "history_00h",
+            "read_share": 0.013229269492294613,
+            "seconds": 90,
+            "start_s": 60,
+            "write_share": 0.9867707305077054
+          },
+          {
+            "channels": [
+              {
+                "file": "member_01_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_02_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_03_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_04_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_05_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_06_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_07_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_08_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_01_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_02_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_03_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_04_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_05_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_06_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_07_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_08_boundary",
+                "operation": "read",
+                "weight": 833781760
+              }
+            ],
+            "end_s": 510,
+            "name": "checkpoint_05h",
+            "read_share": 0.0034628753092703535,
+            "seconds": 360,
+            "start_s": 150,
+            "write_share": 0.9965371246907296
+          },
+          {
+            "channels": [
+              {
+                "file": "member_01_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_02_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_03_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_04_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_05_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_06_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_07_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_08_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              }
+            ],
+            "end_s": 600,
+            "name": "history_06h",
+            "read_share": 0.0,
+            "seconds": 90,
+            "start_s": 510,
+            "write_share": 1.0
+          }
+        ],
+        "fwd_count": 0,
+        "name": "continuous",
+        "read_share": 0.10406211560940641,
+        "seconds": 600,
+        "share_basis": "time-weighted nominal; not a guarantee of measured totals",
+        "target_iops": "max",
+        "wd_count": 1,
+        "write_share": 0.8959378843905936
+      }
+    ],
+    "current": [
+      {
+        "business_phases": [
+          {
+            "channels": [
+              {
+                "file": "member_01_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_02_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_03_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_04_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_05_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_06_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_07_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "member_08_input",
+                "operation": "read",
+                "weight": 61921751040
+              },
+              {
+                "file": "lookup_qs",
+                "operation": "read",
+                "weight": 350126080
+              },
+              {
+                "file": "lookup_freeze",
+                "operation": "read",
+                "weight": 2039578624
+              }
+            ],
+            "end_s": 60,
+            "name": "startup",
+            "read_share": 1.0,
+            "seconds": 60,
+            "start_s": 0,
+            "write_share": 0.0
+          },
+          {
+            "channels": [
+              {
+                "file": "member_01_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_02_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_03_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_04_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_05_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_06_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_07_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_08_history_00h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_01_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_02_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_03_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_04_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_05_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_06_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_07_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_08_boundary",
+                "operation": "read",
+                "weight": 833781760
+              }
+            ],
+            "end_s": 150,
+            "name": "history_00h",
+            "read_share": 0.013229269492294613,
+            "seconds": 90,
+            "start_s": 60,
+            "write_share": 0.9867707305077054
+          },
+          {
+            "channels": [
+              {
+                "file": "member_01_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_02_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_03_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_04_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_05_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_06_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_07_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_08_checkpoint_05h",
+                "operation": "write",
+                "weight": 239943516160
+              },
+              {
+                "file": "member_01_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_02_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_03_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_04_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_05_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_06_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_07_boundary",
+                "operation": "read",
+                "weight": 833781760
+              },
+              {
+                "file": "member_08_boundary",
+                "operation": "read",
+                "weight": 833781760
+              }
+            ],
+            "end_s": 510,
+            "name": "checkpoint_05h",
+            "read_share": 0.0034628753092703535,
+            "seconds": 360,
+            "start_s": 150,
+            "write_share": 0.9965371246907296
+          },
+          {
+            "channels": [
+              {
+                "file": "member_01_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_02_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_03_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_04_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_05_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_06_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_07_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              },
+              {
+                "file": "member_08_history_06h",
+                "operation": "write",
+                "weight": 62191751168
+              }
+            ],
+            "end_s": 600,
+            "name": "history_06h",
+            "read_share": 0.0,
+            "seconds": 90,
+            "start_s": 510,
+            "write_share": 1.0
+          }
+        ],
+        "fwd_count": 0,
+        "name": "continuous",
+        "read_share": 0.10406211560940641,
+        "seconds": 600,
+        "share_basis": "time-weighted nominal; not a guarantee of measured totals",
+        "target_iops": "max",
+        "wd_count": 1,
+        "write_share": 0.8959378843905936
+      }
+    ]
+  },
+  "provenance": {
+    "adaptation": "NCAR WRF role/order-based synthetic I/O; eight member-specific states/outputs and shared read-only lookup tables; four timed activities; added all-object Zipf0.99; no original event replay",
+    "aligned_extent_bytes": 3416959123456,
+    "archive_sha256": "0742d474a242c33ddd2df6d882bf254c4c16c754417022718e220ecb173c706a",
+    "archive_url": "https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/v4.4_bench_conus2.5km.tar.gz",
+    "boundary_rule": "horizontally refined uncompressed boundary-field template read in0h-output and checkpoint activities; boundary updates coarsened into mixed phases",
+    "capacity_basis": "scientific files use1km and e_vert60 uncompressed array payloads; lookup tables retain verified published lengths; exclude NetCDF metadata/compression; no scientific values generated; eight member-specific scientific inventories and one shared lookup-table pair",
+    "channel_weights": "equal member scientific-role weights; shared table startup weights aggregate eight members; representative aligned file extents define request probabilities, not byte quotas",
+    "checkpoint_hours": [
+      5
+    ],
+    "container_padding_bytes": 56459264,
+    "grid": [
+      3751,
+      3001,
+      60
+    ],
+    "grid_refinement": {
+      "dimension_mapping": {
+        "bottom_top": [
+          49,
+          59
+        ],
+        "bottom_top_stag": [
+          50,
+          60
+        ],
+        "south_north": [
+          1200,
+          3000
+        ],
+        "south_north_stag": [
+          1201,
+          3001
+        ],
+        "west_east": [
+          1500,
+          3750
+        ],
+        "west_east_stag": [
+          1501,
+          3751
+        ]
+      },
+      "horizontal_factor": 2.5,
+      "rule": "same projected horizontal extent; explicit mass/stagger dimension mapping; e_vert50 to60 means49 to59 mass levels and50 to60 staggered levels; preserve fields/dtypes/other axes/time records; sum shape*dtype excluding dimension scales",
+      "vertical_grid_points": [
+        50,
+        60
+      ]
+    },
+    "history_hours": [
+      0,
+      6
+    ],
+    "limitation": "repeated Zipf writes are a controlled adaptation, not complete scientific snapshot generation; coverage/counts/whole-run mix depend on actual performance",
+    "native_trace": false,
+    "object_mapping": "each logical file starts at4MiB and owns whole exclusive objects; runtime does not access slot padding",
+    "profiles": "current and baseline are compatibility names for the same approved Zipf plan",
+    "simulated_hours": 6,
+    "source": "https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/benchdata_v44.html",
+    "source_grid": [
+      1501,
+      1201,
+      50
+    ],
+    "source_limitations": [
+      "1km-e_vert60 is a synthetic refinement of the verified official2.5km field schema, not an official1km CONUS benchmark, measured file length or validated new weather simulation",
+      "e_vert60 denotes60 staggered vertical points and59 mass layers; mass and staggered dimensions are mapped separately, not all vertical arrays multiplied by1.2",
+      "0h history size uses final-hour field schema as a representative uncompressed template; not a measured original0h file length",
+      "qgV3 lookup referenced by original log is not supplied with matching name; no invented size or access mapping",
+      "boundary uses one refined uncompressed-field synthetic template in both relevant activities; no claimed per-time-record compressed byte offsets",
+      "User samples synthetic object regions, not native WRF file offsets or request frequencies"
+    ],
+    "source_metadata_sha256": "ebdf6835fce5bdd531b64cda85539d564e04d04e288f5988c79a4e8114f07aff",
+    "source_spacing_m": 2500,
+    "source_summary_sha256": "3fe37da21d18e3f4816c51268605eb948710e582d32fd5312eb7452ab681a0ff",
+    "spacing_m": 1000,
+    "template_bytes": 3416959011392,
+    "timeline_rule": "memory-computation gaps compressed; 60/90/360/90s storage budgets; same activity throughout each1s slice; no quota or per-second rank reset",
+    "transfer_rule": "synthetic1MiB requests inside a selected object; final sub-block shortened to actual4KiB-aligned extent; not measured native WRF sizes",
+    "workload_label": "WRF CONUS-derived1km-e_vert60 eight-member synthetic Zipf",
+    "zipf_scope": "fixed seeded permutation of all object ranks within each logical file; history0/6 use the same relative rank permutation"
+  },
+  "rate": "max",
+  "schema": 1,
+  "total_run_wd": 1
+}

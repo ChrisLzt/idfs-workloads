@@ -1,4 +1,4 @@
-"""Pure validation and deterministic Vdbench emission for IDFS 400 GiB."""
+"""Pure validation and deterministic emission for source-sized IDFS workloads."""
 from __future__ import annotations
 
 from collections import Counter
@@ -44,8 +44,28 @@ def _name(value):
         raise ValueError(f"invalid identifier: {value!r}")
 
 
+def max_wd_channels(model):
+    """Only the explicit FlashGraph temporal plan may exceed the default budget."""
+    limit = model.get('spatial_native', {}).get('max_channels', MAX_FWD)
+    if (type(limit) is not int or limit not in (256, 512)
+            or (limit == 512 and (model.get('id') != 'graph_flashgraph'
+                or model.get('access_engine') != 'sd_wd'
+                or model['spatial_native'].get('source_schema') != 2))):
+        raise ValueError('only FlashGraph schema 2 permits 512 total WD channels; default is 256')
+    return limit
+
+
 def validate_model(model):
+    if model.get('id')=='graph_zipf':
+        from .graph_zipf import validate_model as validate_graph
+        return validate_graph(model)
     _name(model['id'])
+    spatial=model.get('access_engine')=='sd_wd'
+    if model.get('access_engine','fsd_fwd') not in ('fsd_fwd','sd_wd','user'):
+        raise ValueError('unknown access engine')
+    if model.get('access_engine')=='user':
+        from .user_engine import implementation
+        implementation(model).validate_model(model)
     bins = model['bins']
     if not bins or len({b['id'] for b in bins}) != len(bins):
         raise ValueError('bins must be nonempty and unique')
@@ -63,6 +83,8 @@ def validate_model(model):
         _name(profile)
         if not phases or len({p['name'] for p in phases}) != len(phases):
             raise ValueError('profile phases must be nonempty and unique')
+        if spatial and sum(len(p['lanes']) for p in phases)>max_wd_channels(model):
+            raise ValueError(f'spatial profile exceeds {max_wd_channels(model)} total WD channels')
         for phase in phases:
             _name(phase['name'])
             _positive(phase['seconds'], 'elapsed', True)
@@ -101,6 +123,11 @@ def validate_model(model):
                         raise ValueError('transfer must be aligned and fit every file in its bin')
                 if 'stopafter' in lane:
                     _positive(lane['stopafter'], 'stopafter', True)
+                if spatial:
+                    from .sd_wd import validate_lane
+                    if b['files']!=1:
+                        raise ValueError('spatial SD/WD requires one physical file per source identity')
+                    validate_lane(lane,b['size_bytes'])
             for key, count in concurrency.items():
                 if count > lookup[key]['files']:
                     if not all(l.get('file_sharing') for l in lanes if l['bin']==key):
@@ -127,7 +154,7 @@ def percentages(weights):
 
 
 def transfer_percentages(weights):
-    """Round transfer percentages for the stock 5.04.07 integer sampler.
+    """Round transfer percentages for the stock Vdbench integer sampler.
 
     Correct rounding residuals by largest under/over-allocation; ties retain
     input order. Zero categories are omitted by the renderer, not forced to 1%.
@@ -151,7 +178,10 @@ def transfer_percentages(weights):
 
 
 def _header(model, data_root, prepare):
-    label = 'IDFS Region7' if model.get('capacity_policy', {}).get('kind') == 'trace_inventory' else 'IDFS 400 GiB'
+    label = ('IDFS '+model.get('provenance',{}).get('trace_label','Region7')
+             if model.get('capacity_policy', {}).get('kind') == 'trace_inventory' else 'IDFS 400 GiB')
+    if model.get('capacity_policy', {}).get('kind') in ('parametric_inventory', 'aligned_container_inventory'):
+        label = 'IDFS '+model['provenance']['workload_label']
     lines = [f"* {label} {model['id']}; synthetic workload with source read/write semantics",
              'data_errors=1', 'messagescan=no', f"create_anchors={'yes' if prepare else 'no'}",
              'fsd=default,depth=1,width=1,shared=yes,openflags=o_direct']
@@ -160,8 +190,12 @@ def _header(model, data_root, prepare):
     return lines
 
 
-def config_texts(model, data_root, rate):
+def config_texts(model, data_root, rate, *, runtime_root=None):
+    if model.get('id')=='graph_zipf':
+        from .graph_zipf import config_texts as graph_texts
+        return graph_texts(model,data_root,rate,runtime_root)
     validate_model(model)
+    file_counts = {b['id']: b['files'] for b in model['bins']}
     if rate != 'max':
         _positive(rate, 'target mean IOPS')
     texts = {}
@@ -175,6 +209,15 @@ def config_texts(model, data_root, rate):
     texts['prepare_data.vdb'] = '\n'.join(lines) + '\n'
     profiles = {}
     for profile, phases in model['profiles'].items():
+        if model.get('access_engine')=='user':
+            from .user_engine import implementation
+            runtime=runtime_root if runtime_root is not None else Path(__file__).parents[1]/model['id']/'rendered'
+            texts[f'run_{profile}.vdb'],profiles[profile]=implementation(model).render_profile(model,data_root,phases,rate,runtime)
+            continue
+        if model.get('access_engine')=='sd_wd':
+            from .sd_wd import render_profile
+            texts[f'run_{profile}.vdb'],profiles[profile]=render_profile(model,data_root,phases,rate)
+            continue
         lines = _header(model, data_root, False)
         rds = []
         profiles[profile] = []
@@ -188,7 +231,12 @@ def config_texts(model, data_root, rate):
                     xfer = '(' + ','.join(f'{pair[0]},{pct}' for pair, pct in zip(xfer, pcts) if pct > 0) + ')'
                 suffix = f",stopafter={lane['stopafter']}" if 'stopafter' in lane else ''
                 fileio = '(random,shared)' if lane.get('file_sharing') else lane['fileio']
-                lines.append(f"fwd={prefix}{lane_index:04d},fsd={lane['bin']},operation={lane.get('operation', 'read')},threads=1,xfersize={xfer},fileio={fileio},fileselect={lane['fileselect']},skew={skew}{suffix}")
+                fileselect = lane['fileselect']
+                # 5.04.06 forbids shared random I/O with random file selection.
+                # A singleton bin always selects the same file with either selector.
+                if lane.get('file_sharing') and file_counts[lane['bin']] == 1:
+                    fileselect = 'sequential'
+                lines.append(f"fwd={prefix}{lane_index:04d},fsd={lane['bin']},operation={lane.get('operation', 'read')},threads=1,xfersize={xfer},fileio={fileio},fileselect={fileselect},skew={skew}{suffix}")
             phase_rate = 'max' if rate == 'max' else format(rate * phase.get('rate_multiplier', 1), '.12g')
             rds.append(f"rd={prefix}{phase['name']},fwd={prefix}*,fwdrate={phase_rate},format=no,elapsed={phase['seconds']},interval=1")
             total = math.fsum(l['weight'] for l in phase['lanes'])
@@ -199,12 +247,18 @@ def config_texts(model, data_root, rate):
     return texts, profiles
 
 
-def render(model, *, data_root, output, rate=100):
+def render(model, *, data_root, output, rate=100, data_file=None, clients=None, threads=64, stock_home=None):
+    if model.get('id')=='graph_zipf':
+        from .graph_zipf import render as render_graph
+        return render_graph(model,data_root=data_root,output=output,rate=rate,data_file=data_file,
+                            clients=clients,threads=threads,stock_home=stock_home)
+    if data_file is not None or clients is not None or threads!=64 or stock_home is not None:
+        raise ValueError('existing-file/client options apply only to the graph Zipf workload')
     data_root, output = safe_path(data_root), safe_path(output)
     if output == data_root or data_root in output.parents or output in data_root.parents:
         raise ValueError('configuration and data directories must be separate')
     capacity = validate_model(model)
-    texts, profiles = config_texts(model, data_root, rate)
+    texts, profiles = config_texts(model, data_root, rate, runtime_root=output)
     layout = [{'id':b['id'], 'files':b['files'], 'size_bytes':b['size_bytes'], 'anchor':str(data_root/b['id'])} for b in model['bins']]
     manifest = {'schema':1, 'id':model['id'], 'data_root':str(data_root), 'capacity_bytes':capacity,
                 'file_count':sum(b['files'] for b in layout), 'bins':layout, 'profiles':profiles,
@@ -213,7 +267,14 @@ def render(model, *, data_root, output, rate=100):
                 'layout_sha256':digest(json_text(layout)), 'model_sha256':digest(json_text(model)),
                 'provenance':model.get('provenance', {}),
                 'config_sha256':{name:digest(text) for name,text in texts.items()}}
+    if model.get('access_engine') in ('sd_wd','user'):
+        manifest['access_engine']=model['access_engine']
+        manifest['max_run_wd']=max(p['wd_count'] for phases in profiles.values() for p in phases)
+        manifest['total_run_wd']=max(sum(p['wd_count'] for p in phases) for phases in profiles.values())
     output.mkdir(parents=True, exist_ok=True)
+    if model.get('access_engine')=='user':
+        from .user_engine import implementation
+        manifest['asset_sha256']=implementation(model).materialize(model,output)
     for name, text in {**texts, 'model.json':json_text(model), 'manifest.json':json_text(manifest)}.items():
         destination = safe_path(output/name)
         destination.write_text(text)
@@ -225,6 +286,9 @@ def validate_bundle(output):
     """Verify all emitted bytes against the pure model, not only stored checksums."""
     output = Path(output)
     manifest = json.loads((output/'manifest.json').read_text())
+    if manifest.get('id')=='graph_zipf':
+        from .graph_zipf import validate_bundle as validate_graph
+        return validate_graph(output)
     model = json.loads((output/'model.json').read_text())
     if digest(json_text(model)) != manifest['model_sha256']:
         raise ValueError('model checksum differs from manifest')
@@ -234,13 +298,25 @@ def validate_bundle(output):
     layout = [{'id':b['id'], 'files':b['files'], 'size_bytes':b['size_bytes'], 'anchor':str(data_root/b['id'])} for b in model['bins']]
     if layout != manifest['bins'] or digest(json_text(layout)) != manifest['layout_sha256']:
         raise ValueError('layout mismatch')
-    texts, profiles = config_texts(model, data_root, manifest['rate'])
+    texts, profiles = config_texts(model, data_root, manifest['rate'], runtime_root=output)
     if profiles != manifest['profiles'] or set(texts) != set(manifest['config_sha256']):
         raise ValueError('profile/config inventory mismatch')
+    if model.get('access_engine') in ('sd_wd','user'):
+        if (manifest.get('access_engine')!=model['access_engine']
+                or manifest.get('max_run_fwd')!=0
+                or manifest.get('max_run_wd')!=max(p['wd_count'] for ps in profiles.values() for p in ps)
+                or manifest.get('total_run_wd')!=max(sum(p['wd_count'] for p in ps) for ps in profiles.values())):
+            raise ValueError('spatial engine/channel inventory mismatch')
+    if model.get('access_engine')=='user':
+        from .user_engine import implementation
+        implementation(model).validate_assets(model,output,manifest.get('asset_sha256'))
     from .validate_vdbench import validate_prepare_text, validate_run_text
     for name, expected in texts.items():
         actual = (output/name).read_text()
         if actual != expected or digest(actual) != manifest['config_sha256'][name]:
             raise ValueError(f'generated configuration was changed: {name}')
-        (validate_prepare_text if name.startswith('prepare') else validate_run_text)(actual)
+        if name.startswith('prepare'):
+            validate_prepare_text(actual)
+        else:
+            validate_run_text(actual, max_sd_wd_channels=max_wd_channels(model))
     return manifest

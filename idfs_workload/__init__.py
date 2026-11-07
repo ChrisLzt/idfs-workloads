@@ -1,1 +1,1 @@
-"""Self-contained IDFS 400 GiB workload suite derived from current SINGLE."""
+"""Self-contained IDFS suite with trace-native and business-template workloads."""

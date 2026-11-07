@@ -1,0 +1,92 @@
+{
+  "access_engine": "user",
+  "asset_sha256": {
+    "graph-zipf-user.jar": "4a9535c8015b3ab60d9466149ece2f45347e9b4d204307c606142300162f72b4",
+    "runtime.json": "5b5fd98d19cdd2cfcaf3420581c68b84829c63fa9598d0601b5ae40d31aa3667",
+    "stock-home": "f125e283e1cfa2608438f0ed15bfaa7e76480bea0632e733e744cc72090c2844",
+    "vdbench": "7ce4aa1cf2e57ca61ca1f500e8642bddef3595a3cff19d1701747cc8630c9a14"
+  },
+  "bins": [
+    {
+      "anchor": "/mnt/idfs/workloads/graph",
+      "file": "/mnt/idfs/workloads/graph/test.graph.edge.props",
+      "files": 1,
+      "id": "edges",
+      "size_bytes": 4398046511104
+    }
+  ],
+  "capacity_bytes": 4398046511104,
+  "config_sha256": {
+    "run_baseline.vdb": "0577932d01c819f71305d558f86ffec1c6d53502091faa0543aaba08c0285928",
+    "run_current.vdb": "a12eb8d49d5d22cae9db92da067b497ae126aa7f3324127c346df6c0f2c0ebf1"
+  },
+  "data_file": "/mnt/idfs/workloads/graph/test.graph.edge.props",
+  "data_root": "/mnt/idfs/workloads/graph",
+  "file_count": 1,
+  "id": "graph_zipf",
+  "input_policy": {
+    "layout": {
+      "object_size": 4194304,
+      "stripe_count": 1,
+      "stripe_unit": 4194304
+    },
+    "mode": "existing_file",
+    "prepare_allowed": true,
+    "relative_file": "test.graph.edge.props"
+  },
+  "layout_sha256": "61504e608854ab1601c391d4475f69862bb5ca64cc5aaa7165d8c1af946c14e4",
+  "max_prepare_fwd": 0,
+  "max_run_fwd": 0,
+  "max_run_wd": 1,
+  "model_sha256": "4933b9b09e63912bb3f2a7d291d493d46e181cd8386af624d82ac75adf9f7eae",
+  "profiles": {
+    "baseline": [
+      {
+        "fwd_count": 0,
+        "name": "uniform_all",
+        "read_share": 1.0,
+        "seconds": 600,
+        "target_iops": "max",
+        "wd_count": 1,
+        "write_share": 0.0
+      }
+    ],
+    "current": [
+      {
+        "fwd_count": 0,
+        "name": "zipf_all",
+        "read_share": 1.0,
+        "seconds": 600,
+        "target_iops": "max",
+        "wd_count": 1,
+        "write_share": 0.0
+      }
+    ]
+  },
+  "provenance": {
+    "adaptation": "4TiB;shared global object Zipf0.99;O_DIRECT;600s single RD;max rate",
+    "document": "课题5-测试大纲V1.2.docx",
+    "document_sha256": "ad02252820b46cf234269eda4133a17d30e2a9c860f78fd377bb481e7e2afc87",
+    "limitation": "application request distribution;actual coverage and module metrics require measurement",
+    "preparation": "separate explicit preparer or external tool;never part of timed test;write transfer size is configurable",
+    "scope": "synthetic storage I/O based on supplied outline;not a graph algorithm or native trace",
+    "sections": [
+      "7.1.12",
+      "7.1.13",
+      "A.6 Graph_IOPS.vdb"
+    ],
+    "source_semantics": "shared edge-property file;32-byte random reads",
+    "workload_label": "4TiB shared graph I/O with object Zipf"
+  },
+  "rate": "max",
+  "runtime": {
+    "clients": [
+      "localhost"
+    ],
+    "stock_home": "/home/chris/PDSL/vdbench50406",
+    "threads": 64
+  },
+  "schema": 1,
+  "sd_count": 1,
+  "total_run_wd": 1
+}

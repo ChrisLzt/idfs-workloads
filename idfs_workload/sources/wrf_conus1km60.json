@@ -1,0 +1,126 @@
+{
+  "archive_sha256": "0742d474a242c33ddd2df6d882bf254c4c16c754417022718e220ecb173c706a",
+  "archive_url": "https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/v4.4_bench_conus2.5km.tar.gz",
+  "capacity_scope": "scientific files use1km and e_vert60 uncompressed array payloads; lookup tables retain verified published lengths; exclude NetCDF metadata/compression; no scientific values generated",
+  "case": "NCAR WRF v4.4 CONUS2.5km-derived1km-e_vert60 synthetic model",
+  "checkpoint_hours": [
+    5
+  ],
+  "grid": [
+    3751,
+    3001,
+    60
+  ],
+  "history_hours": [
+    0,
+    6
+  ],
+  "limitations": [
+    "1km-e_vert60 is a synthetic refinement of the verified official2.5km field schema, not an official1km CONUS benchmark, measured file length or validated new weather simulation",
+    "e_vert60 denotes60 staggered vertical points and59 mass layers; mass and staggered dimensions are mapped separately, not all vertical arrays multiplied by1.2",
+    "0h history size uses final-hour field schema as a representative uncompressed template; not a measured original0h file length",
+    "qgV3 lookup referenced by original log is not supplied with matching name; no invented size or access mapping",
+    "boundary uses one refined uncompressed-field synthetic template in both relevant activities; no claimed per-time-record compressed byte offsets",
+    "User samples synthetic object regions, not native WRF file offsets or request frequencies"
+  ],
+  "logical_files": [
+    {
+      "id": "input",
+      "rank_seed": 101,
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "source_name": "wrfinput_d01",
+      "template_bytes": 61921748319
+    },
+    {
+      "id": "lookup_qs",
+      "rank_seed": 102,
+      "size_basis": "published_file_length",
+      "source_name": "qr_acr_qsV2.dat",
+      "template_bytes": 43764288
+    },
+    {
+      "id": "lookup_freeze",
+      "rank_seed": 103,
+      "size_basis": "published_file_length",
+      "source_name": "freezeH2O.dat",
+      "template_bytes": 254944848
+    },
+    {
+      "id": "boundary",
+      "rank_seed": 104,
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "source_name": "wrfbdy_d01",
+      "template_bytes": 833778994
+    },
+    {
+      "id": "history_00h",
+      "rank_seed": 105,
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "id": "checkpoint_05h",
+      "rank_seed": 106,
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "source_name": "wrfrst_d01_2019-11-26_23:00:00.gnu",
+      "template_bytes": 239943516151
+    },
+    {
+      "id": "history_06h",
+      "rank_seed": 105,
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    }
+  ],
+  "metadata_sha256": "ebdf6835fce5bdd531b64cda85539d564e04d04e288f5988c79a4e8114f07aff",
+  "schema": 1,
+  "simulated_hours": 6,
+  "spacing_m": 1000,
+  "website": "https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/benchdata_v44.html",
+  "source_grid": [
+    1501,
+    1201,
+    50
+  ],
+  "source_spacing_m": 2500,
+  "derived_from": {
+    "file": "wrf_conus2p5km.json",
+    "sha256": "1f303ed16f0cb9ad5676b700d80cd850516d7871b1e23499d1f0dee3098c71d4"
+  },
+  "refinement": {
+    "horizontal_factor": 2.5,
+    "vertical_grid_points": [
+      50,
+      60
+    ],
+    "dimension_mapping": {
+      "west_east": [
+        1500,
+        3750
+      ],
+      "west_east_stag": [
+        1501,
+        3751
+      ],
+      "south_north": [
+        1200,
+        3000
+      ],
+      "south_north_stag": [
+        1201,
+        3001
+      ],
+      "bottom_top": [
+        49,
+        59
+      ],
+      "bottom_top_stag": [
+        50,
+        60
+      ]
+    },
+    "rule": "same projected horizontal extent; explicit mass/stagger dimension mapping; e_vert50 to60 means49 to59 mass levels and50 to60 staggered levels; preserve fields/dtypes/other axes/time records; sum shape*dtype excluding dimension scales"
+  }
+}

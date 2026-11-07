@@ -1,34 +1,29 @@
 # IDFS 存储负载
 
-本仓库面向冷热数据识别实验，包含大数据、图计算、高性能计算、人工智能四类业务，共五种存储访问负载。
-设计依据分别来自真实生产 trace、GraphChi 论文、WRF 官方资料以及 CCF-SES 测试模板。
+本仓库面向对象冷热识别与缓存实验，包含大数据、图计算、高性能计算、AI训练和AI推理五种存储负载。设计分别依据生产访问记录、QB认知域作战属性图访问模型、NCAR官方WRF资料和CCF-SES模板。
 
-## 负载来源
+## 来源与规模
 
-| 类别 | 负载 | 来源 | 数据容量 |
-|---|---|---|---:|
-| 大数据 | [Baleen](bigdata_baleen/README.md) | [Baleen（FAST 2024）](https://www.usenix.org/conference/fast24/presentation/wong)及其公开的 Region7 trace | 约361.34 GiB |
-| 图计算 | [GraphChi](graph_graphchi_psw/README.md) | [GraphChi（OSDI 2012）](https://www.usenix.org/system/files/conference/osdi12/osdi12-final-126.pdf)的 PSW 方法 | 400 GiB |
-| 高性能计算 | [WRF 天气预报](hpc_wrf_continuous/README.md) | [WRF 官方运行指南](https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/running_wrf.html) | 400 GiB |
-| 人工智能 | [AI训练](ai_training_ses/README.md) | [CCF-SES](https://ses.ccf.org.cn/) 1.2.0 的 PERF_002 模板 | 约399.82 GiB |
-| 人工智能 | [AI推理](ai_inference_ses/README.md) | [CCF-SES](https://ses.ccf.org.cn/) 1.2.0 的 PERF_003 模板 | 399 GiB |
+| 负载 | 来源依据 | 文件／容器容量 | 4MiB对象位置数 |
+|---|---|---:|---:|
+| [大数据 Baleen](bigdata_baleen/README.md) | [Baleen，FAST 2024](https://www.usenix.org/conference/fast24/presentation/wong)及其[Region2数据仓库公开记录](https://ftp.pdl.cmu.edu/pub/datasets/Baleen24/storage_all/storage_all_Region2.tar.gz)，在完整时间轴上整键抽样 | 约5.000 TiB | 1,310,719 |
+| [图计算](graph_zipf/README.md) | QB认知域作战属性图的共享边属性文件与32字节随机读取模型 | 4.000 TiB | 1,048,576 |
+| [高性能计算 WRF](hpc_wrf/README.md) | [NCAR WRF v4.4 CONUS benchmark](https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/benchdata_v44.html)的科学字段和文件角色；采用1km、60层、8成员集合预报设计 | 约3.108 TiB | 814,680 |
+| [AI训练](ai_training_ses/README.md) | [CCF-SES 1.2.0](https://ses.ccf.org.cn/) PERF_002的文件大小类别、读写及请求大小配比 | 容器约5.652 TiB；有效数据约4.295 TiB | 1,481,601 |
+| [AI推理](ai_inference_ses/README.md) | [CCF-SES 1.2.0](https://ses.ccf.org.cn/) PERF_003的文件大小类别、读写及请求大小配比 | 4.500 TiB | 1,179,648 |
 
-每种负载持续600秒，保留相应来源中的读取和写入角色。五种负载总容量约1960.16 GiB。
+五项总容量约22.260 TiB。对象位置数表示按4MiB布局可容纳的对象库存，实际访问对象数取决于600秒内完成的请求。
 
-## 业务访问特征
+## 访问结构与冷热设计
 
-- **Baleen**：依据 Meta 生产存储系统的公开访问记录，保留 GET 读取、PUT 写入及样本原生访问频率差异。
-- **GraphChi**：按照 PSW 的区间处理过程，访问当前 shard 和其他 shard 的对应窗口，并描述活跃边的加载与写回。
-- **WRF**：围绕预报运行中的初始输入、边界更新、history 输出和 restart 保存组织访问。
-- **AI训练**：按照 PERF_002 的小文件、大文件顺序读写组合设计，读写请求比例为70%和30%。
-- **AI推理**：按照 PERF_003 的顺序读写与随机读取组合设计，读写请求比例为80%和20%。
+- **Baleen**：保留705,130个键的原生GET／PUT、偏移、请求大小和频率，原始时间轴映射至600秒，内部每秒更新对应区间的概率。各键独占4MiB对齐对象区间，不额外添加Zipf。采用频率采样保留热点变化。
+- **图计算**：预先准备一份4TiB共享边属性文件，正式阶段持续600秒，每次随机读取32字节。在全文件对象集合上添加Zipf(0.99)，所有客户端共享固定热点排名。最热20%库存对象的理论请求份额约88.13%。
+- **WRF**：42个逻辑文件分别表示8个预报成员的输入、边界、两次history、checkpoint及共享查找表。600秒内依次安排启动0–60秒、第0小时history 60–150秒、checkpoint及边界读取150–510秒、第6小时history 510–600秒。在当前活动文件内部添加对象级Zipf(0.99)，热点随业务角色切换。
+- **AI训练**：七种逻辑文件大小类别，382,965个逻辑文件；小文件／大文件请求占比60%／40%，总读写比70%／30%。每个文件大小类别内部采用对象级Zipf(0.99)，逐I/O独立随机重选对象和合法偏移。
+- **AI推理**：三种逻辑文件大小类别，4,007个逻辑文件；总读写比80%／20%，64KiB和128KiB请求各占一半。每个文件大小类别内部采用对象级Zipf(0.99)，逐I/O独立随机重选对象和合法偏移。
 
-## 冷热分布
+WRF和两项AI采用业务结构驱动的合成访问；图计算采用属性访问模型并添加可控冷热倾斜。两项AI保留SES的文件类别和请求配比，访问方式统一适配为纯随机。Baleen采用生产记录的原生频率，采样访问不保证逐事件顺序。
 
-Baleen 使用所选 trace 的原生访问统计，不额外施加 Zipf。
-GraphChi、WRF、AI训练和AI推理在各自业务文件集合或文件大小类别内添加文件级 Zipf(0.99)，
-使业务访问结构与文件冷热差异同时体现。
+五项统一采用原版Vdbench 5.04.06与独立User模块、单个600秒RD、O_DIRECT和最大速率，不设置逐秒请求配额。访问生成种子为1048596；Baleen来源键选择参数另行保存在清单中。各负载均提供独立造数、就绪检查及测试入口，数据可提前准备后等待测试。
 
-容量、600秒时长、阶段划分以及附加的 Zipf 倾斜属于本测试的设计选择。
-各出处提供业务结构或访问模板；这些参数不代表论文、官方指南或 SES 对所有业务的统一规定。
-本实验描述存储访问特征，具体来源与模拟范围见各负载说明。
+操作步骤见[使用说明](USAGE.md)，五份[科学数据汇交计划](docs/scientific-data/README.md)按各负载分别提供。

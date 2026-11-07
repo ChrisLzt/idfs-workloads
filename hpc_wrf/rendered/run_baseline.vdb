@@ -1,0 +1,8 @@
+* NCAR-derived WRF synthetic four-activity object Zipf0.99; stock5.04.06 User
+data_errors=1
+messagescan=no
+formatsds=no
+hd=default,jvms=1,vdbench=/home/chris/idfs-workloads/hpc_wrf/rendered
+sd=wrf,lun=/mnt/idfs/workloads_400g/hpc_wrf/container/vdb.1_1.dir/vdb_f0000.file,size=3417015582720,threads=64,openflags=o_direct,offset=0,align=4096
+wd=synthetic,sd=wrf,xfersize=1048576,seekpct=100,rdpct=50,skew=100,user=(idfswrf.TimelineWorkload,wrf.timeline,seed1048596)
+rd=continuous,wd=synthetic*,iorate=max,elapsed=600,interval=1,warmup=0

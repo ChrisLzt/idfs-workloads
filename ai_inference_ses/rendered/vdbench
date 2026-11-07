@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+runtime_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+stock_home=${VDBENCH_HOME:-/home/chris/PDSL/vdbench50406}
+stock_jar="$stock_home/vdbench.jar"
+observed=$(sha256sum -- "$stock_jar")
+expected=8a87321b1b3cd6b60a5251a149359b628dd95a52b93efd7a990703478cfbf4d5
+if [[ ${observed%% *} != "$expected" ]]; then
+  printf '%s\n' 'SES User workloads require unmodified Vdbench 5.04.06.' >&2
+  exit 2
+fi
+if [[ -x "$stock_home/jre/bin/java" ]]; then
+  runtime_java="$stock_home/jre/bin/java"
+else
+  runtime_java="${JAVA_HOME:-/usr}/bin/java"
+fi
+main=Vdb.Vdbmain
+heap=${VDBENCH_MAIN_XMX:-512m}
+if [[ ${1:-} == SlaveJvm ]]; then
+  main=Vdb.SlaveJvm
+  heap=${VDBENCH_SLAVE_XMX:-2048m}
+fi
+cd -- "$runtime_dir"
+# Original classes stay first, including their native-library lookup.
+exec "$runtime_java" -XX:-UsePerfData -Xms128m -Xmx"$heap" \
+  -cp "$stock_jar:$runtime_dir/ai-user.jar" "$main" "$@"

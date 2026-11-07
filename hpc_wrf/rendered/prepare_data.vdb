@@ -1,0 +1,9 @@
+* IDFS WRF CONUS-derived1km-e_vert60 eight-member synthetic Zipf hpc_wrf; synthetic workload with source read/write semantics
+data_errors=1
+messagescan=no
+create_anchors=yes
+fsd=default,depth=1,width=1,shared=yes,openflags=o_direct
+fsd=container,anchor=/mnt/idfs/workloads_400g/hpc_wrf/container,files=1,size=3417015582720
+fwd=format,threads=1,xfersize=4m
+fwd=prep_container,fsd=container,operation=read,threads=1
+rd=prepare_000,fwd=(prep_container),format=(restart,only),fwdrate=max

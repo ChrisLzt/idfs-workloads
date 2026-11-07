@@ -1,0 +1,964 @@
+{
+  "access_engine": "user",
+  "bins": [
+    {
+      "files": 1,
+      "group": "wrf",
+      "id": "container",
+      "size_bytes": 3417015582720
+    }
+  ],
+  "business_phases": [
+    {
+      "channels": [
+        {
+          "file": "member_01_input",
+          "operation": "read",
+          "weight": 61921751040
+        },
+        {
+          "file": "member_02_input",
+          "operation": "read",
+          "weight": 61921751040
+        },
+        {
+          "file": "member_03_input",
+          "operation": "read",
+          "weight": 61921751040
+        },
+        {
+          "file": "member_04_input",
+          "operation": "read",
+          "weight": 61921751040
+        },
+        {
+          "file": "member_05_input",
+          "operation": "read",
+          "weight": 61921751040
+        },
+        {
+          "file": "member_06_input",
+          "operation": "read",
+          "weight": 61921751040
+        },
+        {
+          "file": "member_07_input",
+          "operation": "read",
+          "weight": 61921751040
+        },
+        {
+          "file": "member_08_input",
+          "operation": "read",
+          "weight": 61921751040
+        },
+        {
+          "file": "lookup_qs",
+          "operation": "read",
+          "weight": 350126080
+        },
+        {
+          "file": "lookup_freeze",
+          "operation": "read",
+          "weight": 2039578624
+        }
+      ],
+      "end_s": 60,
+      "name": "startup",
+      "start_s": 0
+    },
+    {
+      "channels": [
+        {
+          "file": "member_01_history_00h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_02_history_00h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_03_history_00h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_04_history_00h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_05_history_00h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_06_history_00h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_07_history_00h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_08_history_00h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_01_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_02_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_03_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_04_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_05_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_06_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_07_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_08_boundary",
+          "operation": "read",
+          "weight": 833781760
+        }
+      ],
+      "end_s": 150,
+      "name": "history_00h",
+      "start_s": 60
+    },
+    {
+      "channels": [
+        {
+          "file": "member_01_checkpoint_05h",
+          "operation": "write",
+          "weight": 239943516160
+        },
+        {
+          "file": "member_02_checkpoint_05h",
+          "operation": "write",
+          "weight": 239943516160
+        },
+        {
+          "file": "member_03_checkpoint_05h",
+          "operation": "write",
+          "weight": 239943516160
+        },
+        {
+          "file": "member_04_checkpoint_05h",
+          "operation": "write",
+          "weight": 239943516160
+        },
+        {
+          "file": "member_05_checkpoint_05h",
+          "operation": "write",
+          "weight": 239943516160
+        },
+        {
+          "file": "member_06_checkpoint_05h",
+          "operation": "write",
+          "weight": 239943516160
+        },
+        {
+          "file": "member_07_checkpoint_05h",
+          "operation": "write",
+          "weight": 239943516160
+        },
+        {
+          "file": "member_08_checkpoint_05h",
+          "operation": "write",
+          "weight": 239943516160
+        },
+        {
+          "file": "member_01_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_02_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_03_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_04_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_05_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_06_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_07_boundary",
+          "operation": "read",
+          "weight": 833781760
+        },
+        {
+          "file": "member_08_boundary",
+          "operation": "read",
+          "weight": 833781760
+        }
+      ],
+      "end_s": 510,
+      "name": "checkpoint_05h",
+      "start_s": 150
+    },
+    {
+      "channels": [
+        {
+          "file": "member_01_history_06h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_02_history_06h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_03_history_06h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_04_history_06h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_05_history_06h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_06_history_06h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_07_history_06h",
+          "operation": "write",
+          "weight": 62191751168
+        },
+        {
+          "file": "member_08_history_06h",
+          "operation": "write",
+          "weight": 62191751168
+        }
+      ],
+      "end_s": 600,
+      "name": "history_06h",
+      "start_s": 510
+    }
+  ],
+  "capacity_policy": {
+    "expected_bytes": 3417015582720,
+    "kind": "parametric_inventory",
+    "max_bytes": 3417015582720,
+    "min_bytes": 3417015582720
+  },
+  "ensemble": {
+    "member_selection": "uniform within each activity; shared startup reads aggregate all members",
+    "members": 8,
+    "shared_readonly_roles": [
+      "lookup_qs",
+      "lookup_freeze"
+    ]
+  },
+  "id": "hpc_wrf",
+  "logical_files": [
+    {
+      "base_bytes": 0,
+      "extent_bytes": 43765760,
+      "id": "lookup_qs",
+      "member": 0,
+      "rank_seed": 102,
+      "role": "lookup_qs",
+      "size_basis": "published_file_length",
+      "slot_bytes": 46137344,
+      "source_name": "qr_acr_qsV2.dat",
+      "template_bytes": 43764288
+    },
+    {
+      "base_bytes": 46137344,
+      "extent_bytes": 254947328,
+      "id": "lookup_freeze",
+      "member": 0,
+      "rank_seed": 103,
+      "role": "lookup_freeze",
+      "size_basis": "published_file_length",
+      "slot_bytes": 255852544,
+      "source_name": "freezeH2O.dat",
+      "template_bytes": 254944848
+    },
+    {
+      "base_bytes": 301989888,
+      "extent_bytes": 61921751040,
+      "id": "member_01_input",
+      "member": 1,
+      "rank_seed": 101,
+      "role": "input",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 61924704256,
+      "source_name": "wrfinput_d01",
+      "template_bytes": 61921748319
+    },
+    {
+      "base_bytes": 62226694144,
+      "extent_bytes": 833781760,
+      "id": "member_01_boundary",
+      "member": 1,
+      "rank_seed": 104,
+      "role": "boundary",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 834666496,
+      "source_name": "wrfbdy_d01",
+      "template_bytes": 833778994
+    },
+    {
+      "base_bytes": 63061360640,
+      "extent_bytes": 62191751168,
+      "id": "member_01_history_00h",
+      "member": 1,
+      "rank_seed": 105,
+      "role": "history_00h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 125254500352,
+      "extent_bytes": 239943516160,
+      "id": "member_01_checkpoint_05h",
+      "member": 1,
+      "rank_seed": 106,
+      "role": "checkpoint_05h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 239943548928,
+      "source_name": "wrfrst_d01_2019-11-26_23:00:00.gnu",
+      "template_bytes": 239943516151
+    },
+    {
+      "base_bytes": 365198049280,
+      "extent_bytes": 62191751168,
+      "id": "member_01_history_06h",
+      "member": 1,
+      "rank_seed": 105,
+      "role": "history_06h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 427391188992,
+      "extent_bytes": 61921751040,
+      "id": "member_02_input",
+      "member": 2,
+      "rank_seed": 1101,
+      "role": "input",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 61924704256,
+      "source_name": "wrfinput_d01",
+      "template_bytes": 61921748319
+    },
+    {
+      "base_bytes": 489315893248,
+      "extent_bytes": 833781760,
+      "id": "member_02_boundary",
+      "member": 2,
+      "rank_seed": 1104,
+      "role": "boundary",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 834666496,
+      "source_name": "wrfbdy_d01",
+      "template_bytes": 833778994
+    },
+    {
+      "base_bytes": 490150559744,
+      "extent_bytes": 62191751168,
+      "id": "member_02_history_00h",
+      "member": 2,
+      "rank_seed": 1105,
+      "role": "history_00h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 552343699456,
+      "extent_bytes": 239943516160,
+      "id": "member_02_checkpoint_05h",
+      "member": 2,
+      "rank_seed": 1106,
+      "role": "checkpoint_05h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 239943548928,
+      "source_name": "wrfrst_d01_2019-11-26_23:00:00.gnu",
+      "template_bytes": 239943516151
+    },
+    {
+      "base_bytes": 792287248384,
+      "extent_bytes": 62191751168,
+      "id": "member_02_history_06h",
+      "member": 2,
+      "rank_seed": 1105,
+      "role": "history_06h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 854480388096,
+      "extent_bytes": 61921751040,
+      "id": "member_03_input",
+      "member": 3,
+      "rank_seed": 2101,
+      "role": "input",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 61924704256,
+      "source_name": "wrfinput_d01",
+      "template_bytes": 61921748319
+    },
+    {
+      "base_bytes": 916405092352,
+      "extent_bytes": 833781760,
+      "id": "member_03_boundary",
+      "member": 3,
+      "rank_seed": 2104,
+      "role": "boundary",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 834666496,
+      "source_name": "wrfbdy_d01",
+      "template_bytes": 833778994
+    },
+    {
+      "base_bytes": 917239758848,
+      "extent_bytes": 62191751168,
+      "id": "member_03_history_00h",
+      "member": 3,
+      "rank_seed": 2105,
+      "role": "history_00h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 979432898560,
+      "extent_bytes": 239943516160,
+      "id": "member_03_checkpoint_05h",
+      "member": 3,
+      "rank_seed": 2106,
+      "role": "checkpoint_05h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 239943548928,
+      "source_name": "wrfrst_d01_2019-11-26_23:00:00.gnu",
+      "template_bytes": 239943516151
+    },
+    {
+      "base_bytes": 1219376447488,
+      "extent_bytes": 62191751168,
+      "id": "member_03_history_06h",
+      "member": 3,
+      "rank_seed": 2105,
+      "role": "history_06h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 1281569587200,
+      "extent_bytes": 61921751040,
+      "id": "member_04_input",
+      "member": 4,
+      "rank_seed": 3101,
+      "role": "input",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 61924704256,
+      "source_name": "wrfinput_d01",
+      "template_bytes": 61921748319
+    },
+    {
+      "base_bytes": 1343494291456,
+      "extent_bytes": 833781760,
+      "id": "member_04_boundary",
+      "member": 4,
+      "rank_seed": 3104,
+      "role": "boundary",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 834666496,
+      "source_name": "wrfbdy_d01",
+      "template_bytes": 833778994
+    },
+    {
+      "base_bytes": 1344328957952,
+      "extent_bytes": 62191751168,
+      "id": "member_04_history_00h",
+      "member": 4,
+      "rank_seed": 3105,
+      "role": "history_00h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 1406522097664,
+      "extent_bytes": 239943516160,
+      "id": "member_04_checkpoint_05h",
+      "member": 4,
+      "rank_seed": 3106,
+      "role": "checkpoint_05h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 239943548928,
+      "source_name": "wrfrst_d01_2019-11-26_23:00:00.gnu",
+      "template_bytes": 239943516151
+    },
+    {
+      "base_bytes": 1646465646592,
+      "extent_bytes": 62191751168,
+      "id": "member_04_history_06h",
+      "member": 4,
+      "rank_seed": 3105,
+      "role": "history_06h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 1708658786304,
+      "extent_bytes": 61921751040,
+      "id": "member_05_input",
+      "member": 5,
+      "rank_seed": 4101,
+      "role": "input",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 61924704256,
+      "source_name": "wrfinput_d01",
+      "template_bytes": 61921748319
+    },
+    {
+      "base_bytes": 1770583490560,
+      "extent_bytes": 833781760,
+      "id": "member_05_boundary",
+      "member": 5,
+      "rank_seed": 4104,
+      "role": "boundary",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 834666496,
+      "source_name": "wrfbdy_d01",
+      "template_bytes": 833778994
+    },
+    {
+      "base_bytes": 1771418157056,
+      "extent_bytes": 62191751168,
+      "id": "member_05_history_00h",
+      "member": 5,
+      "rank_seed": 4105,
+      "role": "history_00h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 1833611296768,
+      "extent_bytes": 239943516160,
+      "id": "member_05_checkpoint_05h",
+      "member": 5,
+      "rank_seed": 4106,
+      "role": "checkpoint_05h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 239943548928,
+      "source_name": "wrfrst_d01_2019-11-26_23:00:00.gnu",
+      "template_bytes": 239943516151
+    },
+    {
+      "base_bytes": 2073554845696,
+      "extent_bytes": 62191751168,
+      "id": "member_05_history_06h",
+      "member": 5,
+      "rank_seed": 4105,
+      "role": "history_06h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 2135747985408,
+      "extent_bytes": 61921751040,
+      "id": "member_06_input",
+      "member": 6,
+      "rank_seed": 5101,
+      "role": "input",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 61924704256,
+      "source_name": "wrfinput_d01",
+      "template_bytes": 61921748319
+    },
+    {
+      "base_bytes": 2197672689664,
+      "extent_bytes": 833781760,
+      "id": "member_06_boundary",
+      "member": 6,
+      "rank_seed": 5104,
+      "role": "boundary",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 834666496,
+      "source_name": "wrfbdy_d01",
+      "template_bytes": 833778994
+    },
+    {
+      "base_bytes": 2198507356160,
+      "extent_bytes": 62191751168,
+      "id": "member_06_history_00h",
+      "member": 6,
+      "rank_seed": 5105,
+      "role": "history_00h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 2260700495872,
+      "extent_bytes": 239943516160,
+      "id": "member_06_checkpoint_05h",
+      "member": 6,
+      "rank_seed": 5106,
+      "role": "checkpoint_05h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 239943548928,
+      "source_name": "wrfrst_d01_2019-11-26_23:00:00.gnu",
+      "template_bytes": 239943516151
+    },
+    {
+      "base_bytes": 2500644044800,
+      "extent_bytes": 62191751168,
+      "id": "member_06_history_06h",
+      "member": 6,
+      "rank_seed": 5105,
+      "role": "history_06h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 2562837184512,
+      "extent_bytes": 61921751040,
+      "id": "member_07_input",
+      "member": 7,
+      "rank_seed": 6101,
+      "role": "input",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 61924704256,
+      "source_name": "wrfinput_d01",
+      "template_bytes": 61921748319
+    },
+    {
+      "base_bytes": 2624761888768,
+      "extent_bytes": 833781760,
+      "id": "member_07_boundary",
+      "member": 7,
+      "rank_seed": 6104,
+      "role": "boundary",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 834666496,
+      "source_name": "wrfbdy_d01",
+      "template_bytes": 833778994
+    },
+    {
+      "base_bytes": 2625596555264,
+      "extent_bytes": 62191751168,
+      "id": "member_07_history_00h",
+      "member": 7,
+      "rank_seed": 6105,
+      "role": "history_00h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 2687789694976,
+      "extent_bytes": 239943516160,
+      "id": "member_07_checkpoint_05h",
+      "member": 7,
+      "rank_seed": 6106,
+      "role": "checkpoint_05h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 239943548928,
+      "source_name": "wrfrst_d01_2019-11-26_23:00:00.gnu",
+      "template_bytes": 239943516151
+    },
+    {
+      "base_bytes": 2927733243904,
+      "extent_bytes": 62191751168,
+      "id": "member_07_history_06h",
+      "member": 7,
+      "rank_seed": 6105,
+      "role": "history_06h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 2989926383616,
+      "extent_bytes": 61921751040,
+      "id": "member_08_input",
+      "member": 8,
+      "rank_seed": 7101,
+      "role": "input",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 61924704256,
+      "source_name": "wrfinput_d01",
+      "template_bytes": 61921748319
+    },
+    {
+      "base_bytes": 3051851087872,
+      "extent_bytes": 833781760,
+      "id": "member_08_boundary",
+      "member": 8,
+      "rank_seed": 7104,
+      "role": "boundary",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 834666496,
+      "source_name": "wrfbdy_d01",
+      "template_bytes": 833778994
+    },
+    {
+      "base_bytes": 3052685754368,
+      "extent_bytes": 62191751168,
+      "id": "member_08_history_00h",
+      "member": 8,
+      "rank_seed": 7105,
+      "role": "history_00h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    },
+    {
+      "base_bytes": 3114878894080,
+      "extent_bytes": 239943516160,
+      "id": "member_08_checkpoint_05h",
+      "member": 8,
+      "rank_seed": 7106,
+      "role": "checkpoint_05h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 239943548928,
+      "source_name": "wrfrst_d01_2019-11-26_23:00:00.gnu",
+      "template_bytes": 239943516151
+    },
+    {
+      "base_bytes": 3354822443008,
+      "extent_bytes": 62191751168,
+      "id": "member_08_history_06h",
+      "member": 8,
+      "rank_seed": 7105,
+      "role": "history_06h",
+      "size_basis": "horizontally_and_vertically_refined_uncompressed_array_payload",
+      "slot_bytes": 62193139712,
+      "source_name": "wrfout_d01_2019-11-27_00:00:00.gnu",
+      "template_bytes": 62191747159
+    }
+  ],
+  "profiles": {
+    "baseline": [
+      {
+        "lanes": [
+          {
+            "bin": "container",
+            "file_sharing": true,
+            "fileio": "random",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 62.43726936564384,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "container",
+            "file_sharing": true,
+            "fileio": "random",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 537.5627306343562,
+            "xfersize": 1048576
+          }
+        ],
+        "name": "continuous",
+        "seconds": 600
+      }
+    ],
+    "current": [
+      {
+        "lanes": [
+          {
+            "bin": "container",
+            "file_sharing": true,
+            "fileio": "random",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 62.43726936564384,
+            "xfersize": 1048576
+          },
+          {
+            "bin": "container",
+            "file_sharing": true,
+            "fileio": "random",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 537.5627306343562,
+            "xfersize": 1048576
+          }
+        ],
+        "name": "continuous",
+        "seconds": 600
+      }
+    ]
+  },
+  "provenance": {
+    "adaptation": "NCAR WRF role/order-based synthetic I/O; eight member-specific states/outputs and shared read-only lookup tables; four timed activities; added all-object Zipf0.99; no original event replay",
+    "aligned_extent_bytes": 3416959123456,
+    "archive_sha256": "0742d474a242c33ddd2df6d882bf254c4c16c754417022718e220ecb173c706a",
+    "archive_url": "https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/v4.4_bench_conus2.5km.tar.gz",
+    "boundary_rule": "horizontally refined uncompressed boundary-field template read in0h-output and checkpoint activities; boundary updates coarsened into mixed phases",
+    "capacity_basis": "scientific files use1km and e_vert60 uncompressed array payloads; lookup tables retain verified published lengths; exclude NetCDF metadata/compression; no scientific values generated; eight member-specific scientific inventories and one shared lookup-table pair",
+    "channel_weights": "equal member scientific-role weights; shared table startup weights aggregate eight members; representative aligned file extents define request probabilities, not byte quotas",
+    "checkpoint_hours": [
+      5
+    ],
+    "container_padding_bytes": 56459264,
+    "grid": [
+      3751,
+      3001,
+      60
+    ],
+    "grid_refinement": {
+      "dimension_mapping": {
+        "bottom_top": [
+          49,
+          59
+        ],
+        "bottom_top_stag": [
+          50,
+          60
+        ],
+        "south_north": [
+          1200,
+          3000
+        ],
+        "south_north_stag": [
+          1201,
+          3001
+        ],
+        "west_east": [
+          1500,
+          3750
+        ],
+        "west_east_stag": [
+          1501,
+          3751
+        ]
+      },
+      "horizontal_factor": 2.5,
+      "rule": "same projected horizontal extent; explicit mass/stagger dimension mapping; e_vert50 to60 means49 to59 mass levels and50 to60 staggered levels; preserve fields/dtypes/other axes/time records; sum shape*dtype excluding dimension scales",
+      "vertical_grid_points": [
+        50,
+        60
+      ]
+    },
+    "history_hours": [
+      0,
+      6
+    ],
+    "limitation": "repeated Zipf writes are a controlled adaptation, not complete scientific snapshot generation; coverage/counts/whole-run mix depend on actual performance",
+    "native_trace": false,
+    "object_mapping": "each logical file starts at4MiB and owns whole exclusive objects; runtime does not access slot padding",
+    "profiles": "current and baseline are compatibility names for the same approved Zipf plan",
+    "simulated_hours": 6,
+    "source": "https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/benchdata_v44.html",
+    "source_grid": [
+      1501,
+      1201,
+      50
+    ],
+    "source_limitations": [
+      "1km-e_vert60 is a synthetic refinement of the verified official2.5km field schema, not an official1km CONUS benchmark, measured file length or validated new weather simulation",
+      "e_vert60 denotes60 staggered vertical points and59 mass layers; mass and staggered dimensions are mapped separately, not all vertical arrays multiplied by1.2",
+      "0h history size uses final-hour field schema as a representative uncompressed template; not a measured original0h file length",
+      "qgV3 lookup referenced by original log is not supplied with matching name; no invented size or access mapping",
+      "boundary uses one refined uncompressed-field synthetic template in both relevant activities; no claimed per-time-record compressed byte offsets",
+      "User samples synthetic object regions, not native WRF file offsets or request frequencies"
+    ],
+    "source_metadata_sha256": "ebdf6835fce5bdd531b64cda85539d564e04d04e288f5988c79a4e8114f07aff",
+    "source_spacing_m": 2500,
+    "source_summary_sha256": "3fe37da21d18e3f4816c51268605eb948710e582d32fd5312eb7452ab681a0ff",
+    "spacing_m": 1000,
+    "template_bytes": 3416959011392,
+    "timeline_rule": "memory-computation gaps compressed; 60/90/360/90s storage budgets; same activity throughout each1s slice; no quota or per-second rank reset",
+    "transfer_rule": "synthetic1MiB requests inside a selected object; final sub-block shortened to actual4KiB-aligned extent; not measured native WRF sizes",
+    "workload_label": "WRF CONUS-derived1km-e_vert60 eight-member synthetic Zipf",
+    "zipf_scope": "fixed seeded permutation of all object ranks within each logical file; history0/6 use the same relative rank permutation"
+  },
+  "user_timeline": {
+    "alpha": 0.99,
+    "duration_us": 600000000,
+    "grain_bytes": 4194304,
+    "max_transfer_bytes": 1048576,
+    "request_quota": null,
+    "seed": 1048596,
+    "slice_us": 1000000,
+    "threads": 64
+  }
+}

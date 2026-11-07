@@ -75,8 +75,25 @@ def validate_prepare_text(text: str) -> None:
             )
 
 
-def validate_run_text(text: str) -> None:
+def validate_run_text(text: str, *, max_sd_wd_channels: int = 256) -> None:
     """Validate wildcard selection, skew totals, and formal run duration."""
+    if 'user=(' in text:
+        if 'user=(idfsgraphzipf.' in text:
+            from .graph_zipf import validate_run_text as validate_user
+        elif 'user=(idfsbaleen.' in text:
+            from .baleen_user import validate_run_text as validate_user
+        elif 'user=(idfswrf.' in text:
+            from .wrf_user import validate_run_text as validate_user
+        elif 'user=(idfsai.' in text:
+            from .ai_user import validate_run_text as validate_user
+        else:
+            raise ConfigValidationError('unsupported User workload class')
+        validate_user(text)
+        return
+    if any(line.startswith('wd=') for line in text.splitlines()):
+        from .sd_wd import validate_run_text as validate_sd_wd
+        validate_sd_wd(text, max_channels=max_sd_wd_channels)
+        return
     fwds = _named_lines(text, "fwd=")
     rds = _named_lines(text, "rd=")
     if not fwds or not rds:
@@ -190,7 +207,7 @@ def main() -> None:
     parser.add_argument(
         "--vdbench",
         type=Path,
-        default=Path(os.environ.get("VDBENCH_HOME", "/home/chris/PDSL/vdbench")) / "vdbench",
+        default=Path(os.environ.get("VDBENCH_HOME", "/home/chris/PDSL/vdbench50406")) / "vdbench",
     )
     parser.add_argument("--jobs", type=int, default=4)
     args = parser.parse_args()

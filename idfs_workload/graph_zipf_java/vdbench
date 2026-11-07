@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+runtime_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+expected_runtime='@RUNTIME_DIR@'
+configured_home='@STOCK_HOME@'
+if [[ "$runtime_dir" != "$expected_runtime" ]]; then
+  printf '%s\n' 'Graph bundle moved; render it again for this directory.' >&2
+  exit 2
+fi
+if [[ ${VDBENCH_HOME:-$configured_home} != "$configured_home" ]]; then
+  printf '%s\n' 'VDBENCH_HOME differs from the rendered installation; render again.' >&2
+  exit 2
+fi
+require_sha() {
+  local observed
+  observed=$(sha256sum -- "$1")
+  if [[ ${observed%% *} != "$2" ]]; then
+    printf 'Graph runtime asset changed: %s\n' "$1" >&2
+    exit 2
+  fi
+}
+require_sha "$runtime_dir/graph-zipf-user.jar" '@EXTENSION_SHA@'
+require_sha "$runtime_dir/runtime.json" '@META_SHA@'
+require_sha "$runtime_dir/stock-home" '@HOME_SHA@'
+stock_home=$configured_home
+stock_jar="$stock_home/vdbench.jar"
+expected=8a87321b1b3cd6b60a5251a149359b628dd95a52b93efd7a990703478cfbf4d5
+observed=$(sha256sum -- "$stock_jar")
+if [[ ${observed%% *} != "$expected" ]]; then
+  printf '%s\n' 'Graph Zipf requires the unmodified Vdbench 5.04.06 JAR.' >&2
+  exit 2
+fi
+if [[ -n ${JAVA_HOME:-} ]]; then
+  runtime_java="$JAVA_HOME/bin/java"
+elif [[ -x "$stock_home/jre/bin/java" ]]; then
+  runtime_java="$stock_home/jre/bin/java"
+else
+  runtime_java=/usr/bin/java
+fi
+main=Vdb.Vdbmain
+heap=${VDBENCH_MAIN_XMX:-512m}
+if [[ ${1:-} == SlaveJvm ]]; then
+  main=Vdb.SlaveJvm
+  heap=${VDBENCH_SLAVE_XMX:-512m}
+fi
+cd -- "$runtime_dir"
+# The original JAR is first so stock native-library discovery keeps its own home.
+exec "$runtime_java" -XX:-UsePerfData -Xms64m -Xmx"$heap" \
+  -cp "$stock_jar:$runtime_dir/graph-zipf-user.jar" "$main" "$@"

@@ -48,8 +48,8 @@ def mount_info(path):
 def _storage_target(root):
     root = no_symlinks(root)
     info = mount_info(root)
-    if info['fstype'] not in ('idfs', 'fuse.idfs', 'fuse.idfs-fuse', 'ceph', 'fuse.ceph', 'fuse.ceph-fuse'):
-        raise ValueError(f"target is not an IDFS/CephFS mount: {info['target']} ({info['fstype']})")
+    if info['fstype'] not in ('idfs', 'fuse.idfs', 'fuse.idfs-fuse', 'ceph', 'fuse.ceph', 'fuse.ceph-fuse','nfs','nfs4'):
+        raise ValueError(f"target is not an IDFS/CephFS/NFS mount: {info['target']} ({info['fstype']})")
     if root == Path(info['target']):
         raise ValueError('data root must be a dedicated directory below the mount')
     return root, info
@@ -57,6 +57,9 @@ def _storage_target(root):
 
 def preflight(bundle):
     manifest = validate_bundle(bundle)
+    if manifest['id']=='graph_zipf':
+        from .graph_prepare import preflight as graph_preflight
+        return graph_preflight(bundle)
     root, mount = _storage_target(manifest['data_root'])
     if root.exists() and (not root.is_dir() or any(root.iterdir())):
         raise ValueError(f'data root already contains content; no automatic overwrite or cleanup: {root}')
@@ -68,9 +71,13 @@ def preflight(bundle):
         raise ValueError(f'insufficient free space: {available} bytes available, {required} required including 5% headroom')
     if not os.access(parent, os.W_OK):
         raise ValueError(f'target parent is not writable: {parent}')
+    if manifest.get('access_engine')=='user':
+        from .file_layout import require_layout
+        layout=require_layout(parent,directory=True,stop=mount['target'],fstype=mount['fstype'])
     return {'id':manifest['id'], 'data_root':str(root), 'mount':mount,
             'capacity_bytes':manifest['capacity_bytes'], 'required_free_bytes':required,
-            'available_bytes':available, 'existing_empty_directory':root.exists()}
+            'available_bytes':available, 'existing_empty_directory':root.exists(),
+            'layout_verification':layout['verification'] if manifest.get('access_engine')=='user' else 'not checked'}
 
 
 def verify_inventory(manifest):
@@ -85,6 +92,7 @@ def verify_inventory(manifest):
         if child.is_symlink():
             raise ValueError(f'symlink in data root: {child}')
     total_files = total_bytes = 0
+    mount=mount_info(root);unverified=False
     for b in manifest['bins']:
         anchor = no_symlinks(b['anchor'])
         if not anchor.is_dir():
@@ -111,6 +119,10 @@ def verify_inventory(manifest):
                     raise ValueError(f'wrong file size: {p}')
                 if st.st_blocks * 512 < st.st_size:
                     raise ValueError(f'sparse or incompletely allocated data file: {p}')
+                if manifest.get('access_engine')=='user':
+                    from .file_layout import require_layout
+                    inspected=require_layout(p,fstype=mount['fstype'])
+                    unverified |= inspected['layout'] is None
                 actual_files.add(relative)
                 count += 1
                 total_bytes += st.st_size
@@ -121,7 +133,9 @@ def verify_inventory(manifest):
         total_files += count
     if total_bytes != manifest['capacity_bytes'] or total_files != manifest['file_count']:
         raise ValueError('total file inventory mismatch')
-    return {'file_count':total_files, 'capacity_bytes':total_bytes, 'verification':'stat counts/sizes/allocated extents; no content read'}
+    return {'file_count':total_files, 'capacity_bytes':total_bytes, 'verification':'stat counts/sizes/allocated extents; no content read',
+            'layout_verification':('not checked' if manifest.get('access_engine')!='user' else
+                'not exposed by NFS;must be confirmed when preparing data' if unverified else 'xattr')}
 
 
 def _record(manifest, **extra):
@@ -161,11 +175,14 @@ def _output(output, root, bundle):
     return output
 
 
-def prepare(bundle, *, vdbench, output, execute=False):
+def prepare(bundle, *, vdbench, output, execute=False, chunk_mib=16):
     if not execute:
         raise ValueError('preparation writes data; explicit --execute is required')
     bundle = Path(bundle).absolute()
     manifest = validate_bundle(bundle)
+    if manifest['id']=='graph_zipf':
+        from .graph_prepare import prepare as prepare_graph
+        return prepare_graph(bundle,output=output,execute=execute,chunk_mib=chunk_mib,vdbench=vdbench)
     report = preflight(bundle)
     root = Path(manifest['data_root'])
     vdbench = _executable(vdbench)
@@ -177,11 +194,15 @@ def prepare(bundle, *, vdbench, output, execute=False):
     subprocess.run([str(vdbench), '-f', str(bundle/'prepare_data.vdb'), '-o', str(output)], check=True)
     inventory = verify_inventory(manifest)
     (root/READY).write_text(json_text(_record(manifest, state='ready', inventory=inventory)))
+    (root/INTENT).unlink()
     return {**report, **inventory, 'state':'ready', 'output':str(output)}
 
 
 def check_ready(bundle):
     manifest = validate_bundle(bundle)
+    if manifest['id']=='graph_zipf':
+        from .graph_zipf import check_ready as check_existing_graph
+        return check_existing_graph(bundle)
     root, mount = _storage_target(manifest['data_root'])
     marker = root/READY
     if not marker.is_file() or marker.is_symlink():
@@ -204,5 +225,9 @@ def run(bundle, *, profile='baseline', vdbench, output, execute=False):
     root = Path(manifest['data_root'])
     output = _output(output, root, bundle)
     config = bundle/f'run_{profile}.vdb'
-    subprocess.run([str(vdbench), '-f', str(config), '-o', str(output)], check=True)
+    if manifest.get('access_engine')=='user':
+        from .user_engine import implementation
+        subprocess.run(**implementation(manifest).execution(bundle,vdbench,config,output),check=True)
+    else:
+        subprocess.run([str(vdbench), '-f', str(config), '-o', str(output)], check=True)
     return {'id':manifest['id'], 'profile':profile, 'output':str(output)}

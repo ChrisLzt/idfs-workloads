@@ -1,0 +1,91 @@
+{
+  "access_engine": "user",
+  "bins": [
+    {
+      "files": 1,
+      "group": "graph",
+      "id": "edges",
+      "size_bytes": 4398046511104
+    }
+  ],
+  "capacity_policy": {
+    "expected_bytes": 4398046511104,
+    "kind": "existing_file_inventory",
+    "max_bytes": 4398046511104,
+    "min_bytes": 4398046511104
+  },
+  "id": "graph_zipf",
+  "input_policy": {
+    "layout": {
+      "object_size": 4194304,
+      "stripe_count": 1,
+      "stripe_unit": 4194304
+    },
+    "mode": "existing_file",
+    "prepare_allowed": true,
+    "relative_file": "test.graph.edge.props"
+  },
+  "profiles": {
+    "baseline": [
+      {
+        "lanes": [
+          {
+            "bin": "edges",
+            "file_sharing": true,
+            "fileio": "random",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1,
+            "xfersize": 32
+          }
+        ],
+        "name": "uniform_all",
+        "seconds": 600
+      }
+    ],
+    "current": [
+      {
+        "lanes": [
+          {
+            "bin": "edges",
+            "file_sharing": true,
+            "fileio": "random",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 1,
+            "xfersize": 32
+          }
+        ],
+        "name": "zipf_all",
+        "seconds": 600
+      }
+    ]
+  },
+  "provenance": {
+    "adaptation": "4TiB;shared global object Zipf0.99;O_DIRECT;600s single RD;max rate",
+    "document": "课题5-测试大纲V1.2.docx",
+    "document_sha256": "ad02252820b46cf234269eda4133a17d30e2a9c860f78fd377bb481e7e2afc87",
+    "limitation": "application request distribution;actual coverage and module metrics require measurement",
+    "preparation": "separate explicit preparer or external tool;never part of timed test;write transfer size is configurable",
+    "scope": "synthetic storage I/O based on supplied outline;not a graph algorithm or native trace",
+    "sections": [
+      "7.1.12",
+      "7.1.13",
+      "A.6 Graph_IOPS.vdb"
+    ],
+    "source_semantics": "shared edge-property file;32-byte random reads",
+    "workload_label": "4TiB shared graph I/O with object Zipf"
+  },
+  "user_zipf": {
+    "alpha": 0.99,
+    "mapping": "SplittableRandom Fisher-Yates bijection",
+    "mapping_seed": 1048596,
+    "object_bytes": 4194304,
+    "object_count": 1048576,
+    "request_quota": null,
+    "sampling": "independent draws from exact discrete CDF",
+    "transfer_bytes": 32
+  }
+}

@@ -1,31 +1,28 @@
 {
-  "repository": "https://github.com/ChrisLzt/ceph-test",
   "commit": "303e43e2e1c98cb74ec156af75ce2546faaa72eb",
   "model_files": {
-    "baleen": {
-      "kind": "trace_profile",
-      "path": "idfs_workload/sources/baleen_region7.json",
-      "sha256": "f6f7cb462fc2b407a4d6dd7de2f3027e156b7e7ace44066168f03e284b566741",
-      "trace_url": "https://ftp.pdl.cmu.edu/pub/datasets/Baleen24/storage/20230325/Region7/full_0_0.1.trace",
-      "trace_sha256": "019ba3162716d6d3623df7bfd69be206ae00aff054d521933d102eee23a486a2"
-    },
-    "graphchi": {
-      "path": "SINGLE_workload/graph_graphchi_psw_v2/rendered/model.json",
-      "sha256": "0cfbbb3c4e62df715ecbe3e3e29591e20a1b19193c264a0f9dbc8fbc903213df"
-    },
-    "wrf": {
-      "path": "SINGLE_workload/hpc_wrf_continuous_v2/rendered/model.json",
-      "sha256": "8f0b871ba503fe9477a52f99052ffdf174854ffbec999310f50880e6d6c88de2"
+    "ai_inference": {
+      "path": "SINGLE_workload/ai_inference_ses_v2/rendered/model.json",
+      "sha256": "04fed5bee8bf6ad04f7f0c7687fb4caea5644eac0436536fe01b0117b3ea5148"
     },
     "ai_training": {
       "path": "SINGLE_workload/ai_training_ses_v2/rendered/model.json",
       "sha256": "df1154c2a1b5fc569eac95ac9541552a700b513b8fb0f0e2cdf8a67bf4bae6e8"
     },
-    "ai_inference": {
-      "path": "SINGLE_workload/ai_inference_ses_v2/rendered/model.json",
-      "sha256": "04fed5bee8bf6ad04f7f0c7687fb4caea5644eac0436536fe01b0117b3ea5148"
+    "baleen": {
+      "kind": "full-time whole-key trace subset",
+      "path": "idfs_workload/sources/baleen_region2.json",
+      "sha256": "bdcb75dce40ab81134b88d65be26dad4ea5dd2994599b500424d6ce8ef00754b",
+      "trace_sha256": "df6cc476579301fa9148092903713242cc44975536c98a372ab0957df1014f06",
+      "trace_url": "https://ftp.pdl.cmu.edu/pub/datasets/Baleen24/storage_all/storage_all_Region2.tar.gz"
+    },
+    "wrf": {
+      "basis": "NCAR official WRFv4.4 CONUS2.5km verified array schemas;1km/e_vert60 uncompressed synthetic Zipf model; explicit mass/stagger mapping; fixed lookup tables",
+      "file": "wrf_conus1km60.json",
+      "sha256": "3fe37da21d18e3f4816c51268605eb948710e582d32fd5312eb7452ab681a0ff"
     }
   },
+  "repository": "https://github.com/ChrisLzt/ceph-test",
   "support_files": {
     "core.py": {
       "path": "workload_common/single_v2/core.py",
@@ -42,6 +39,11 @@
     "validate_vdbench.py": {
       "path": "workload_common/validate_vdbench.py",
       "sha256": "87057f0c764ae00b210b18feaed16e522d975301ecea6d7e15deefd0352d8325"
+    }
+  },
+  "user_sources": {
+    "baleen": {
+      "index_sha256": "4f02b7493898ea977e82351b3e5cca2d7edba0dde18f1668e6a0c407447188cd"
     }
   }
 }

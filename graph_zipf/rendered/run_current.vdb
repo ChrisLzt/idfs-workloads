@@ -1,0 +1,9 @@
+* Shared existing4TiB graph storage model;synthetic object distribution
+data_errors=1
+messagescan=no
+formatsds=no
+hd=default,jvms=1,vdbench=/home/chris/idfs-workloads/graph_zipf/rendered
+hd=h000,system=localhost
+sd=graph_000,host=h000,lun=/mnt/idfs/workloads/graph/test.graph.edge.props,size=4398046511104,threads=64,openflags=o_direct,offset=0
+wd=graph,sd=graph*,xfersize=32,seekpct=100,rdpct=100,user=(idfsgraphzipf.ZipfWorkload,zipf,seed1048596,jarsha4a9535c8015b3ab60d9466149ece2f45347e9b4d204307c606142300162f72b4)
+rd=continuous,wd=graph*,iorate=max,elapsed=600,interval=1,warmup=0

@@ -1,0 +1,9 @@
+{
+  "stock_jar_sha256": "8a87321b1b3cd6b60a5251a149359b628dd95a52b93efd7a990703478cfbf4d5",
+  "java_class_version": 52,
+  "jar_sha256": "6d567d9b7bd33a95f208bd559b2e736ebe9991e9c6a7db8607f2701439839764",
+  "source_sha256": {
+    "idfsai/Timeline.java": "2e42fd64927238b790f483a3d55f64b9c40275bca3347854b8e77cc291ff7e93",
+    "idfsai/TimelineWorkload.java": "ed818cf2cf541cf1fb8b0f80442bc44868aa8072e16ad31bae3834cf32550ec6"
+  }
+}

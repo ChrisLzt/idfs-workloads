@@ -3,3 +3,4 @@
 **/output/
 **/logs/
 *.log
+**/invalid.timeline
