@@ -1,0 +1,36 @@
+{
+  "commit": "303e43e2e1c98cb74ec156af75ce2546faaa72eb",
+  "model_files": {
+    "baleen": {
+      "kind": "full-time whole-key trace subset",
+      "path": "idfs_workload/sources/baleen_region2.json",
+      "sha256": "bdcb75dce40ab81134b88d65be26dad4ea5dd2994599b500424d6ce8ef00754b",
+      "trace_sha256": "df6cc476579301fa9148092903713242cc44975536c98a372ab0957df1014f06",
+      "trace_url": "https://ftp.pdl.cmu.edu/pub/datasets/Baleen24/storage_all/storage_all_Region2.tar.gz"
+    }
+  },
+  "repository": "https://github.com/ChrisLzt/ceph-test",
+  "support_files": {
+    "core.py": {
+      "path": "workload_common/single_v2/core.py",
+      "sha256": "81d1b848ea8d0e964512735cebbc56901a56e283512ad9608420246434222661"
+    },
+    "lifecycle.py": {
+      "path": "workload_common/single_v2/lifecycle.py",
+      "sha256": "0b72701d6ca5234d29b78ccb0dc5ec86409e5005f19badc9be99381d3a3b3681"
+    },
+    "parser_check.py": {
+      "path": "workload_common/single_v2/parser_check.py",
+      "sha256": "ddf6832ff9a673eaa85e115b320ee173fbbf25de3d55cc9355d1e38d5b34e2ae"
+    },
+    "validate_vdbench.py": {
+      "path": "workload_common/validate_vdbench.py",
+      "sha256": "87057f0c764ae00b210b18feaed16e522d975301ecea6d7e15deefd0352d8325"
+    }
+  },
+  "user_sources": {
+    "baleen": {
+      "index_sha256": "4f02b7493898ea977e82351b3e5cca2d7edba0dde18f1668e6a0c407447188cd"
+    }
+  }
+}

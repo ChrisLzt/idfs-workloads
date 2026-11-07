@@ -1,0 +1,31 @@
+QB认知域作战图计算存储访问数据集：归档使用与复现说明
+
+版本：2026-11-07，访问生成种子1048596。获取方式：随本批资料包提供，公开链接和正式平台标识由发布方登记。
+资料根目录含datasets/、tools/、verification/和metadata/。datasets/source保存来源与参数；datasets/model保存冻结模型与配置；datasets/data_dictionary.json保存字段及单位。
+运行条件：资料级核验使用Python3.10及以上；模型处理使用Linux及配套工具；访问运行使用兼容Java8的环境和原版Vdbench5.04.06。原版运行软件按其许可获取。
+步骤1：在资料根目录运行python3 tools/check_delivery.py --root .，输出status=PASS表示本批模型、映射和清单核验通过。
+步骤2：复制资料到独立工作目录，按以下命令生成并验证配置。配置输出与载体数据路径分别设置。
+
+# 从本项资料根目录开始，先核验归档文件
+python3 tools/check_delivery.py --root .
+# 将以下路径替换为实际独立工作目录、数据根目录和原版安装位置
+REPLAY_CFG_ROOT=/path/to/replay-config
+REPLAY_DATA_ROOT=/mnt/nfs/heat-data
+REPLAY_VDBENCH=/opt/vdbench50406/vdbench
+cd tools
+bash workloads.sh render --case graph \
+  --config-root "$REPLAY_CFG_ROOT" \
+  --data-root "$REPLAY_DATA_ROOT" \
+  --vdbench "$REPLAY_VDBENCH"
+bash workloads.sh validate --case graph \
+  --config-root "$REPLAY_CFG_ROOT" \
+  --vdbench "$REPLAY_VDBENCH"
+
+输出位于REPLAY_CFG_ROOT/graph_zipf/rendered/，其中model.json、manifest.json、run_current.vdb及配套模型文件共同构成当前访问方案。render/validate输出real_io_executed=false。
+主方案入口为run_current.vdb；run_baseline.vdb表示同一文件与32字节请求的全局均匀对象对照。
+步骤3：正式运行按数据准备、就绪检查、测试三步执行，每项独立入口分别为prepare_data.sh、check_data.sh和run_test.sh。已有相同路径、容量和布局的载体先检查就绪状态；执行人员按实际计划提供--execute及全新的结果目录。
+模型与时间线定义实际读写类型、请求大小和访问概率；配置文件负责连接运行入口、路径、时长和速率。
+图计算共享全局热度排名。
+统计口径：模型对象数为可寻址位置；来源请求数为原记录统计；实际请求数和实访对象数由后续日志记录。跨对象请求按覆盖对象与相交字节归并。
+完整性：verification/files.sha256覆盖数据与工具文件；metadata/delivery_files.csv覆盖资源清单登记的三类资料；元数据管理文件另行保存。
+许可：自研资料与工具开放许可待承担单位确认，第三方资料遵循原许可。

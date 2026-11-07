@@ -18,7 +18,7 @@ Word第七章描述正式汇交资料包的目录；本仓库按可运行负载�
 |---|---|
 | datasets/source/ | idfs_workload/sources/中的来源参数、Baleen频率表及来源清单 |
 | datasets/model/ | 各负载rendered/中的模型、运行配置、映射及User配套文件 |
-| tools/ | idfs_workload/共用工具、User源码及各负载Shell入口 |
+| tools/ | [五套独立复现工具](../../handover_tools/)，各自包含本负载入口、运行组件及冻结输入 |
 | verification/、metadata/ | 汇交归档中保存的数据质量记录和资源清单，按汇交批次管理 |
 
 本次GitHub发布包括五种负载及复现文件、五份汇交Word。Word中登记的现有资料文件数和体量按完整汇交归档统计。归档中的原始资料、质量记录与管理清单另外保存；大容量载体和未来集群实测资料按计划形成后追加登记。

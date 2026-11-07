@@ -1,0 +1,9 @@
+{
+  "jar_sha256": "4a9535c8015b3ab60d9466149ece2f45347e9b4d204307c606142300162f72b4",
+  "java_class_version": 52,
+  "source_sha256": {
+    "idfsgraphzipf/ZipfDistribution.java": "566f4143863a5ab50970ee50ad5d08b7201fb4da14d6527d716b1d6afa83edf3",
+    "idfsgraphzipf/ZipfWorkload.java": "6390696cedb89606e3d5f8edd05dafc454b2f6a1a5f1d9bc0a37881dbb810399"
+  },
+  "stock_jar_sha256": "8a87321b1b3cd6b60a5251a149359b628dd95a52b93efd7a990703478cfbf4d5"
+}
