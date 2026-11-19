@@ -23,7 +23,7 @@ class PreparationTests(unittest.TestCase):
     def test_each_workload_has_independent_prepare_check_and_test_entries(self):
         for case in CASES:
             for entry in ['prepare_data.sh','check_data.sh','run_test.sh']:
-                p=ROOT.parent/'workloads'/case/entry
+                p=ROOT.parent/'workloads'/'hot_cold'/case/entry
                 self.assertTrue(p.is_file(),str(p))
                 self.assertTrue(os.access(p,os.X_OK),str(p))
                 r=subprocess.run([str(p),'--help'],capture_output=True,text=True)

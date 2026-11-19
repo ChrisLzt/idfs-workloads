@@ -13,7 +13,7 @@
 | *_user_java/、graph_zipf_java/ | 当前User源码、接口版本和构建产物摘要 |
 | *_user_build.py、graph_zipf_build.py | 针对原版Vdbench 5.04.06构建独立User扩展 |
 
-Baleen的冻结来源目录与`workloads/bigdata_baleen/rendered/`中的表和映射分别承担生成输入、运行输出的用途。两处内容由SHA-256核对，渲染配置时可直接复用冻结输入，无需下载原始trace或实际生成容器数据。
+Baleen的冻结来源目录与`workloads/hot_cold/bigdata_baleen/rendered/`中的表和映射分别承担生成输入、运行输出的用途。两处内容由SHA-256核对，渲染配置时可直接复用冻结输入，无需下载原始trace或实际生成容器数据。
 
 ## 离线生成与核验
 

@@ -1,0 +1,56 @@
+# 测试时需要根据客户端数量调整hd、sd，以及sd中的range
+# 测试时需要根据客户端数量调整hd、sd，以及sd中的range
+hd=default,vdbench=/root/vdbench50406,user=root,shell=ssh
+hd=h1,system=100.7.46.29
+…
+hd=h16,system=100.7.46.48
+
+# 设置：线程数
+sd=default,threads=128
+
+# 边属性文件
+# 测试规模:
+#   344.75  TB: size=250t
+#   109.875 TB: size=62.5t
+#   35.375  TB: size=25t
+#   3.1875  TB: size=1.25t
+#   35.375  GB: size=25g
+#   3.1875  GB: size=1.25g
+# 单客户端写入
+sd=sd1,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,host=h1
+# 多客户端读取
+sd=sd2,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(0,6.25),host=h1
+sd=sd3,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(6.25,12.5),host=h2
+sd=sd4,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(12.5,18.75),host=h3
+sd=sd5,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(18.75,25),host=h4
+sd=sd6,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(25,31.25),host=h5
+sd=sd7,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(31.25,37.5),host=h6
+sd=sd8,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(37.5,43.75),host=h7
+sd=sd9,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(43.75,50),host=h8
+sd=sd10,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(50,56.25),host=h9
+sd=sd11,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(56.25,62.5),host=h10
+sd=sd12,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(62.5,68.75),host=h11
+sd=sd13,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(68.75,75),host=h12
+sd=sd14,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(75,81.25),host=h13
+sd=sd15,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(81.25,87.5),host=h14
+sd=sd16,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(87.5,93.75),host=h15
+sd=sd17,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=25t,range=(93.75,100),host=h16
+
+# 定义工作负载
+
+# 阶段一（图生成）：顺序写入边属性文件
+wd=wd1,sd=sd1,rdpct=0,seekpct=0,xfersize=4m
+
+# 阶段二（子图生成）：随机读取边属性文件
+wd=wd2,sd=(sd2-sd17),rdpct=100,seekpct=100,xfersize=32
+
+# 设置运行配置
+rd=default,iorate=max,interval=1,warmup=60
+
+# 阶段一（图生成）
+# 设置：写边属性文件的停止条件
+rd=rd1,wd=wd1,maxdata=25t,format=restart,elapsed=48h
+
+# 阶段二（子图生成）
+# 设置：读边属性文件的停止条件
+rd=rd2,wd=wd2,maxdata=25t,format=restart,elapsed=600

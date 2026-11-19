@@ -6,15 +6,17 @@
 
 | 负载 | 来源依据 | 文件／容器容量 | 4MiB对象位置数 |
 |---|---|---:|---:|
-| [大数据 Baleen](workloads/bigdata_baleen/README.md) | [Baleen，FAST 2024](https://www.usenix.org/conference/fast24/presentation/wong)及其[Region2数据仓库公开记录](https://ftp.pdl.cmu.edu/pub/datasets/Baleen24/storage_all/storage_all_Region2.tar.gz)，在完整时间轴上整键抽样 | 约5.000 TiB | 1,310,719 |
-| [图计算](workloads/graph_zipf/README.md) | QB认知域作战属性图的共享边属性文件与32字节随机读取模型 | 4.000 TiB | 1,048,576 |
-| [高性能计算 WRF](workloads/hpc_wrf/README.md) | [NCAR WRF v4.4 CONUS benchmark](https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/benchdata_v44.html)的科学字段和文件角色；采用1km、60层、8成员集合预报设计 | 约3.108 TiB | 814,680 |
-| [AI训练](workloads/ai_training_ses/README.md) | [CCF-SES 1.2.0](https://ses.ccf.org.cn/) PERF_002的文件大小类别、读写及请求大小配比 | 容器约5.652 TiB；有效数据约4.295 TiB | 1,481,601 |
-| [AI推理](workloads/ai_inference_ses/README.md) | [CCF-SES 1.2.0](https://ses.ccf.org.cn/) PERF_003的文件大小类别、读写及请求大小配比 | 4.500 TiB | 1,179,648 |
+| [大数据 Baleen](workloads/hot_cold/bigdata_baleen/README.md) | [Baleen，FAST 2024](https://www.usenix.org/conference/fast24/presentation/wong)及其[Region2数据仓库公开记录](https://ftp.pdl.cmu.edu/pub/datasets/Baleen24/storage_all/storage_all_Region2.tar.gz)，在完整时间轴上整键抽样 | 约5.000 TiB | 1,310,719 |
+| [图计算](workloads/hot_cold/graph_zipf/README.md) | QB认知域作战属性图的共享边属性文件与32字节随机读取模型 | 4.000 TiB | 1,048,576 |
+| [高性能计算 WRF](workloads/hot_cold/hpc_wrf/README.md) | [NCAR WRF v4.4 CONUS benchmark](https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/benchdata_v44.html)的科学字段和文件角色；采用1km、60层、8成员集合预报设计 | 约3.108 TiB | 814,680 |
+| [AI训练](workloads/hot_cold/ai_training_ses/README.md) | [CCF-SES 1.2.0](https://ses.ccf.org.cn/) PERF_002的文件大小类别、读写及请求大小配比 | 容器约5.652 TiB；有效数据约4.295 TiB | 1,481,601 |
+| [AI推理](workloads/hot_cold/ai_inference_ses/README.md) | [CCF-SES 1.2.0](https://ses.ccf.org.cn/) PERF_003的文件大小类别、读写及请求大小配比 | 4.500 TiB | 1,179,648 |
 
 五项总容量约22.260 TiB。对象位置数表示按4MiB布局可容纳的对象库存，实际访问对象数取决于600秒内完成的请求。
 
-正式版大数据负载保留两种方案。[Baleen Region2](workloads/bigdata_baleen/README.md) 为默认用例，计入上述五项。[FAST 天文观测数据分析容器版](workloads/bigdata_fast/README.md) 为独立备选，容器逻辑总长 4 TiB，有效数据 400 GiB，共 1,048,576 个 4 MiB 对象位置。
+正式版大数据负载保留两种方案。[Baleen Region2](workloads/hot_cold/bigdata_baleen/README.md) 为默认用例，计入上述五项。[FAST 天文观测数据分析容器版](workloads/hot_cold/bigdata_fast/README.md) 为独立备选，容器逻辑总长 4 TiB，有效数据 400 GiB，共 1,048,576 个 4 MiB 对象位置。
+
+冷热识别负载集中在 `workloads/hot_cold/`，涵盖 Baleen 的原生冷热以及其余用例的人工倾斜。测试脚本 A.1–A.6 另存为[原负载集（未添加冷热倾斜）](workloads/original/README.md)，用于对照。
 
 ## 访问结构与冷热设计
 

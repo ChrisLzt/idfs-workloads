@@ -12,7 +12,7 @@ import re
 MAX_FWD = 256
 BATCH_SIZE = 20
 NAME = re.compile(r"[a-z][a-z0-9_]*\Z")
-DEFAULT_CONFIG_ROOT = Path(__file__).resolve().parents[2] / 'workloads'
+DEFAULT_CONFIG_ROOT = Path(__file__).resolve().parents[2] / 'workloads' / 'hot_cold'
 
 
 def json_text(value):
