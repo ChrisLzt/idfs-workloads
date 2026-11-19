@@ -2,15 +2,17 @@
 
 五项负载的访问生成种子统一为1048596。Baleen保留已选定的Region2键清单、抽样参数和原生频率表；新种子用于访问生成。只更换访问种子且容量、布局不变时，已准备的载体数据可以继续使用。
 
-每种负载目录都有独立的三个入口：
+默认五项在 `workloads/` 下各有独立的造数、检查和测试入口。
 
 | 负载目录 | 造数据 | 检查数据 | 正式测试 |
 |---|---|---|---|
-| bigdata_baleen | prepare_data.sh | check_data.sh | run_test.sh |
-| graph_zipf | prepare_data.sh | check_data.sh | run_test.sh |
-| hpc_wrf | prepare_data.sh | check_data.sh | run_test.sh |
-| ai_training_ses | prepare_data.sh | check_data.sh | run_test.sh |
-| ai_inference_ses | prepare_data.sh | check_data.sh | run_test.sh |
+| `workloads/bigdata_baleen` | prepare_data.sh | check_data.sh | run_test.sh |
+| `workloads/graph_zipf` | prepare_data.sh | check_data.sh | run_test.sh |
+| `workloads/hpc_wrf` | prepare_data.sh | check_data.sh | run_test.sh |
+| `workloads/ai_training_ses` | prepare_data.sh | check_data.sh | run_test.sh |
+| `workloads/ai_inference_ses` | prepare_data.sh | check_data.sh | run_test.sh |
+
+FAST 容器版使用独立的配置和操作入口，详见 [FAST 使用说明](workloads/bigdata_fast/README.md)。
 
 一次造数只准备一份共享数据集，不在每个压测客户端各造副本。准备完成后可以等待，不会自动启动测试；正式测试不会重新format或再次填满数据。图计算为纯读，其余负载按各自来源保留读写，写操作使用预先准备的容器空间。
 
@@ -19,7 +21,7 @@
 先按目标集群的数据路径渲染每个负载的render_config.sh。图计算可指定准确共享文件路径，例如：
 
 ```bash
-./graph_zipf/render_config.sh \
+./workloads/graph_zipf/render_config.sh \
   --data-file /mnt/nfs/graph/test.graph.edge.props \
   --vdbench /opt/vdbench50406/vdbench
 ```
@@ -27,7 +29,7 @@
 其他四项使用--data-root设置数据集根目录，例如：
 
 ```bash
-./bigdata_baleen/render_config.sh --data-root /mnt/idfs/workloads
+./workloads/bigdata_baleen/render_config.sh --data-root /mnt/idfs/workloads
 ```
 
 仓库中rendered目录内的数据路径为示例，部署时先按实际挂载路径重新渲染。目录名称不决定数据容量，容量由模型和清单中的字节数确定。配置和结果必须放在数据目录之外。修改数据容量或布局后须重新渲染并按新布局准备数据；仅更换测试参数不意味着需要重造同一布局的数据。
@@ -37,7 +39,7 @@
 在对应目录独立运行，例如：
 
 ```bash
-./graph_zipf/prepare_data.sh --execute \
+./workloads/graph_zipf/prepare_data.sh --execute \
   --vdbench /opt/vdbench50406/vdbench \
   --results /path/to/prepare-session
 ```
@@ -55,7 +57,7 @@ WRF采用8成员方案，容器为3,417,015,582,720字节（约3.108 TiB）；AI
 ## 3. 检查、等待
 
 ```bash
-./graph_zipf/check_data.sh
+./workloads/graph_zipf/check_data.sh
 ```
 
 每个目录都可独立检查。检查是文件清单、大小、分配信息、准备状态和可用布局属性的元数据核验，不扫描payload，不要求再次腾出一个数据集容量。数据未被删除、移动或改变布局时，可留待后续测试。
@@ -63,17 +65,21 @@ WRF采用8成员方案，容器为3,417,015,582,720字节（约3.108 TiB）；AI
 ## 4. 测试时再执行
 
 ```bash
-./graph_zipf/run_test.sh --execute \
+./workloads/graph_zipf/run_test.sh --execute \
   --vdbench /opt/vdbench50406/vdbench \
   --results /path/to/test-session
 ```
 
 同样将目录替换为其他负载即可。默认current方案，单个600秒RD、iorate=max、O_DIRECT；不带--execute拒绝启动。数据/配置/结果分开，结果子目录不得已存在。布局和所用原版安装必须与渲染配置一致。
 
-只渲染、验证模型或执行原版-s解析不等于真实集群兼容性、吞吐或识别准确率验收。各负载来源及当前容量见[README](README.md)；图计算的多客户端和运行资产要求见[图计算使用说明](graph_zipf/USAGE.md)。
+只渲染、验证模型或执行原版-s解析不等于真实集群兼容性、吞吐或识别准确率验收。各负载来源及当前容量见[README](README.md)；图计算的多客户端和运行资产要求见[图计算使用说明](workloads/graph_zipf/USAGE.md)。
 
 ## 5. 仓库目录
 
-五个负载目录各自保存入口脚本、来源说明和rendered配置。`idfs_workload/`保存共用工具、User源码与JAR、冻结来源参数及频率表；`tests/`保存离线校验代码；`docs/scientific-data/`保存五份汇交Word及目录对应说明。
+`workloads/` 下的六个目录各自保存入口脚本和负载说明。五种默认负载随附 `rendered/` 配置，FAST 的运行包按部署路径生成。
 
-正式运行需要的JAR、映射表和Baleen频率表已随仓库提供。重新构建User模块的方法见[复现文件说明](idfs_workload/README.md)。原版Vdbench运行软件按其许可另行取得。
+`tools/` 保存统一命令、Python 实现、Java User 扩展、冻结来源输入及离线测试。从仓库根目录可执行 `./tools/workloads.sh` 查看默认五项，或执行 `./tools/validate_all.sh` 做离线校验。
+
+`handover/` 集中存放五份 Word 汇交计划和五套独立复现工具包，分别位于 `plans/` 和 `tools/`。
+
+正式运行需要的JAR、映射表和Baleen频率表已随仓库提供。重新构建User模块的方法见[复现文件说明](tools/idfs_workload/README.md)。原版Vdbench运行软件按其许可另行取得。

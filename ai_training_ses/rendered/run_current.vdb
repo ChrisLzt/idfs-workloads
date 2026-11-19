@@ -1,8 +1,0 @@
-* SES1.2.0-derived pure random I/O; aligned physical container; stock5.04.06 User
-data_errors=1
-messagescan=no
-formatsds=no
-hd=default,jvms=1,vdbench=/home/chris/idfs-workloads/ai_training_ses/rendered
-sd=ai,lun=/mnt/idfs/workloads_400g/ai_training_ses/container/vdb.1_1.dir/vdb_f0000.file,size=6214285000704,threads=64,openflags=o_direct,offset=0,align=4096
-wd=ses,sd=ai,xfersize=1048576,seekpct=100,rdpct=50,skew=100,user=(idfsai.TimelineWorkload,ai.timeline,current,seed1048596)
-rd=continuous,wd=ses*,iorate=max,elapsed=600,interval=1,warmup=0

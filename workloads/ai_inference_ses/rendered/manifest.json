@@ -1,0 +1,111 @@
+{
+  "access_engine": "user",
+  "asset_sha256": {
+    "ai-user.jar": "6d567d9b7bd33a95f208bd559b2e736ebe9991e9c6a7db8607f2701439839764",
+    "ai.timeline": "7c78a9bc58205f1f04203b423e1fc5f3b7fbce55eba6deaa9e0ddf589053bd8a",
+    "file-map.csv": "daee60ee0ee3865dc61f586b6a498733fbed7e6d44d39b186a4668659ebb09ab",
+    "vdbench": "42c5ab09d584aaea0675d029d2a07c1655e308c8ab9df9c3b653222b8b74f968"
+  },
+  "bins": [
+    {
+      "anchor": "/mnt/idfs/workloads_400g/ai_inference_ses/container",
+      "files": 1,
+      "id": "container",
+      "size_bytes": 4947802324992
+    }
+  ],
+  "capacity_bytes": 4947802324992,
+  "config_sha256": {
+    "prepare_data.vdb": "634e380dae10e61c7ac96efa562168492a2bd800ee610c638a811b9dd48ca4ab",
+    "run_baseline.vdb": "cffcc41a15f58884991241fc46062cc32a23f05b4df5471f298fefe2f7dadc5a",
+    "run_current.vdb": "de3456ea0e7c23638325a8d5c761059f3e22a921e8002d67eabd4ebf503682b2"
+  },
+  "data_root": "/mnt/idfs/workloads_400g/ai_inference_ses",
+  "file_count": 1,
+  "id": "ai_inference_ses",
+  "layout_sha256": "2547e11c8aab954890b34133665cf33498a91f4615964ead75cef0be14e161f2",
+  "max_prepare_fwd": 1,
+  "max_run_fwd": 0,
+  "max_run_wd": 1,
+  "model_sha256": "8dea08a9ca17ce46a151cd6733fbc11adfc11e3cb4f8957aa3a4fc07890ce0b8",
+  "profiles": {
+    "baseline": [
+      {
+        "fwd_count": 0,
+        "ios_per_object_selection": 1,
+        "name": "continuous",
+        "object_sampling": "iid_with_replacement",
+        "object_selection": "conditional_uniform",
+        "read_share": 0.7999999999999999,
+        "seconds": 600,
+        "share_basis": "request sampling probabilities, not completion quotas",
+        "target_iops": "max",
+        "wd_count": 1,
+        "write_share": 0.20000000000000007
+      }
+    ],
+    "current": [
+      {
+        "fwd_count": 0,
+        "ios_per_object_selection": 1,
+        "name": "continuous",
+        "object_sampling": "iid_with_replacement",
+        "object_selection": "conditional_Zipf0.99",
+        "read_share": 0.7999999999999999,
+        "seconds": 600,
+        "share_basis": "request sampling probabilities, not completion quotas",
+        "target_iops": "max",
+        "wd_count": 1,
+        "write_share": 0.20000000000000007
+      }
+    ]
+  },
+  "provenance": {
+    "access_mode_mapping": "convert every SES sequential/random channel to random reads or writes; merge identical group/operation/transfer-size channels while preserving their summed probability",
+    "adaptation": "SES1.2.0-derived logical inventory and read/write/transfer-size shares; all source access modes converted to pure random; added conditional object Zipf0.99 with IID per-I/O object and legal-offset selection; not SES certification",
+    "idfs_expansion": {
+      "actual_bytes": 4947802324992,
+      "container_bytes": 4947802324992,
+      "method": "increase logical file counts, retain size classes and SES read/write/size shares; use pure random offsets in aligned independent object slots",
+      "original_bytes": 123480309760,
+      "reference_count_multiplier": 1,
+      "reference_target_bytes": null,
+      "runtime": "unmodified Vdbench5.04.06 plus separate User extension; no SES installation",
+      "source_commit": "303e43e2e1c98cb74ec156af75ce2546faaa72eb",
+      "source_model_sha256": "04fed5bee8bf6ad04f7f0c7687fb4caea5644eac0436536fe01b0117b3ea5148",
+      "target_bytes": 4947802324992
+    },
+    "inventory_objects": 1179648,
+    "limitation": "pure random adaptation does not retain the SES sequential/random mix; container changes inode/directory/open metadata; conditional class mixture is not one global Zipf; finite sampling and coverage still depend on I/O count; no native AI event replay",
+    "native_trace": false,
+    "object_mapping": "4MiB-aligned exclusive original-file/fragment slots; reversible mapping; runtime excludes padding",
+    "object_selection": "Zipf0.99 over all4MiB objects within each original size class; baseline uniform objects; fixed Fisher-Yates ranks seeded by1048596 XOR logical_size_bytes",
+    "operation_mapping": "preserve source reads and writes; overwrite prepared synthetic payload",
+    "preparation": "full-container formatting allocates padding too; partial original-file objects become full-sized slots",
+    "random_rule": "uniform legal4KiB-aligned offsets inside the selected object; no object or logical-file boundary crossing",
+    "sampling": "per-channel IID pseudorandom uniforms through the object CDF; with replacement, repeated objects allowed; domain-separated run-seed streams distinct from request/offset RNG; no request or time quota",
+    "ses_build": "1.2.0.25061615",
+    "ses_version": "1.2.0",
+    "source": "https://ses.ccf.org.cn/",
+    "source_case": "PERF_003",
+    "source_read_write_ratio": "80:20",
+    "source_write_to_read": false,
+    "templates": {
+      "inference": {
+        "path": "resource/io_model_param_file/vdbench/multi_thread_large_io_rw_as_infer.txt",
+        "sha256": "a7fdd9992c8dae7d6a2ea0768ab23107403d6ce7c5d93fdcecfc525eccb6682c"
+      },
+      "training": {
+        "path": "resource/io_model_param_file/vdbench/multi_thread_large_io_rw_as_mix.txt",
+        "sha256": "c2ec3a654ba3a354d457a935e1ba7a9823cb880bff04b65cc7e1c2bd4392f3c4"
+      }
+    },
+    "timing": "one600sRD;1s internal time slices with stationary SES-derived probabilities; no reseeding at slice boundaries; no per-second quota",
+    "wheel_path": "storage_evaluation_system-1.2.0-py3-none-any.whl",
+    "wheel_sha256": "e21b30c18073becb34fca202b83d19b4507729f9d79414dedb1a98b2fca43813",
+    "workload_label": "CCF-SES PERF_003 inference"
+  },
+  "rate": "max",
+  "schema": 1,
+  "total_run_wd": 1
+}

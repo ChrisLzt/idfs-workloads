@@ -1,8 +1,0 @@
-* Baleen Region2 full-time key subset;native joint time/address/size/read-write frequencies
-data_errors=1
-messagescan=no
-formatsds=no
-hd=default,jvms=1,vdbench=/home/chris/idfs-workloads/bigdata_baleen/rendered
-sd=baleen,lun=/mnt/idfs/workloads_400g/bigdata_baleen/container/vdb.1_1.dir/vdb_f0000.file,size=5497553944576,threads=64,openflags=o_direct,offset=0,align=4096
-wd=native,sd=baleen,xfersize=44826624,seekpct=100,rdpct=50,skew=100,user=(idfsbaleen.TimelineWorkload,native.timeline,seed1048596)
-rd=continuous,wd=native*,iorate=max,elapsed=600,interval=1,warmup=0
