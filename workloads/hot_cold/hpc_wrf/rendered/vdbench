@@ -1,18 +1,32 @@
 #!/usr/bin/env bash
 set -euo pipefail
 runtime_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
-stock_home=${VDBENCH_HOME:-/home/chris/PDSL/vdbench50406}
-stock_jar="$stock_home/vdbench.jar"
-observed=$(sha256sum -- "$stock_jar")
-expected=8a87321b1b3cd6b60a5251a149359b628dd95a52b93efd7a990703478cfbf4d5
-if [[ ${observed%% *} != "$expected" ]]; then
-  printf '%s\n' 'WRF User workload requires unmodified Vdbench 5.04.06.' >&2
+configured_home='/home/chris/PDSL/vdbench50406'
+if [[ "$runtime_dir" != '/home/chris/idfs-workloads/workloads/hot_cold/hpc_wrf/rendered' || ${VDBENCH_HOME:-$configured_home} != "$configured_home" ]]; then
+  printf '%s\n' 'Render again for this bundle path and Vdbench installation.' >&2
   exit 2
 fi
-if [[ -x "$stock_home/jre/bin/java" ]]; then
-  runtime_java="$stock_home/jre/bin/java"
+require_sha() {
+  local observed
+  observed=$(sha256sum -- "$1")
+  if [[ ${observed%% *} != "$2" ]]; then
+    printf 'User runtime checksum mismatch: %s\n' "$1" >&2
+    exit 2
+  fi
+}
+stock_jar="$configured_home/vdbench.jar"
+extension="$runtime_dir/wrf-user.jar"
+require_sha "$stock_jar" '8a87321b1b3cd6b60a5251a149359b628dd95a52b93efd7a990703478cfbf4d5'
+require_sha "$extension" '0e09e266b6ee22c3f889b99612f73aaf205c2f1639c7d9253ab0372d6e08a507'
+require_sha "$runtime_dir/runtime.json" 'f5a1d650fd5d2bd2fdd444b9f3024fa473d289e87b949e3c2356b2da2004e108'
+require_sha "$runtime_dir/stock-home" 'f125e283e1cfa2608438f0ed15bfaa7e76480bea0632e733e744cc72090c2844'
+unset JDK_JAVA_OPTIONS JAVA_TOOL_OPTIONS _JAVA_OPTIONS
+if [[ -n ${JAVA_HOME:-} ]]; then
+  java="$JAVA_HOME/bin/java"
+elif [[ -x "$configured_home/jre/bin/java" ]]; then
+  java="$configured_home/jre/bin/java"
 else
-  runtime_java="${JAVA_HOME:-/usr}/bin/java"
+  java=/usr/bin/java
 fi
 main=Vdb.Vdbmain
 heap=${VDBENCH_MAIN_XMX:-512m}
@@ -21,6 +35,8 @@ if [[ ${1:-} == SlaveJvm ]]; then
   heap=${VDBENCH_SLAVE_XMX:-2048m}
 fi
 cd -- "$runtime_dir"
-# Native JAR must be first so Vdbench locates its own original native libraries.
-exec "$runtime_java" -XX:-UsePerfData -Xms128m -Xmx"$heap" \
-  -cp "$stock_jar:$runtime_dir/wrf-user.jar" "$main" "$@"
+opts=(-XX:-UsePerfData -Xms64m -Xmx"$heap")
+if [[ -n ${TMPDIR:-} ]]; then
+  opts+=("-Djava.io.tmpdir=$TMPDIR")
+fi
+exec "$java" "${opts[@]}" -cp "$stock_jar:$extension" "$main" "$@"

@@ -5,8 +5,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 from .core import json_text, safe_path, validate_bundle
-
-JAR_SHA256 = '8a87321b1b3cd6b60a5251a149359b628dd95a52b93efd7a990703478cfbf4d5'
+from .user_runtime import JAR_SHA256
 
 
 def check(bundles, *, jar, output):
@@ -53,6 +52,9 @@ def check(bundles, *, jar, output):
             result=subprocess.run(command,cwd=bundle if extension else tmp,env=env,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=90)
         (dest/'console.log').write_text(result.stdout)
         success=result.returncode==0 and 'Vdbench simulation completed successfully.' in result.stdout
+        if extension and config.name=='prepare_data.vdb':
+            # A syntactically valid RD without elapsed would stop at the stock 30s default.
+            success = success and 'elapsed=(none);' in result.stdout
         report['results'].append({'config':str(config),'config_sha256':expected,'command':command,'exit_status':result.returncode,'passed':success})
         (output/'summary.json').write_text(json_text(report))
         if not success:

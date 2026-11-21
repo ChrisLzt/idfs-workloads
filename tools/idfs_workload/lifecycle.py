@@ -8,7 +8,7 @@ import stat
 import subprocess
 from datetime import datetime, timezone
 
-from .core import digest, json_text, safe_path, validate_bundle
+from .core import RUN_CONFIG, json_text, safe_path, validate_bundle
 
 READY = '.single-v2-ready.json'
 INTENT = '.single-v2-preparing.json'
@@ -57,10 +57,17 @@ def _storage_target(root):
 
 def preflight(bundle):
     manifest = validate_bundle(bundle)
+    if manifest['id']=='bigdata_fast':
+        from .fast_prepare import preflight as preflight_fast
+        return preflight_fast(manifest)
     if manifest['id']=='graph_zipf':
         from .graph_prepare import preflight as graph_preflight
         return graph_preflight(bundle)
     root, mount = _storage_target(manifest['data_root'])
+    if manifest.get('access_engine') == 'user' and (root/READY).is_file() and not (root/INTENT).exists():
+        ready = check_ready(bundle)
+        fs = os.statvfs(root)
+        return dict(ready, data_root=str(root), required_free_bytes=0, available_bytes=fs.f_bavail*fs.f_frsize)
     if root.exists() and (not root.is_dir() or any(root.iterdir())):
         raise ValueError(f'data root already contains content; no automatic overwrite or cleanup: {root}')
     parent = _existing_parent(root)
@@ -81,7 +88,9 @@ def preflight(bundle):
 
 
 def verify_inventory(manifest):
-    """Stat only: prove expected file counts, sizes and allocated extents, not payload checksums."""
+    """Verify the file inventory from metadata."""
+    if manifest.get('access_engine') == 'user':
+        return _inspect_container(manifest)[0]
     root = no_symlinks(manifest['data_root'])
     expected = {b['id'] for b in manifest['bins']}
     if not root.is_dir():
@@ -92,7 +101,6 @@ def verify_inventory(manifest):
         if child.is_symlink():
             raise ValueError(f'symlink in data root: {child}')
     total_files = total_bytes = 0
-    mount=mount_info(root);unverified=False
     for b in manifest['bins']:
         anchor = no_symlinks(b['anchor'])
         if not anchor.is_dir():
@@ -119,10 +127,6 @@ def verify_inventory(manifest):
                     raise ValueError(f'wrong file size: {p}')
                 if st.st_blocks * 512 < st.st_size:
                     raise ValueError(f'sparse or incompletely allocated data file: {p}')
-                if manifest.get('access_engine')=='user':
-                    from .file_layout import require_layout
-                    inspected=require_layout(p,fstype=mount['fstype'])
-                    unverified |= inspected['layout'] is None
                 actual_files.add(relative)
                 count += 1
                 total_bytes += st.st_size
@@ -134,13 +138,84 @@ def verify_inventory(manifest):
     if total_bytes != manifest['capacity_bytes'] or total_files != manifest['file_count']:
         raise ValueError('total file inventory mismatch')
     return {'file_count':total_files, 'capacity_bytes':total_bytes, 'verification':'stat counts/sizes/allocated extents; no content read',
-            'layout_verification':('not checked' if manifest.get('access_engine')!='user' else
-                'not exposed by NFS;must be confirmed when preparing data' if unverified else 'xattr')}
+            'layout_verification':'not checked'}
+
+
+def _inspect_container(manifest):
+    from .file_layout import require_layout
+
+    preparation = manifest['preparation']
+    file, mount = _storage_target(preparation['file'])
+    info = file.lstat()
+    if not stat.S_ISREG(info.st_mode) or info.st_size != manifest['capacity_bytes']:
+        raise ValueError(f'expected a regular container of {manifest["capacity_bytes"]} bytes: {file}')
+    allocated = info.st_blocks * 512
+    if allocated < preparation['written_bytes']:
+        raise ValueError(f'incompletely allocated container: {file}')
+    if not os.access(file, os.R_OK):
+        raise ValueError(f'container is not readable: {file}')
+    layout = require_layout(file, fstype=mount['fstype'])
+    return dict(id=manifest['id'], state='ready', data_root=manifest['data_root'], data_file=str(file),
+                mount=mount, file_count=1, capacity_bytes=info.st_size,
+                payload_bytes=preparation['written_bytes'], allocated_bytes=allocated,
+                layout=layout['layout'], layout_verification=layout['verification'],
+                verification='file size, allocated bytes and layout metadata'), info
 
 
 def _record(manifest, **extra):
     return {'id':manifest['id'], 'layout_sha256':manifest['layout_sha256'],
             'capacity_bytes':manifest['capacity_bytes'], 'utc':datetime.now(timezone.utc).isoformat(), **extra}
+
+
+def container_markers(manifest):
+    if manifest.get('input_policy', {}).get('mode') == 'existing_file':
+        from .graph_prepare import markers
+        return markers(manifest['preparation']['file'])
+    root = Path(manifest['data_root'])
+    return root/INTENT, root/READY
+
+
+def record_container_ready(manifest):
+    from .user_prepare import sync_directory
+
+    _, marker = container_markers(manifest)
+    marker = safe_path(marker)
+    if marker.exists():
+        raise FileExistsError(f'container already has a readiness record: {marker}')
+    inventory, info = _inspect_container(manifest)
+    pending = safe_path(marker.with_name(marker.name+'.tmp'))
+    with pending.open('w') as stream:
+        stream.write(json_text(_record(manifest, state='ready', inode=info.st_ino, inventory=inventory)))
+        stream.flush()
+        os.fsync(stream.fileno())
+    pending.replace(marker)
+    sync_directory(marker.parent)
+    return inventory
+
+
+def container_ready(manifest):
+    intent, marker = container_markers(manifest)
+    if intent.exists() or intent.is_symlink():
+        raise ValueError('preparation is incomplete or active; test cannot start')
+    marker = safe_path(marker)
+    inode = None
+    if marker.exists():
+        ready = json.loads(marker.read_text())
+        if (ready.get('state') != 'ready'
+                or ready.get('id', manifest['id']) != manifest['id']
+                or ready.get('layout_sha256') != manifest['layout_sha256']
+                or ready.get('capacity_bytes') != manifest['capacity_bytes']):
+            raise ValueError('prepared data belongs to a different layout')
+        inode = ready.get('inode')
+    elif manifest['id'] == 'bigdata_fast':
+        from .fast_prepare import completed_inode
+        inode = completed_inode(Path(manifest['data_root']))
+    elif manifest.get('input_policy', {}).get('mode') != 'existing_file':
+        raise ValueError('ready marker absent; preparation must finish successfully before measurement')
+    inventory, info = _inspect_container(manifest)
+    if inode is not None and inode != info.st_ino:
+        raise ValueError(f'container identity differs from preparation record: {inventory["data_file"]}')
+    return inventory
 
 
 def _executable(vdbench):
@@ -175,35 +250,68 @@ def _output(output, root, bundle):
     return output
 
 
-def prepare(bundle, *, vdbench, output, execute=False, chunk_mib=16):
+def prepare(bundle, *, vdbench, output, execute=False):
     if not execute:
         raise ValueError('preparation writes data; explicit --execute is required')
     bundle = Path(bundle).absolute()
     manifest = validate_bundle(bundle)
+    vdbench = _executable(vdbench)
+    if manifest.get('access_engine') == 'user':
+        from . import user_prepare, user_runtime
+        # Check the runtime before creating any data, including the file extent.
+        user_runtime.execution(bundle, vdbench, bundle/'prepare_data.vdb', output)
+    if manifest['id']=='bigdata_fast':
+        from .fast_prepare import prepare as prepare_fast
+        output = _output(output, Path(manifest['data_root']), bundle)
+        output.mkdir(exist_ok=False)
+        report = dict(prepare_fast(manifest, bundle=bundle, vdbench=vdbench, output=output), output=str(output))
+        (output/'prepare.json').write_text(json_text(report))
+        return report
     if manifest['id']=='graph_zipf':
         from .graph_prepare import prepare as prepare_graph
-        return prepare_graph(bundle,output=output,execute=execute,chunk_mib=chunk_mib,vdbench=vdbench)
+        return prepare_graph(bundle,output=output,execute=execute,vdbench=vdbench)
     report = preflight(bundle)
+    if report.get('state') == 'ready':
+        return dict(report, reused_existing_data=True)
     root = Path(manifest['data_root'])
-    vdbench = _executable(vdbench)
     output = _output(output, root, bundle)
     root.mkdir(parents=True, exist_ok=True)
     # Exclusive intent file prevents duplicate preparations; leftovers require inspection.
     with (root/INTENT).open('x') as stream:
         stream.write(json_text(_record(manifest, state='preparing', output=str(output))))
-    subprocess.run([str(vdbench), '-f', str(bundle/'prepare_data.vdb'), '-o', str(output)], check=True)
-    inventory = verify_inventory(manifest)
-    (root/READY).write_text(json_text(_record(manifest, state='ready', inventory=inventory)))
+        stream.flush()
+        os.fsync(stream.fileno())
+    if manifest.get('access_engine') == 'user':
+        output.mkdir()
+        user_prepare.sync_directory(root)
+        file = safe_path(manifest['preparation']['file'])
+        file.parent.mkdir(parents=True)
+        user_prepare.write_new_file(bundle, manifest, vdbench, output, report['mount'])
+        user_prepare.sync_directory(file.parent)
+        user_prepare.sync_directory(file.parent.parent)
+        inventory = record_container_ready(manifest)
+    else:
+        subprocess.run([str(vdbench), '-f', str(bundle/'prepare_data.vdb'), '-o', str(output)], check=True)
+        inventory = verify_inventory(manifest)
+        with (root/READY).open('x') as stream:
+            stream.write(json_text(_record(manifest, state='ready', inventory=inventory)))
+            stream.flush()
+            os.fsync(stream.fileno())
     (root/INTENT).unlink()
-    return {**report, **inventory, 'state':'ready', 'output':str(output)}
+    result = {**report, **inventory, 'state':'ready', 'output':str(output)}
+    if manifest.get('access_engine') == 'user':
+        user_prepare.sync_directory(root)
+        (output/'prepare.json').write_text(json_text(result))
+    return result
 
 
 def check_ready(bundle):
     manifest = validate_bundle(bundle)
-    if manifest['id']=='graph_zipf':
-        from .graph_zipf import check_ready as check_existing_graph
-        return check_existing_graph(bundle)
+    if manifest.get('access_engine') == 'user':
+        return container_ready(manifest)
     root, mount = _storage_target(manifest['data_root'])
+    if (root/INTENT).exists() or (root/INTENT).is_symlink():
+        raise ValueError('preparation is incomplete or active; test cannot start')
     marker = root/READY
     if not marker.is_file() or marker.is_symlink():
         raise ValueError('ready marker absent; preparation must finish successfully before measurement')
@@ -213,21 +321,28 @@ def check_ready(bundle):
     return {**verify_inventory(manifest), 'id':manifest['id'], 'mount':mount, 'state':'ready'}
 
 
-def run(bundle, *, profile='baseline', vdbench, output, execute=False):
+def run(bundle, *, vdbench, output, execute=False):
     if not execute:
         raise ValueError('measurement requires explicit --execute')
     bundle = Path(bundle).absolute()
     manifest = validate_bundle(bundle)
-    if profile not in manifest['profiles']:
-        raise ValueError(f'unknown profile: {profile}')
+    if manifest['id']=='bigdata_fast':
+        from .fast_prepare import dataset_lock
+        from .user_runtime import execution
+        with dataset_lock(Path(manifest['data_root']), create=False) as lock:
+            check_ready(bundle)
+            stock = _executable(vdbench)
+            output = _output(output, Path(manifest['data_root']), bundle)
+            subprocess.run(**execution(bundle, stock, bundle/RUN_CONFIG, output), check=True, pass_fds=(lock,))
+        return {'id':manifest['id'], 'output':str(output)}
     check_ready(bundle)
     vdbench = _executable(vdbench)
     root = Path(manifest['data_root'])
     output = _output(output, root, bundle)
-    config = bundle/f'run_{profile}.vdb'
+    config = bundle/RUN_CONFIG
     if manifest.get('access_engine')=='user':
-        from .user_engine import implementation
-        subprocess.run(**implementation(manifest).execution(bundle,vdbench,config,output),check=True)
+        from .user_runtime import execution
+        subprocess.run(**execution(bundle, vdbench, config, output), check=True)
     else:
         subprocess.run([str(vdbench), '-f', str(config), '-o', str(output)], check=True)
-    return {'id':manifest['id'], 'profile':profile, 'output':str(output)}
+    return {'id':manifest['id'], 'output':str(output)}

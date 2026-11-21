@@ -37,7 +37,7 @@ class WRFUserTests(unittest.TestCase):
                              {'input', 'boundary', 'history_00h', 'checkpoint_05h', 'history_06h'})
         operations = [{c['operation'] for c in p['channels']} for p in phases]
         self.assertEqual(operations, [{'read'}, {'read', 'write'}, {'read', 'write'}, {'write'}])
-        self.assertEqual(model['profiles']['current'], model['profiles']['baseline'])
+        self.assertEqual(set(model['profiles']), {'current'})
         self.assertEqual([p['seconds'] for p in model['profiles']['current']], [600])
         self.assertEqual(model['user_timeline']['slice_us'], 1000000)
         self.assertEqual(model['user_timeline']['grain_bytes'], 4194304)
@@ -172,7 +172,8 @@ class WRFUserTests(unittest.TestCase):
         self.assertTrue(jar.is_file(), 'stock 5.04.06 JAR required for offline compatibility check')
         with tempfile.TemporaryDirectory() as d:
             root = Path(d); classes = root/'classes'; classes.mkdir()
-            sources = sorted((module.JAVA/'idfswrf').glob('*.java'))
+            from idfs_workload.user_build import source_files
+            sources = source_files('wrf')
             sources += [ROOT/'tests/java/idfswrf/WRFTests.java', ROOT/'tests/java/Vdb/WRFAdapterTests.java']
             result = subprocess.run(['javac', '-J-XX:-UsePerfData', '-J-Djava.io.tmpdir='+d,
                                      '--release', '8', '-cp', str(jar), '-d', str(classes),

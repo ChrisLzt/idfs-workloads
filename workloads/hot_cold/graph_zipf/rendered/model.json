@@ -26,24 +26,6 @@
     "relative_file": "test.graph.edge.props"
   },
   "profiles": {
-    "baseline": [
-      {
-        "lanes": [
-          {
-            "bin": "edges",
-            "file_sharing": true,
-            "fileio": "random",
-            "fileselect": "random",
-            "operation": "read",
-            "threads": 1,
-            "weight": 1,
-            "xfersize": 32
-          }
-        ],
-        "name": "uniform_all",
-        "seconds": 600
-      }
-    ],
     "current": [
       {
         "lanes": [
@@ -68,7 +50,7 @@
     "document": "课题5-测试大纲V1.2.docx",
     "document_sha256": "ad02252820b46cf234269eda4133a17d30e2a9c860f78fd377bb481e7e2afc87",
     "limitation": "application request distribution;actual coverage and module metrics require measurement",
-    "preparation": "separate explicit preparer or external tool;never part of timed test;write transfer size is configurable",
+    "preparation": "separate Vdbench User write pass or existing dense file; never part of the timed test",
     "scope": "synthetic storage I/O based on supplied outline;not a graph algorithm or native trace",
     "sections": [
       "7.1.12",

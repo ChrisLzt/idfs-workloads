@@ -48,18 +48,17 @@ public strictfp final class ZipfDistribution {
 
     public int objectAtRank(int rank) { return objects[rank]; }
     public double cumulative(int rank) { return CDF[rank]; }
-    public Stream stream(long seed, boolean uniform) { return new Stream(this, seed, uniform); }
+    public Stream stream(long seed) { return new Stream(this, seed); }
 
     public static final class Stream {
         private final ZipfDistribution distribution;
         private final SplittableRandom random;
-        private final boolean uniform;
-        private Stream(ZipfDistribution distribution, long seed, boolean uniform) {
+        private Stream(ZipfDistribution distribution, long seed) {
             this.distribution = distribution;
-            this.random = new SplittableRandom(seed); this.uniform = uniform;
+            this.random = new SplittableRandom(seed);
         }
         public long nextOffset() {
-            int rank = uniform ? random.nextInt(OBJECTS) : distribution.rank(random.nextDouble());
+            int rank = distribution.rank(random.nextDouble());
             int slot = random.nextInt(OBJECT_BYTES / TRANSFER_BYTES);
             return (long)distribution.objects[rank] * OBJECT_BYTES + (long)slot * TRANSFER_BYTES;
         }

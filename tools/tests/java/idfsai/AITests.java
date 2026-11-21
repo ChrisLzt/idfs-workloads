@@ -34,7 +34,7 @@ public final class AITests {
         }
         long end() { return base + slot * count * fragments; }
     }
-    private static void sample(Path path, boolean training, boolean zipf) throws Exception {
+    private static void sample(Path path, boolean training) throws Exception {
         List<String> rows = Files.readAllLines(path, StandardCharsets.UTF_8);
         List<Region> regions = new ArrayList<Region>();
         Map<String, Double> targetGroups = new HashMap<String, Double>();
@@ -44,7 +44,7 @@ public final class AITests {
             if (p[0].equals("G")) regions.add(new Region(p));
             if (p[0].equals("C")) targetGroups.put(p[1], targetGroups.getOrDefault(p[1], 0.) + Double.parseDouble(p[5]));
         }
-        Timeline timeline = Timeline.load(path, 12345, zipf);
+        Timeline timeline = Timeline.load(path, 12345);
         Timeline.Sample s = new Timeline.Sample();
         Map<String, Integer> joint = new HashMap<String, Integer>();
         Map<String, Integer> groupCounts = new HashMap<String, Integer>();
@@ -118,13 +118,13 @@ public final class AITests {
             check(Math.abs(n / (double)total - targetGroups.get(r.id)) < .004, "size-class request shares");
             double z = 0, top = 0, squared = 0;
             for (int rank = 1; rank <= r.objects; rank++) {
-                double weight = zipf ? Math.pow(rank, -.99) : 1;
+                double weight = Math.pow(rank, -.99);
                 z += weight; squared += weight * weight;
                 if (rank <= (r.objects + 4) / 5) top += weight;
             }
             if (n > 5000)
                 check(Math.abs(hotCounts.getOrDefault(r.id, 0) / (double)n - top / z) < .02,
-                      "object top20 probability uses analytic Zipf or uniform baseline");
+                      "object top20 probability uses analytic Zipf");
             for (String channel : transitions.keySet()) if (channel.startsWith(r.id + ":")) {
                 int nTransitions = transitions.get(channel);
                 if (nTransitions < 5000) continue;
@@ -145,14 +145,14 @@ public final class AITests {
         check(s.offset >= 0 && s.offset + s.size <= capacity, "late queued token remains a valid request");
         try { timeline.next(599999999, s); throw new AssertionError("reversed clock accepted"); }
         catch (IllegalArgumentException expectedError) { }
-        System.out.println("AI_SAMPLE " + (training ? "training" : "inference") + " " + (zipf ? "zipf" : "uniform")
+        System.out.println("AI_SAMPLE " + (training ? "training" : "inference") + " zipf"
                            + " requests=" + total + " joint=" + joint);
     }
     public static void main(String[] args) throws Exception {
         for (int c = 0; c < args.length; c++) {
             Path path = Paths.get(args[c]);
-            sample(path, c == 0, true); sample(path, c == 0, false);
-            Timeline dense = Timeline.load(path, 71, true), sparse = Timeline.load(path, 71, true);
+            sample(path, c == 0);
+            Timeline dense = Timeline.load(path, 71), sparse = Timeline.load(path, 71);
             Timeline.Sample a = new Timeline.Sample(), b = new Timeline.Sample();
             for (int i = 0; i < 50000; i++) {
                 dense.next(i * 10L, a); sparse.next(i * 11000L, b);
@@ -173,10 +173,10 @@ public final class AITests {
                                 text + "G\tduplicate\t1\t65536\t1\t0\t4194304\t20261021\n"};
             for (String value : invalid) {
                 Files.write(bad, value.getBytes(StandardCharsets.UTF_8));
-                try { Timeline.load(bad, 7, true); throw new AssertionError("invalid timeline accepted"); }
+                try { Timeline.load(bad, 7); throw new AssertionError("invalid timeline accepted"); }
                 catch (IOException expected) { }
             }
         }
-        System.out.println("AI_SAMPLER_TESTS_PASS exclusive_objects SES_read_write_size_mix object_Zipf uniform_control iid_per_io random_offsets no_quota no_physical_io=true");
+        System.out.println("AI_SAMPLER_TESTS_PASS exclusive_objects SES_read_write_size_mix object_Zipf iid_per_io random_offsets no_quota no_physical_io=true");
     }
 }

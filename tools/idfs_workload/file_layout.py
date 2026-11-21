@@ -39,5 +39,5 @@ def require_layout(path, *, directory=False, stop=None, fstype=None):
     result=probe_layout(path,directory=directory,stop=stop)
     if result is not None:return dict(result,verification='xattr')
     if fstype in ('nfs','nfs4'):
-        return dict(path=str(path),layout=None,verification='not exposed by NFS;must be confirmed when preparing data')
+        return dict(path=str(path),layout=None,verification='unavailable')
     raise ValueError('cannot verify actual4MiB Ceph/IDFS layout for '+str(path))

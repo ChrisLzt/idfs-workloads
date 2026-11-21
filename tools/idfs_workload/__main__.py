@@ -3,9 +3,10 @@ import argparse
 import json
 import os
 from pathlib import Path
+import subprocess
 import sys
 
-from . import core,lifecycle,models
+from . import core,fast_container,lifecycle,models
 
 DEFAULT_DATA=Path('/mnt/idfs/workloads_400g')
 
@@ -19,6 +20,7 @@ def _validate(bundle):
         valid_kind = (policy['kind']=='trace_inventory' or
                       (policy['kind']=='parametric_inventory' and model['id']=='hpc_wrf') or
                       (policy['kind']=='existing_file_inventory' and model['id']=='graph_zipf') or
+                      (policy['kind']=='sparse_container_inventory' and model['id']==fast_container.WORKLOAD_ID) or
                       (policy['kind']=='aligned_container_inventory' and
                        model['id'] in ('ai_training_ses', 'ai_inference_ses')))
         if not valid_kind or capacity!=policy['expected_bytes']:
@@ -40,16 +42,14 @@ def _validate(bundle):
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action',nargs='?',default='preview',choices=['preview','render','validate','preflight','prepare','verify','run','parser-check'])
-    lookup = models.CASES
+    parser.add_argument('action',nargs='?',default='preview',choices=['preview','build-user','render','validate','preflight','prepare','verify','run','parser-check'])
+    lookup = {'fast':fast_container.WORKLOAD_ID, **models.CASES}
     parser.add_argument('--case',default='all',choices=['all',*lookup])
-    parser.add_argument('--profile',default='current',choices=['current','baseline'])
     parser.add_argument('--config-root',type=Path,default=Path(os.environ.get('CONFIG_ROOT',core.DEFAULT_CONFIG_ROOT)))
     parser.add_argument('--data-root',type=Path,default=Path(os.environ.get('DATA_ROOT',DEFAULT_DATA)),help='used only when rendering')
     parser.add_argument('--data-file',type=Path,help='graph render only:exact path to the already prepared shared4TiB file')
-    parser.add_argument('--clients',help='graph render only:comma-separated NFS client hostnames;default localhost')
-    parser.add_argument('--threads',type=int,help='graph render only:I/O threads per client;default64')
-    parser.add_argument('--prepare-chunk-mib',type=int,help='graph prepare only:write chunk size;default16MiB')
+    parser.add_argument('--clients',help='render: comma-separated test clients ([user@]host); default localhost')
+    parser.add_argument('--threads',type=int,help='render: I/O threads per test client; default 64')
     parser.add_argument('--vdbench',type=Path,default=Path(os.environ.get('VDBENCH_HOME','/home/chris/PDSL/vdbench50406'))/'vdbench')
     parser.add_argument('--results',type=Path,help='new, separate results directory')
     parser.add_argument('--execute',action='store_true')
@@ -57,12 +57,18 @@ def main(argv=None):
     try:
         if args.action in ('prepare','run') and not args.execute:
             raise ValueError('prepare/run require explicit --execute and user authorization')
-        cases=list(models.CASES) if args.case=='all' else [args.case]
-        graph_options = args.data_file is not None or args.clients is not None or args.threads is not None
-        if graph_options and (args.action!='render' or 'graph' not in cases):
-            raise ValueError('--data-file/--clients/--threads apply only when rendering graph')
-        if args.prepare_chunk_mib is not None and (args.action!='prepare' or 'graph' not in cases):
-            raise ValueError('--prepare-chunk-mib applies only to graph preparation')
+        if (args.clients is not None or args.threads is not None) and args.action!='render':
+            raise ValueError('--clients and --threads apply when rendering the test configuration')
+        cases=models.DEFAULT_CASES if args.case=='all' else (args.case,)
+        if args.action=='build-user':
+            from .user_build import BUILDS, build
+            from .user_engine import build_key
+            keys = BUILDS if args.case=='all' else [build_key({'id':lookup[args.case]})]
+            jar = args.vdbench.parent/'vdbench.jar'
+            print(core.json_text({key:build(key, jar) for key in keys}), end='')
+            return 0
+        if args.data_file is not None and (args.action!='render' or 'graph' not in cases):
+            raise ValueError('--data-file applies only when rendering graph')
         config=core.safe_path(args.config_root)
         protected=Path(__file__).parent
         if config==protected or protected in config.parents:
@@ -70,15 +76,20 @@ def main(argv=None):
         bundles={case:config/lookup[case]/'rendered' for case in cases}
         if args.action=='render':
             data=core.safe_path(args.data_root)
+            clients=args.clients
+            threads=args.threads if args.threads is not None else 64
             for case in cases:
-                if case=='graph':
+                if case=='fast':
+                    spec=fast_container.specification(data/lookup[case], args.vdbench.parent,
+                                                      clients, threads)
+                    fast_container.render(spec, bundles[case])
+                elif case=='graph':
                     core.render(models.build(case),data_root=data/'graph',output=bundles[case],rate='max',
-                                data_file=args.data_file,
-                                clients=args.clients.split(',') if args.clients is not None else None,
-                                threads=args.threads if args.threads is not None else 64,
+                                data_file=args.data_file,clients=clients,threads=threads,
                                 stock_home=args.vdbench.parent)
                 else:
-                    core.render(models.build(case),data_root=data/lookup[case],output=bundles[case],rate='max')
+                    core.render(models.build(case),data_root=data/lookup[case],output=bundles[case],rate='max',
+                                clients=clients,threads=threads,stock_home=args.vdbench.parent)
         reports=[_validate(bundles[c]) for c in cases]
         for case,manifest in zip(cases,reports):
             if manifest['id']!=lookup[case]:raise ValueError('bundle identity mismatch')
@@ -91,13 +102,15 @@ def main(argv=None):
         if args.action in ('preview','render','validate'):
             print(core.json_text({'action':args.action,'real_io_executed':False,
                 'total_gib':total/2**30,'required_free_gib_with_5pct_headroom':sum(
-                    0 if m.get('input_policy',{}).get('mode')=='existing_file'
-                    else (m['capacity_bytes']*105+99)//100 for m in reports)/2**30,
+                    0 if m.get('input_policy',{}).get('mode')=='existing_file' else
+                    (m.get('preparation',{}).get('written_bytes',m['capacity_bytes'])*105+99)//100 for m in reports)/2**30,
                 'cases':[{'id':m['id'],'capacity_gib':m['capacity_bytes']/2**30,'physical_files':m['file_count'],
                           'max_run_fwd':m['max_run_fwd'],'data_root':m['data_root'],
                           'max_run_wd':m.get('max_run_wd',0),
-                          'config':str(bundles[c]/f'run_{args.profile}.vdb'),
-                          'phases':m['profiles'][args.profile]} for c,m in zip(cases,reports)]}),end='')
+                          'clients':m['runtime']['clients'],
+                          'threads_per_client':m['runtime']['threads'],
+                          'config':str(bundles[c]/core.RUN_CONFIG),
+                          'phases':m['profiles']['current']} for c,m in zip(cases,reports)]}),end='')
             return 0
         if args.action=='parser-check':
             if args.results is None:raise ValueError('--results required for parser-check')
@@ -116,17 +129,18 @@ def main(argv=None):
             print(core.json_text([lifecycle.check_ready(bundles[c]) for c in cases]),end='');return 0
         if args.results is None:raise ValueError('--results must name a new, separate directory')
         lifecycle.validate_outputs(reports,list(bundles.values()),args.results)
-        lifecycle._executable(args.vdbench)
+        stock = lifecycle._executable(args.vdbench)
+        from .user_runtime import execution
+        for c, manifest in zip(cases, reports):
+            if manifest.get('access_engine') == 'user':
+                execution(bundles[c], stock, bundles[c]/'prepare_data.vdb', args.results/lookup[c])
         if args.action=='run':
             for c in cases:lifecycle.check_ready(bundles[c])
         for c in cases:
             options={'vdbench':args.vdbench,'output':args.results/lookup[c],'execute':True}
-            if args.action=='run':options['profile']=args.profile
-            if args.action=='prepare' and c=='graph':
-                options['chunk_mib']=args.prepare_chunk_mib if args.prepare_chunk_mib is not None else 16
             print(core.json_text(getattr(lifecycle,args.action)(bundles[c],**options)),end='')
         return 0
-    except (ValueError,OSError,KeyError) as error:
+    except (ValueError,OSError,KeyError,subprocess.CalledProcessError) as error:
         print('FAIL: '+str(error),file=sys.stderr);return 1
 
 

@@ -129,7 +129,7 @@ class AIUserTests(unittest.TestCase):
             self.assertEqual(set(masses), set(want))
             for size, mass in want.items(): self.assertAlmostEqual(masses[size], mass, places=10)
 
-    def test_render_uses_one_ordinary_sd_and_preserves_the_uniform_control(self):
+    def test_render_uses_one_ordinary_sd_and_only_the_skewed_run(self):
         module = self.module()
         from idfs_workload.__main__ import _validate
         with tempfile.TemporaryDirectory() as d:
@@ -141,19 +141,20 @@ class AIUserTests(unittest.TestCase):
                 self.assertAlmostEqual(manifest['profiles']['current'][0]['read_share'], read)
                 self.assertEqual(_validate(bundle)['capacity_bytes'], model['bins'][0]['size_bytes'])
                 current = (bundle/'run_current.vdb').read_text()
-                baseline = (bundle/'run_baseline.vdb').read_text()
+                self.assertFalse((bundle/'run_baseline.vdb').exists())
                 self.assertEqual(sum(l.startswith('rd=') for l in current.splitlines()), 1)
                 self.assertEqual(sum(l.startswith('sd=') for l in current.splitlines()), 1)
                 self.assertIn('iorate=max,elapsed=600,interval=1,warmup=0', current)
                 self.assertIn('user=(idfsai.TimelineWorkload,ai.timeline,current,', current)
-                self.assertIn('user=(idfsai.TimelineWorkload,ai.timeline,baseline,', baseline)
                 self.assertNotIn('concatenatesds', current)
                 self.assertEqual(set(manifest['asset_sha256']),
-                                 {'ai-user.jar', 'ai.timeline', 'file-map.csv', 'vdbench'})
+                                 {'ai-user.jar', 'ai.timeline', 'file-map.csv', 'vdbench',
+                                  'runtime.json', 'stock-home'})
                 with zipfile.ZipFile(bundle/'ai-user.jar') as jar:
                     self.assertTrue(jar.namelist())
+                    self.assertIn('idfscommon/ContainerPrepare.class', jar.namelist())
                     for name in jar.namelist():
-                        self.assertTrue(name.startswith('idfsai/'))
+                        self.assertTrue(name.startswith(('idfsai/', 'idfscommon/')))
                         self.assertEqual(int.from_bytes(jar.read(name)[6:8], 'big'), 52)
                 (bundle/'file-map.csv').write_text('corrupted')
                 with self.assertRaisesRegex(ValueError, 'asset'): core.validate_bundle(bundle)
@@ -197,7 +198,8 @@ class AIUserTests(unittest.TestCase):
                 path = root/(case+'.timeline')
                 path.write_text(module.timeline_text(models.build(case)))
                 timelines.append(str(path))
-            sources = sorted((module.JAVA/'idfsai').glob('*.java'))
+            from idfs_workload.user_build import source_files
+            sources = source_files('ai')
             sources += [ROOT/'tests/java/idfsai/AITests.java', ROOT/'tests/java/Vdb/AIAdapterTests.java']
             compiled = subprocess.run(['javac', '-J-XX:-UsePerfData', '-J-Djava.io.tmpdir='+d,
                                        '--release', '8', '-cp', str(jar), '-d', str(classes),

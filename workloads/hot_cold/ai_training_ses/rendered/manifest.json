@@ -1,10 +1,12 @@
 {
   "access_engine": "user",
   "asset_sha256": {
-    "ai-user.jar": "6d567d9b7bd33a95f208bd559b2e736ebe9991e9c6a7db8607f2701439839764",
+    "ai-user.jar": "ba9c23df444e6f3fac240d7961954128fdcfd798de22eff10062183e5d7ab712",
     "ai.timeline": "0560c488de99a5f0d71a76b872125fd50273c77dbefe73c852d63398baffe282",
     "file-map.csv": "19ea45936e76fb02761c13b7254e7d03eda9531d68a0b51075cc3f62e3cdb872",
-    "vdbench": "42c5ab09d584aaea0675d029d2a07c1655e308c8ab9df9c3b653222b8b74f968"
+    "runtime.json": "94252078f29a1bc0031ef1688f3e01a783ad9f67270eac67d0f68bfbc3c52e04",
+    "stock-home": "f125e283e1cfa2608438f0ed15bfaa7e76480bea0632e733e744cc72090c2844",
+    "vdbench": "b3d54abb2183d6c8cc0289b99b611baf4b1bc2e523d1cba45bbf56ab71b381a0"
   },
   "bins": [
     {
@@ -16,34 +18,27 @@
   ],
   "capacity_bytes": 6214285000704,
   "config_sha256": {
-    "prepare_data.vdb": "c6a6d8113cbf1de3dbf403cdbe887e1a5768c7c6acabf1de23d249314f4821e0",
-    "run_baseline.vdb": "a5e6955a91c9590babfcab45c8429e9956af1a4111a254cc9252ca9cf12eeb74",
-    "run_current.vdb": "453e68cdddc275c433cc32e29782b3dc2288889a41ee673a7d1d98fa04959b43"
+    "prepare_data.vdb": "210d762dbcfcd23c2b92c37fdfbaa7bb43ee8fa6a4d07abfc164b7838dac8275",
+    "run_current.vdb": "9faf94a697ecca2e92087f77bc8c83284b290d27707feabab62962c2d6c22028"
   },
   "data_root": "/mnt/idfs/workloads_400g/ai_training_ses",
   "file_count": 1,
   "id": "ai_training_ses",
   "layout_sha256": "e2afbb2a6c325a1568d54b5605fe2125107cbc610699db8fe23e129fd24c1e3a",
-  "max_prepare_fwd": 1,
+  "max_prepare_fwd": 0,
   "max_run_fwd": 0,
   "max_run_wd": 1,
-  "model_sha256": "4481512d4ee4f93b1b9bbc42ca79ca7b65ccf439ee06b07ba6c6b94e480c2cc4",
+  "model_sha256": "8b5f99e7cc7ccb5684aa5c9b065b32f5c274e1652f911368c0f6bf35eabfb936",
+  "preparation": {
+    "capacity_bytes": 6214285000704,
+    "file": "/mnt/idfs/workloads_400g/ai_training_ses/container/vdb.1_1.dir/vdb_f0000.file",
+    "payload_offset": 0,
+    "slots": 1481601,
+    "stride_bytes": 4194304,
+    "transfer_bytes": 4194304,
+    "written_bytes": 6214285000704
+  },
   "profiles": {
-    "baseline": [
-      {
-        "fwd_count": 0,
-        "ios_per_object_selection": 1,
-        "name": "continuous",
-        "object_sampling": "iid_with_replacement",
-        "object_selection": "conditional_uniform",
-        "read_share": 0.7000000000000002,
-        "seconds": 600,
-        "share_basis": "request sampling probabilities, not completion quotas",
-        "target_iops": "max",
-        "wd_count": 1,
-        "write_share": 0.2999999999999998
-      }
-    ],
     "current": [
       {
         "fwd_count": 0,
@@ -79,9 +74,9 @@
     "limitation": "pure random adaptation does not retain the SES sequential/random mix; container changes inode/directory/open metadata; conditional class mixture is not one global Zipf; finite sampling and coverage still depend on I/O count; no native AI event replay",
     "native_trace": false,
     "object_mapping": "4MiB-aligned exclusive original-file/fragment slots; reversible mapping; runtime excludes padding",
-    "object_selection": "Zipf0.99 over all4MiB objects within each original size class; baseline uniform objects; fixed Fisher-Yates ranks seeded by1048596 XOR logical_size_bytes",
+    "object_selection": "Zipf0.99 over all4MiB objects within each original size class; fixed Fisher-Yates ranks seeded by1048596 XOR logical_size_bytes",
     "operation_mapping": "preserve source reads and writes; overwrite prepared synthetic payload",
-    "preparation": "full-container formatting allocates padding too; partial original-file objects become full-sized slots",
+    "preparation": "full-container Vdbench User write pass also fills alignment padding",
     "random_rule": "uniform legal4KiB-aligned offsets inside the selected object; no object or logical-file boundary crossing",
     "sampling": "per-channel IID pseudorandom uniforms through the object CDF; with replacement, repeated objects allowed; domain-separated run-seed streams distinct from request/offset RNG; no request or time quota",
     "ses_build": "1.2.0.25061615",
@@ -106,6 +101,16 @@
     "workload_label": "CCF-SES PERF_002 training"
   },
   "rate": "max",
+  "runtime": {
+    "clients": [
+      "localhost"
+    ],
+    "ssh_user": "lzt",
+    "stock_home": "/home/chris/PDSL/vdbench50406",
+    "threads": 64
+  },
   "schema": 1,
-  "total_run_wd": 1
+  "sd_count": 1,
+  "total_run_wd": 1,
+  "user_jar": "ai-user.jar"
 }

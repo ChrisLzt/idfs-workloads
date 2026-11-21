@@ -28,8 +28,8 @@ public final class ZipfTests {
             check(d.rank((d.cumulative(r - 1) + d.cumulative(r)) / 2) == r, "CDF inverse");
             check(d.rank(d.cumulative(r)) == r + 1, "exact boundary selects next bucket");
         }
-        ZipfDistribution.Stream a = d.stream(91L, false), b = d.stream(91L, false);
-        ZipfDistribution.Stream other = d.stream(92L, false);
+        ZipfDistribution.Stream a = d.stream(91L), b = d.stream(91L);
+        ZipfDistribution.Stream other = d.stream(92L);
         boolean different = false;
         for (int i = 0; i < 4096; i++) {
             long off = a.nextOffset();
@@ -37,8 +37,8 @@ public final class ZipfTests {
             different |= off != other.nextOffset();
         }
         check(different, "independent streams must not clone one another");
-        ZipfDistribution.Stream zipf = d.stream(71L, false), uniform = d.stream(72L, true);
-        int hotZipf = 0, hotUniform = 0, visited = 0;
+        ZipfDistribution.Stream zipf = d.stream(71L);
+        int hotZipf = 0, visited = 0;
         boolean[] touched = new boolean[1048576];
         long maximum = 0;
         for (int i = 0; i < 200000; i++) {
@@ -49,12 +49,10 @@ public final class ZipfTests {
             int object = (int)(off / 4194304);
             if (!touched[object]) { touched[object] = true; visited++; }
             if (hot[object]) hotZipf++;
-            if (hot[(int)(uniform.nextOffset() / 4194304)]) hotUniform++;
         }
         check(maximum > 2199023255552L, "no 32-bit offset truncation or fixed file partition");
         check(visited > 40000, "cold tail is sampled");
         check(Math.abs(hotZipf / 200000.0 - 0.8812691928671978) < 0.005, "Zipf request distribution");
-        check(Math.abs(hotUniform / 200000.0 - 0.2) < 0.005, "uniform control uses same objects");
         System.out.println("GRAPH_ZIPF_SAMPLER_PASS requests=200000 no_storage_io=true");
     }
 }

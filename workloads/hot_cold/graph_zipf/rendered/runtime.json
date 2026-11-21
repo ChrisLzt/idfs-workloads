@@ -1,9 +1,11 @@
 {
-  "jar_sha256": "4a9535c8015b3ab60d9466149ece2f45347e9b4d204307c606142300162f72b4",
+  "jar_sha256": "1009e205869131430c0f15d23c75933d955bd6cd7aadbcc7fdb2edef7636d7a0",
   "java_class_version": 52,
   "source_sha256": {
-    "idfsgraphzipf/ZipfDistribution.java": "566f4143863a5ab50970ee50ad5d08b7201fb4da14d6527d716b1d6afa83edf3",
-    "idfsgraphzipf/ZipfWorkload.java": "6390696cedb89606e3d5f8edd05dafc454b2f6a1a5f1d9bc0a37881dbb810399"
+    "common_user_java/idfscommon/ContainerPrepare.java": "570ce1477b805c977ab2633243898e6d25b1f4b919978428ec3e391f7bfbe9d0",
+    "common_user_java/idfscommon/RuntimeIdentity.java": "29c0a72cdccf1e84003d7b9d89887c5d3fce4318b4ed9aaf83736833c34abe17",
+    "graph_zipf_java/idfsgraphzipf/ZipfDistribution.java": "01cf849d6f9cfb4fb829caf0ff5307c0015335fe2f8d4d5292a8b2d1e11ceff4",
+    "graph_zipf_java/idfsgraphzipf/ZipfWorkload.java": "6dbf0710c8060651aa0612215ccbf11f54bbbc543578f1cbd29fd042fc6d0ec9"
   },
   "stock_jar_sha256": "8a87321b1b3cd6b60a5251a149359b628dd95a52b93efd7a990703478cfbf4d5"
 }

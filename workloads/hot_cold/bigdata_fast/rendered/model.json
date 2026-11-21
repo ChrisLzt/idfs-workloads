@@ -1,0 +1,66 @@
+{
+  "access_engine": "user",
+  "bins": [
+    {
+      "files": 1,
+      "group": "fast",
+      "id": "container",
+      "size_bytes": 4398046511104
+    }
+  ],
+  "capacity_policy": {
+    "expected_bytes": 4398046511104,
+    "kind": "sparse_container_inventory",
+    "max_bytes": 4398046511104,
+    "min_bytes": 4398046511104
+  },
+  "container_mapping": {
+    "effective_bytes": 429496729600,
+    "file": "fast.bin",
+    "object_bytes": 4194304,
+    "object_count": 1048576,
+    "payload_bytes": 409600,
+    "payload_offset": 131072
+  },
+  "id": "bigdata_fast",
+  "profiles": {
+    "current": [
+      {
+        "lanes": [
+          {
+            "bin": "container",
+            "file_sharing": true,
+            "fileio": "random",
+            "fileselect": "random",
+            "operation": "read",
+            "threads": 1,
+            "weight": 9,
+            "xfersize": 131072
+          },
+          {
+            "bin": "container",
+            "file_sharing": true,
+            "fileio": "random",
+            "fileselect": "random",
+            "operation": "write",
+            "threads": 1,
+            "weight": 1,
+            "xfersize": 131072
+          }
+        ],
+        "name": "fast_analysis",
+        "seconds": 600
+      }
+    ]
+  },
+  "provenance": {
+    "preparation": "sparse container, one write per payload extent",
+    "source_semantics": "400 KiB logical files, 128 KiB random I/O, 90% reads",
+    "workload_label": "FAST small-file analysis"
+  },
+  "user_zipf": {
+    "alpha": 0.99,
+    "mapping_seed": 1048596,
+    "request_quota": null
+  }
+}

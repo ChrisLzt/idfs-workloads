@@ -4,10 +4,9 @@ import csv
 import hashlib
 import io
 import json
-import os
 from pathlib import Path
 
-from .user_runtime import JAR_SHA256, execution
+from . import user_runtime
 
 PACKAGE = Path(__file__).parent
 SOURCE = PACKAGE/'sources'/'wrf_conus1km60.json'
@@ -85,14 +84,14 @@ def build():
     runtime_phase = dict(name='continuous', seconds=600, lanes=lanes)
     return dict(id='hpc_wrf', access_engine='user',
         bins=[dict(id='container', group='wrf', files=1, size_bytes=capacity)],
-        profiles={'current': [deepcopy(runtime_phase)], 'baseline': [deepcopy(runtime_phase)]},
+        profiles={'current': [runtime_phase]},
         logical_files=files, business_phases=phases,
         ensemble=dict(members=MEMBERS, shared_readonly_roles=list(SHARED_ROLES),
                       member_selection='uniform within each activity; shared startup reads aggregate all members'),
         capacity_policy=dict(kind='parametric_inventory', expected_bytes=capacity,
                              min_bytes=capacity, max_bytes=capacity),
         user_timeline=dict(duration_us=600000000, slice_us=1000000, grain_bytes=GRAIN,
-                           alpha=.99, max_transfer_bytes=MAX_TRANSFER, threads=64,
+                           alpha=.99, max_transfer_bytes=MAX_TRANSFER,
                            seed=SEED, request_quota=None),
         provenance=dict(workload_label='WRF CONUS-derived1km-e_vert60 eight-member synthetic Zipf',
             source=source['website'], archive_url=source['archive_url'],
@@ -112,7 +111,6 @@ def build():
             transfer_rule='synthetic1MiB requests inside a selected object; final sub-block shortened to actual4KiB-aligned extent; not measured native WRF sizes',
             boundary_rule='horizontally refined uncompressed boundary-field template read in0h-output and checkpoint activities; boundary updates coarsened into mixed phases',
             timeline_rule='memory-computation gaps compressed; 60/90/360/90s storage budgets; same activity throughout each1s slice; no quota or per-second rank reset',
-            profiles='current and baseline are compatibility names for the same approved Zipf plan',
             limitation='repeated Zipf writes are a controlled adaptation, not complete scientific snapshot generation; coverage/counts/whole-run mix depend on actual performance',
             source_limitations=source['limitations']))
 
@@ -152,67 +150,47 @@ def file_map_text(model):
     return output.getvalue()
 
 
-def _runtime():
-    meta = json.loads((JAVA/'runtime.json').read_text())
-    if meta['stock_jar_sha256'] != JAR_SHA256 or meta['java_class_version'] != 52:
-        raise ValueError('WRF extension must target stock Vdbench5.04.06 and Java8')
-    for name, expected in meta['source_sha256'].items():
-        if _sha((JAVA/name).read_bytes()) != expected:
-            raise ValueError('WRF Java source differs from built extension')
-    if _sha((JAVA/EXTENSION_JAR).read_bytes()) != meta['jar_sha256']:
-        raise ValueError('WRF extension JAR checksum mismatch')
-    return meta
-
-
 def _assets(model):
-    validate_model(model); _runtime()
-    return {EXTENSION_JAR: (JAVA/EXTENSION_JAR).read_bytes(),
-            'vdbench': (JAVA/'vdbench').read_bytes(),
-            'wrf.timeline': timeline_text(model).encode(),
+    validate_model(model)
+    return {'wrf.timeline': timeline_text(model).encode(),
             'file-map.csv': file_map_text(model).encode()}
 
 
 def materialize(model, output):
-    output = Path(output); assets = _assets(model)
-    for name in assets:
-        path = output/name
-        if path.is_symlink() or any(p.is_symlink() for p in path.parents):
-            raise ValueError('WRF asset path must not be a symlink')
+    from .core import safe_path
+
+    assets = _assets(model)
+    targets = {name:safe_path(Path(output)/name) for name in assets}
     for name, payload in assets.items():
-        (output/name).write_bytes(payload)
-    (output/'vdbench').chmod(0o755)
+        targets[name].write_bytes(payload)
     return {name: _sha(payload) for name, payload in assets.items()}
 
 
 def validate_assets(model, bundle, recorded):
+    from .core import safe_path
+
     expected = {name: _sha(payload) for name, payload in _assets(model).items()}
     if recorded != expected:
         raise ValueError('WRF asset inventory differs from the approved model')
     for name, digest in expected.items():
-        path = Path(bundle)/name
-        if (path.is_symlink() or any(p.is_symlink() for p in path.parents)
-                or not path.is_file() or _sha(path.read_bytes()) != digest):
-            raise ValueError('WRF asset missing, linked or modified: '+name)
-    if not os.access(Path(bundle)/'vdbench', os.X_OK):
-        raise ValueError('WRF launcher must be executable')
+        if _sha(safe_path(Path(bundle)/name).read_bytes()) != digest:
+            raise ValueError('WRF asset missing or modified: '+name)
 
 
-def _wd_line():
-    return (f'wd=synthetic,sd=wrf,xfersize={MAX_TRANSFER},seekpct=100,rdpct=50,skew=100,'
-            f'user=(idfswrf.TimelineWorkload,wrf.timeline,seed{SEED})')
+def _wd_line(fingerprint):
+    return (f'wd=synthetic,sd=wrf_*,xfersize={MAX_TRANSFER},seekpct=100,rdpct=50,skew=100,'
+            f'user=(idfswrf.TimelineWorkload,wrf.timeline,seed{SEED},jarsha{fingerprint})')
 
 
-def render_profile(model, data_root, phases, rate, runtime_root):
+def render_profile(model, data_root, phases, rate, runtime_root, settings, fingerprint):
     validate_model(model)
     if rate != 'max':
         raise ValueError('WRF User requires iorate=max without per-second quotas')
     size = model['bins'][0]['size_bytes']
     data_file = Path(data_root)/'container'/'vdb.1_1.dir'/'vdb_f0000.file'
-    lines = ['* NCAR-derived WRF synthetic four-activity object Zipf0.99; stock5.04.06 User',
-             'data_errors=1', 'messagescan=no', 'formatsds=no',
-             f'hd=default,jvms=1,vdbench={Path(runtime_root).absolute()}',
-             f'sd=wrf,lun={data_file},size={size},threads=64,openflags=o_direct,offset=0,align=4096',
-             _wd_line(), 'rd=continuous,wd=synthetic*,iorate=max,elapsed=600,interval=1,warmup=0']
+    text = user_runtime.render_run(
+        'NCAR-derived WRF four-activity object Zipf(0.99)', runtime_root, settings, device='wrf',
+        file=data_file, capacity=size, wd=_wd_line(fingerprint), alignment=4096)
     business = []
     for p in model['business_phases']:
         total = sum(c['weight'] for c in p['channels'])
@@ -224,14 +202,10 @@ def render_profile(model, data_root, phases, rate, runtime_root):
     stats = [dict(name='continuous', seconds=600, fwd_count=0, wd_count=1, target_iops='max',
                   read_share=read, write_share=1-read, share_basis='time-weighted nominal; not a guarantee of measured totals',
                   business_phases=business)]
-    return '\n'.join(lines)+'\n', stats
+    return text, stats
 
 
 def validate_run_text(text):
-    lines = [l for l in text.splitlines() if l and not l.startswith('*')]
-    if len(lines)!=7 or any(sum(l.startswith(p) for l in lines)!=1 for p in ('hd=', 'sd=', 'wd=', 'rd=')):
-        raise ValueError('WRF User requires one host, SD, WD and RD')
-    if (next(l for l in lines if l.startswith('wd=')) != _wd_line()
-            or next(l for l in lines if l.startswith('rd=')) != 'rd=continuous,wd=synthetic*,iorate=max,elapsed=600,interval=1,warmup=0'
-            or 'threads=64,openflags=o_direct,offset=0,align=4096' not in next(l for l in lines if l.startswith('sd='))):
-        raise ValueError('WRF runtime differs from the approved max-rate User plan')
+    fingerprint = user_runtime.compiled('wrf')[3]['jar_sha256']
+    allowed = {_wd_line(fingerprint)}
+    user_runtime.validate_run(text, device='wrf', allowed_wds=allowed, alignment=4096)

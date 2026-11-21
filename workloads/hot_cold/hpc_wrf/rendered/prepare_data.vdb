@@ -1,9 +1,9 @@
-* IDFS WRF CONUS-derived1km-e_vert60 eight-member synthetic Zipf hpc_wrf; synthetic workload with source read/write semantics
+* Separate User preparation pass; populate the configured file extents to EOF
 data_errors=1
 messagescan=no
-create_anchors=yes
-fsd=default,depth=1,width=1,shared=yes,openflags=o_direct
-fsd=container,anchor=/mnt/idfs/workloads_400g/hpc_wrf/container,files=1,size=3417015582720
-fwd=format,threads=1,xfersize=4m
-fwd=prep_container,fsd=container,operation=read,threads=1
-rd=prepare_000,fwd=(prep_container),format=(restart,only),fwdrate=max
+formatsds=no
+hd=default,jvms=1,vdbench=/home/chris/idfs-workloads/workloads/hot_cold/hpc_wrf/rendered
+hd=local,system=localhost
+sd=target,host=local,lun=/mnt/idfs/workloads_400g/hpc_wrf/container/vdb.1_1.dir/vdb_f0000.file,size=3417015582720,threads=16,openflags=o_direct,offset=0,align=4096
+wd=populate,sd=target,xfersize=4194304,seekpct=eof,rdpct=0,user=(idfscommon.ContainerPrepare,extent3417015582720,stride4194304,offset0,payload4194304,first0,end814680,jarsha0e09e266b6ee22c3f889b99612f73aaf205c2f1639c7d9253ab0372d6e08a507)
+rd=prepare,wd=populate,iorate=max,elapsed=99999998,interval=1,warmup=0

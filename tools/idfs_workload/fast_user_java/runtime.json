@@ -1,0 +1,11 @@
+{
+  "jar_sha256": "4abff25616f98dfac1d8f6ea392601f190067cf09aebc8f51c6e7e9c929cd0e2",
+  "java_class_version": 52,
+  "source_sha256": {
+    "common_user_java/idfscommon/ContainerPrepare.java": "570ce1477b805c977ab2633243898e6d25b1f4b919978428ec3e391f7bfbe9d0",
+    "common_user_java/idfscommon/RuntimeIdentity.java": "29c0a72cdccf1e84003d7b9d89887c5d3fce4318b4ed9aaf83736833c34abe17",
+    "fast_user_java/idfsfast/FastWorkload.java": "5d62372be5043e8fe796e3fb3e01bf0e5d558eb1f188675853813ca746b6041b",
+    "graph_zipf_java/idfsgraphzipf/ZipfDistribution.java": "01cf849d6f9cfb4fb829caf0ff5307c0015335fe2f8d4d5292a8b2d1e11ceff4"
+  },
+  "stock_jar_sha256": "8a87321b1b3cd6b60a5251a149359b628dd95a52b93efd7a990703478cfbf4d5"
+}

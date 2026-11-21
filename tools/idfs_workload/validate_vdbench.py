@@ -80,6 +80,8 @@ def validate_run_text(text: str, *, max_sd_wd_channels: int = 256) -> None:
     if 'user=(' in text:
         if 'user=(idfsgraphzipf.' in text:
             from .graph_zipf import validate_run_text as validate_user
+        elif 'user=(idfsfast.' in text:
+            from .fast_container import validate_run_text as validate_user
         elif 'user=(idfsbaleen.' in text:
             from .baleen_user import validate_run_text as validate_user
         elif 'user=(idfswrf.' in text:

@@ -49,35 +49,6 @@
     }
   ],
   "profiles": {
-    "baseline": [
-      {
-        "lanes": [
-          {
-            "bin": "container",
-            "file_sharing": true,
-            "fileio": "random",
-            "fileselect": "random",
-            "operation": "read",
-            "threads": 1,
-            "weight": 0.7999999999999999,
-            "xfersize": 131072
-          },
-          {
-            "bin": "container",
-            "file_sharing": true,
-            "fileio": "random",
-            "fileselect": "random",
-            "operation": "write",
-            "threads": 1,
-            "weight": 0.19999999999999998,
-            "xfersize": 131072
-          }
-        ],
-        "name": "continuous",
-        "seconds": 600,
-        "user_profile": "baseline"
-      }
-    ],
     "current": [
       {
         "lanes": [
@@ -103,8 +74,7 @@
           }
         ],
         "name": "continuous",
-        "seconds": 600,
-        "user_profile": "current"
+        "seconds": 600
       }
     ]
   },
@@ -127,9 +97,9 @@
     "limitation": "pure random adaptation does not retain the SES sequential/random mix; container changes inode/directory/open metadata; conditional class mixture is not one global Zipf; finite sampling and coverage still depend on I/O count; no native AI event replay",
     "native_trace": false,
     "object_mapping": "4MiB-aligned exclusive original-file/fragment slots; reversible mapping; runtime excludes padding",
-    "object_selection": "Zipf0.99 over all4MiB objects within each original size class; baseline uniform objects; fixed Fisher-Yates ranks seeded by1048596 XOR logical_size_bytes",
+    "object_selection": "Zipf0.99 over all4MiB objects within each original size class; fixed Fisher-Yates ranks seeded by1048596 XOR logical_size_bytes",
     "operation_mapping": "preserve source reads and writes; overwrite prepared synthetic payload",
-    "preparation": "full-container formatting allocates padding too; partial original-file objects become full-sized slots",
+    "preparation": "full-container Vdbench User write pass also fills alignment padding",
     "random_rule": "uniform legal4KiB-aligned offsets inside the selected object; no object or logical-file boundary crossing",
     "sampling": "per-channel IID pseudorandom uniforms through the object CDF; with replacement, repeated objects allowed; domain-separated run-seed streams distinct from request/offset RNG; no request or time quota",
     "ses_build": "1.2.0.25061615",
@@ -241,7 +211,6 @@
   ],
   "user_timeline": {
     "alpha": 0.99,
-    "baseline_object_selection": "uniform",
     "duration_us": 600000000,
     "grain_bytes": 4194304,
     "ios_per_object_selection": 1,
@@ -251,7 +220,6 @@
     "request_quota": null,
     "seed": 1048596,
     "slice_us": 1000000,
-    "threads": 64,
     "zipf_scope": "objects_within_size_class"
   },
   "valid_payload_bytes": 4947802324992

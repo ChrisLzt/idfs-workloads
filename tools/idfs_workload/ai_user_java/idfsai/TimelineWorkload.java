@@ -1,6 +1,7 @@
 package idfsai;
 
 import User.*;
+import idfscommon.RuntimeIdentity;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.file.*;
@@ -20,7 +21,6 @@ public final class TimelineWorkload extends UserClass {
     private final LongSupplier clock;
     private Path manifest;
     private long seed, last = -1, late;
-    private boolean zipf;
     private Timeline timeline;
     private WorkloadInfo work;
     private final Timeline.Sample sample = new Timeline.Sample();
@@ -30,23 +30,27 @@ public final class TimelineWorkload extends UserClass {
         this.clock = clock;
     }
     @Override public boolean parser(String[] args) {
-        if (args.length != 3 || !(args[1].equals("current") || args[1].equals("baseline"))) return false;
+        if (args.length != 3 && (args.length != 4 || !RuntimeIdentity.matchesJar(TimelineWorkload.class, args[3]))) return false;
+        if (!args[1].equals("current")) return false;
         try {
             URI uri = URI.create(args[0]);
             manifest = uri.getScheme() == null ? Paths.get(args[0]) : Paths.get(uri);
-            zipf = args[1].equals("current");
             seed = Long.parseLong(args[2].startsWith("seed") ? args[2].substring(4) : args[2]);
             return Files.isRegularFile(manifest);
         } catch (IllegalArgumentException bad) { return false; }
     }
     public void loadForCapacity(long capacity, int buffer) {
-        try { timeline = Timeline.load(manifest, seed, zipf); }
+        loadForCapacity(capacity, buffer, seed);
+    }
+
+    private void loadForCapacity(long capacity, int buffer, long samplingSeed) {
+        try { timeline = Timeline.load(manifest, samplingSeed); }
         catch (IOException bad) { throw new IllegalArgumentException("Invalid SES container timeline", bad); }
         if (timeline.capacity() != capacity || timeline.maximum() > buffer)
             throw new IllegalArgumentException("SES container capacity or I/O buffer differs");
     }
     @Override public UserDeviceInfo initialize(WorkloadInfo info) {
-        loadForCapacity(info.getSd().end_lba, info.getAverageXferSize());
+        loadForCapacity(info.getSd().end_lba, info.getAverageXferSize(), RuntimeIdentity.samplingSeed(seed, info));
         work = info; return super.initialize(info);
     }
     @Override public boolean generate() {

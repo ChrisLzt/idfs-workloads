@@ -18,7 +18,10 @@ def implementation(model):
 
 
 def extension_jar(model):
-    implementation(model)
-    return {'bigdata_baleen':'baleen-user.jar','hpc_wrf':'wrf-user.jar',
-            'graph_zipf':'graph-zipf-user.jar', 'ai_training_ses':'ai-user.jar',
-            'ai_inference_ses':'ai-user.jar'}[model['id']]
+    from .user_build import BUILDS
+    return BUILDS[build_key(model)][1]
+
+
+def build_key(model):
+    return {'bigdata_fast':'fast', 'bigdata_baleen':'baleen', 'graph_zipf':'graph',
+            'hpc_wrf':'wrf', 'ai_training_ses':'ai', 'ai_inference_ses':'ai'}[model['id']]

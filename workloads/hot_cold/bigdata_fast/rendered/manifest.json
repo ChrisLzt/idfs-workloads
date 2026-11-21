@@ -1,0 +1,72 @@
+{
+  "access_engine": "user",
+  "asset_sha256": {
+    "fast-user.jar": "4abff25616f98dfac1d8f6ea392601f190067cf09aebc8f51c6e7e9c929cd0e2",
+    "runtime.json": "25e3eed5cabc6cd4535b26c2f3b349112e1f76e194fe7e897e8e9adbd3b77224",
+    "stock-home": "f125e283e1cfa2608438f0ed15bfaa7e76480bea0632e733e744cc72090c2844",
+    "vdbench": "a6f0065fe0e45c72bc5af50d390379cb91699597f2b791e1e27ea14f8290114c"
+  },
+  "bins": [
+    {
+      "anchor": "/mnt/idfs/workloads_400g/bigdata_fast",
+      "file": "/mnt/idfs/workloads_400g/bigdata_fast/fast.bin",
+      "files": 1,
+      "id": "container",
+      "size_bytes": 4398046511104
+    }
+  ],
+  "capacity_bytes": 4398046511104,
+  "config_sha256": {
+    "prepare_data.vdb": "b51d7cc84b1373fc2653169307ced65c2331e40742bf4d90089927bbd14c374e",
+    "run_current.vdb": "9ea7ca4c0a48f1162e50981ba403d6fcad60a8434202cad0f8bbc6d6aed304cc"
+  },
+  "data_file": "/mnt/idfs/workloads_400g/bigdata_fast/fast.bin",
+  "data_root": "/mnt/idfs/workloads_400g/bigdata_fast",
+  "file_count": 1,
+  "id": "bigdata_fast",
+  "layout_sha256": "a33be5d0866fd97a5ba05a4863afeb0cf664a13202a7489f1d7540992d1c9771",
+  "max_prepare_fwd": 0,
+  "max_run_fwd": 0,
+  "max_run_wd": 1,
+  "model_sha256": "fc7c580da65976a19102240129dc819ad2930f68e4fb9b38acc1f40f8c034bf6",
+  "preparation": {
+    "capacity_bytes": 4398046511104,
+    "file": "/mnt/idfs/workloads_400g/bigdata_fast/fast.bin",
+    "payload_offset": 131072,
+    "slots": 1048576,
+    "stride_bytes": 4194304,
+    "transfer_bytes": 409600,
+    "written_bytes": 429496729600
+  },
+  "profiles": {
+    "current": [
+      {
+        "fwd_count": 0,
+        "name": "fast_analysis",
+        "read_share": 0.9,
+        "seconds": 600,
+        "target_iops": "max",
+        "wd_count": 1,
+        "write_share": 0.1
+      }
+    ]
+  },
+  "provenance": {
+    "preparation": "sparse container, one write per payload extent",
+    "source_semantics": "400 KiB logical files, 128 KiB random I/O, 90% reads",
+    "workload_label": "FAST small-file analysis"
+  },
+  "rate": "max",
+  "runtime": {
+    "clients": [
+      "localhost"
+    ],
+    "ssh_user": "lzt",
+    "stock_home": "/home/chris/PDSL/vdbench50406",
+    "threads": 64
+  },
+  "schema": 1,
+  "sd_count": 1,
+  "total_run_wd": 1,
+  "user_jar": "fast-user.jar"
+}

@@ -9,6 +9,7 @@ from pathlib import Path
 CASES = {'baleen':'bigdata_baleen', 'graph':'graph_zipf',
          'wrf':'hpc_wrf', 'ai_training':'ai_training_ses',
          'ai_inference':'ai_inference_ses'}
+DEFAULT_CASES = ('fast', 'graph', 'wrf', 'ai_training', 'ai_inference')
 TARGET_BYTES = 400 * 2**30
 AI_TARGET_BYTES = {'ai_training': 4400 * 2**30, 'ai_inference': 9 * 2**39}
 ALPHA = .99

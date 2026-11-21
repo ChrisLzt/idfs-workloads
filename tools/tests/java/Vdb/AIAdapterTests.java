@@ -62,8 +62,8 @@ public final class AIAdapterTests {
             catch (IllegalArgumentException expected) { }
             try { invalid.loadForCapacity(capacity, 4096); throw new AssertionError("short buffer accepted"); }
             catch (IllegalArgumentException expected) { }
-            String[] badArgs = userArgs.clone(); badArgs[1] = "unknown";
-            AITests.check(!new TimelineWorkload(clock).parser(badArgs), "unknown profile rejected");
+            String[] badArgs = userArgs.clone(); badArgs[1] = "baseline";
+            AITests.check(!new TimelineWorkload(clock).parser(badArgs), "retired control rejected");
         }
         System.out.println("AI_ADAPTER_TESTS_PASS original50406 loader tokenizer read_write queue late_callback no_physical_io=true");
     }

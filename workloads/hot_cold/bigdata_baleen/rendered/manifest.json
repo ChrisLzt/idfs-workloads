@@ -1,9 +1,11 @@
 {
   "access_engine": "user",
   "asset_sha256": {
-    "baleen-user.jar": "f2d0a3bf8f587546b0ce99b258204fcd61b6c92bf6aa8e61015448ff07bd349d",
+    "baleen-user.jar": "66d9d66149b71f43c112848376faac01f256f983a70cb492c370d4536fa4e773",
     "key-map.csv": "f189f02ce563810503ed0b1978acaaf9b5b557864a30c985bfade19465257c6b",
     "native.timeline": "ad2933acba441f7286283f156de4addcd3f52d9999cdb28b5d0a7f61f8044aac",
+    "runtime.json": "864a6f4a805488826044002307162edd95d68ed7d58d63d3f2647b8355bef780",
+    "stock-home": "f125e283e1cfa2608438f0ed15bfaa7e76480bea0632e733e744cc72090c2844",
     "user_data/second_000.bin.gz": "6c80863e47c9a3d05bc02133d0a64cc594e652206e6f2200047a8588decd87e9",
     "user_data/second_001.bin.gz": "6fef6f2a2b51ec2788503dd55fff26fb00c667bee466eb5655a0751a92fb36a8",
     "user_data/second_002.bin.gz": "e92a5e7057a9807967c424984c380321cee72927703af64edcba587febe9c251",
@@ -604,7 +606,7 @@
     "user_data/second_597.bin.gz": "021c1d9f6da662835ad90b4a70eeb10fd057bc5b8639605fb4b0efcb183db3db",
     "user_data/second_598.bin.gz": "0f56049937c5ec1559cc88a4806589a5601b26bab449db6f90d307cf7d794bbc",
     "user_data/second_599.bin.gz": "8d2efb24885685336cc61cac19408b4a4eb603a63c65ab3cd80a0ea458386ecf",
-    "vdbench": "e6f169cca36457dff90b6109a03cf2912ae8415920a71e80479cf45f63f315cc"
+    "vdbench": "0d8091fbd31c702c4195d72166e12570c78a862212dd4c2bd562f2f401415d50"
   },
   "bins": [
     {
@@ -616,30 +618,27 @@
   ],
   "capacity_bytes": 5497553944576,
   "config_sha256": {
-    "prepare_data.vdb": "499ff6ef91b93d59422fff78642ccb09a4f693ac99b0fb3b691c3beb7073814b",
-    "run_baseline.vdb": "35b00aaa5e42eff2407a95b7ae5a5c39a8e5db707d0ca7b19db3038103a71cd1",
-    "run_current.vdb": "35b00aaa5e42eff2407a95b7ae5a5c39a8e5db707d0ca7b19db3038103a71cd1"
+    "prepare_data.vdb": "0b10e738c4974f39379342ded7721b5e8892c04b1c324e0df2e376972b6be74e",
+    "run_current.vdb": "ec2e00909c16b022ee4b943cff20429e5ce30bc497c085e50b380313e6a3cc2d"
   },
   "data_root": "/mnt/idfs/workloads_400g/bigdata_baleen",
   "file_count": 1,
   "id": "bigdata_baleen",
   "layout_sha256": "b3aa649117c30821ba939403474ea749a4880208ae45603bad333a51072d65c3",
-  "max_prepare_fwd": 1,
+  "max_prepare_fwd": 0,
   "max_run_fwd": 0,
   "max_run_wd": 1,
-  "model_sha256": "400880860e1773b6f8247a418695430d7382d05807d26cb74ff50d4dbc82851c",
+  "model_sha256": "0555f2ad5f714073972d0fb1cf092110261c88a3f9da7ef191ab6d8838ae7530",
+  "preparation": {
+    "capacity_bytes": 5497553944576,
+    "file": "/mnt/idfs/workloads_400g/bigdata_baleen/container/vdb.1_1.dir/vdb_f0000.file",
+    "payload_offset": 0,
+    "slots": 1310719,
+    "stride_bytes": 4194304,
+    "transfer_bytes": 4194304,
+    "written_bytes": 5497553944576
+  },
   "profiles": {
-    "baseline": [
-      {
-        "fwd_count": 0,
-        "name": "native_all",
-        "read_share": 0.8587105053935689,
-        "seconds": 600,
-        "target_iops": "max",
-        "wd_count": 1,
-        "write_share": 0.14128949460643114
-      }
-    ],
     "current": [
       {
         "fwd_count": 0,
@@ -664,7 +663,7 @@
     "native_top20_active_object_count_share": 0.7231431511552164,
     "object_mapping": "(key,object_index) bijects to container object; each key starts at4MiB boundary and owns whole objects",
     "operation_mapping": "GET becomes read;PUT becomes write;retain every selected original record",
-    "preparation": "standard full container format; each key owns whole4MiB objects; runtime never accesses alignment padding",
+    "preparation": "full-container Vdbench User write pass; each key owns whole4MiB objects; runtime never accesses alignment padding",
     "raw_extent_alignment_padding_bytes": 522952376320,
     "region": "Region2",
     "selected_keys_gzip_sha256": "39de250e45ecdaec5411c9688d617956286f57d68e189e71deec4dcb44eaf243",
@@ -735,6 +734,16 @@
     "unique_accessed_bytes": 4947748978688
   },
   "rate": "max",
+  "runtime": {
+    "clients": [
+      "localhost"
+    ],
+    "ssh_user": "lzt",
+    "stock_home": "/home/chris/PDSL/vdbench50406",
+    "threads": 64
+  },
   "schema": 1,
-  "total_run_wd": 1
+  "sd_count": 1,
+  "total_run_wd": 1,
+  "user_jar": "baleen-user.jar"
 }

@@ -810,34 +810,6 @@
     }
   ],
   "profiles": {
-    "baseline": [
-      {
-        "lanes": [
-          {
-            "bin": "container",
-            "file_sharing": true,
-            "fileio": "random",
-            "fileselect": "random",
-            "operation": "read",
-            "threads": 1,
-            "weight": 62.43726936564384,
-            "xfersize": 1048576
-          },
-          {
-            "bin": "container",
-            "file_sharing": true,
-            "fileio": "random",
-            "fileselect": "random",
-            "operation": "write",
-            "threads": 1,
-            "weight": 537.5627306343562,
-            "xfersize": 1048576
-          }
-        ],
-        "name": "continuous",
-        "seconds": 600
-      }
-    ],
     "current": [
       {
         "lanes": [
@@ -925,7 +897,6 @@
     "limitation": "repeated Zipf writes are a controlled adaptation, not complete scientific snapshot generation; coverage/counts/whole-run mix depend on actual performance",
     "native_trace": false,
     "object_mapping": "each logical file starts at4MiB and owns whole exclusive objects; runtime does not access slot padding",
-    "profiles": "current and baseline are compatibility names for the same approved Zipf plan",
     "simulated_hours": 6,
     "source": "https://www2.mmm.ucar.edu/wrf/users/benchmark/v44/benchdata_v44.html",
     "source_grid": [
@@ -958,7 +929,6 @@
     "max_transfer_bytes": 1048576,
     "request_quota": null,
     "seed": 1048596,
-    "slice_us": 1000000,
-    "threads": 64
+    "slice_us": 1000000
   }
 }

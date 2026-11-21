@@ -1,6 +1,7 @@
 package idfsbaleen;
 
 import User.*;
+import idfscommon.RuntimeIdentity;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.file.*;
@@ -19,17 +20,23 @@ public final class TimelineWorkload extends UserClass {
     public TimelineWorkload(){this(new FirstIOClock());}
     public TimelineWorkload(LongSupplier clock){if(clock==null)throw new IllegalArgumentException("clock");this.clock=clock;}
     @Override public boolean parser(String[]args){
-        if(args.length!=2)return false;
+        if (args.length != 2 && (args.length != 3 || !RuntimeIdentity.matchesJar(TimelineWorkload.class, args[2]))) return false;
         try{URI location=URI.create(args[0]);manifest=location.getScheme()==null?Paths.get(args[0]):Paths.get(location);
             seed=Long.parseLong(args[1].startsWith("seed")?args[1].substring(4):args[1]);return Files.isRegularFile(manifest);}
         catch(IllegalArgumentException bad){return false;}
     }
-    public void loadForCapacity(long capacity,int buffer){
-        try{timeline=Timeline.load(manifest,seed);}catch(IOException bad){throw new IllegalArgumentException("Invalid native Baleen timeline",bad);}
+    public void loadForCapacity(long capacity, int buffer) {
+        loadForCapacity(capacity, buffer, seed);
+    }
+
+    private void loadForCapacity(long capacity, int buffer, long samplingSeed) {
+        try{timeline=Timeline.load(manifest,samplingSeed);}catch(IOException bad){throw new IllegalArgumentException("Invalid native Baleen timeline",bad);}
         if(timeline.capacity()!=capacity||timeline.maximum()>buffer)throw new IllegalArgumentException("Baleen extent or native I/O buffer differs");
     }
     @Override public UserDeviceInfo initialize(WorkloadInfo info){
-        loadForCapacity(info.getSd().end_lba,info.getAverageXferSize());work=info;return super.initialize(info);
+        loadForCapacity(info.getSd().end_lba, info.getAverageXferSize(), RuntimeIdentity.samplingSeed(seed, info));
+        work = info;
+        return super.initialize(info);
     }
     @Override public boolean generate(){
         if(work==null||timeline==null)throw new IllegalStateException("Not initialized");

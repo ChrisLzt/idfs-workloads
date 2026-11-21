@@ -19,16 +19,17 @@ public final class Timeline {
         final long base, extent, slot;
         final double[] cdf;
         final int[] objects;
-        Group(int count, int fragments, long rankSeed, long base, long extent, long slot, boolean zipf) {
+        Group(int count, int fragments, long rankSeed, long base, long extent, long slot) {
             this.base = base; this.extent = extent; this.slot = slot;
             objectsPerFragment = (int)(slot / G);
             totalObjects = count * fragments * objectsPerFragment;
-            cdf = zipf ? new double[totalObjects] : null;
+            cdf = new double[totalObjects];
             objects = new int[totalObjects];
             double sum = 0;
             for (int r = 0; r < totalObjects; r++) {
                 objects[r] = r;
-                if (zipf) { sum += Math.pow(r + 1, -.99); cdf[r] = sum; }
+                sum += Math.pow(r + 1, -.99);
+                cdf[r] = sum;
             }
             // Rank placement is fixed independently of run seed, rate and time.
             Random permutation = new Random(rankSeed);
@@ -38,15 +39,14 @@ public final class Timeline {
             }
         }
         int selectAt(double fraction) {
-            int rank;
-            if (cdf == null) rank = (int)(fraction * totalObjects);
-            else {
-                double u = fraction * cdf[cdf.length - 1];
-                int lo = 0, hi = totalObjects - 1;
-                while (lo < hi) { int mid = (lo + hi) >>> 1; if (cdf[mid] <= u) lo = mid + 1; else hi = mid; }
-                rank = lo;
+            double target = fraction * cdf[cdf.length - 1];
+            int low = 0, high = totalObjects - 1;
+            while (low < high) {
+                int middle = (low + high) >>> 1;
+                if (cdf[middle] <= target) low = middle + 1;
+                else high = middle;
             }
-            return objects[rank];
+            return objects[low];
         }
         long valid(int object) { return Math.min(G, extent - (object % objectsPerFragment) * G); }
     }
@@ -83,7 +83,7 @@ public final class Timeline {
         this.capacity = capacity; this.maximum = maximum; this.channels = channels; this.total = total;
         this.rng = new Random(seed);
     }
-    public static Timeline load(Path path, long seed, boolean zipf) throws IOException {
+    public static Timeline load(Path path, long seed) throws IOException {
         List<String> rows = Files.readAllLines(path, StandardCharsets.UTF_8);
         try {
             if (rows.isEmpty()) throw new IOException("Empty SES timeline");
@@ -123,7 +123,7 @@ public final class Timeline {
                         (long)count * fragments > (capacity - base) / slot ||
                         physicalFiles + (long)count * fragments > 1000000)
                         throw new IOException("SES file slots exceed the container");
-                    groups.put(p[1], new Group(count, fragments, rankSeed, base, extent, slot, zipf));
+                    groups.put(p[1], new Group(count, fragments, rankSeed, base, extent, slot));
                     end = base + (long)count * fragments * slot; physicalFiles += (long)count * fragments;
                 } else if (p[0].equals("C")) {
                     if (p.length != 6 || !groups.containsKey(p[1]) ||

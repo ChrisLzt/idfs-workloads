@@ -1,9 +1,9 @@
-* IDFS Baleen Region2 whole-key full-time subset bigdata_baleen; synthetic workload with source read/write semantics
+* Separate User preparation pass; populate the configured file extents to EOF
 data_errors=1
 messagescan=no
-create_anchors=yes
-fsd=default,depth=1,width=1,shared=yes,openflags=o_direct
-fsd=container,anchor=/mnt/idfs/workloads_400g/bigdata_baleen/container,files=1,size=5497553944576
-fwd=format,threads=1,xfersize=4m
-fwd=prep_container,fsd=container,operation=read,threads=1
-rd=prepare_000,fwd=(prep_container),format=(restart,only),fwdrate=max
+formatsds=no
+hd=default,jvms=1,vdbench=/home/chris/idfs-workloads/workloads/hot_cold/bigdata_baleen/rendered
+hd=local,system=localhost
+sd=target,host=local,lun=/mnt/idfs/workloads_400g/bigdata_baleen/container/vdb.1_1.dir/vdb_f0000.file,size=5497553944576,threads=16,openflags=o_direct,offset=0,align=4096
+wd=populate,sd=target,xfersize=4194304,seekpct=eof,rdpct=0,user=(idfscommon.ContainerPrepare,extent5497553944576,stride4194304,offset0,payload4194304,first0,end1310719,jarsha66d9d66149b71f43c112848376faac01f256f983a70cb492c370d4536fa4e773)
+rd=prepare,wd=populate,iorate=max,elapsed=99999998,interval=1,warmup=0

@@ -1,5 +1,7 @@
 # Baleen 大数据负载
 
+Baleen Region2 是大数据备选负载，可通过统一入口的 `--case baleen` 单独选择。默认五项的大数据用例为 FAST 容器版。
+
 ## 来源
 
 本负载依据[Baleen: ML Admission & Prefetching for Flash Caches（FAST2024）](https://www.usenix.org/conference/fast24/presentation/wong)
@@ -45,7 +47,7 @@
 User内部每1秒使用对应源区间的`(offset,size,GET/PUT)`联合频率，600张表均非空。
 每秒按原生频率均衡穿插并随机化访问，完整循环保留该片的源频率；切换后不补跑过期片，不逐条复现原始读写顺序。
 
-使用原版Vdbench5.04.06的独立User扩展，保持iorate=max、O_DIRECT，不设逐秒配额；current与baseline使用同一原生方案。
+使用原版Vdbench5.04.06的独立User扩展，保持iorate=max、O_DIRECT，不设逐秒配额。
 选中请求本来均为4KiB对齐，直接I/O覆盖对齐没有改变这些请求；最大请求44,826,624B，约42.75MiB，跨对象请求仍为一次I/O。
 4MiB是对象布局大小，不是单次请求大小。
 

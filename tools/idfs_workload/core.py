@@ -13,6 +13,8 @@ MAX_FWD = 256
 BATCH_SIZE = 20
 NAME = re.compile(r"[a-z][a-z0-9_]*\Z")
 DEFAULT_CONFIG_ROOT = Path(__file__).resolve().parents[2] / 'workloads' / 'hot_cold'
+RUN_CONFIG = 'run_current.vdb'
+RETIRED_CONFIG = 'run_baseline.vdb'
 
 
 def json_text(value):
@@ -31,6 +33,18 @@ def safe_path(path):
         if item.is_symlink():
             raise ValueError(f'symlink is not allowed in configuration/data path: {item}')
     return path
+
+
+def retire_baseline(output, workload_id):
+    """Remove only the previous bundle's generated, unmodified control."""
+    former = safe_path(output/RETIRED_CONFIG)
+    if not former.exists():
+        return
+    previous = json.loads(safe_path(output/'manifest.json').read_text())
+    if (previous.get('id') != workload_id
+            or previous.get('config_sha256', {}).get(RETIRED_CONFIG) != digest(former.read_text())):
+        raise ValueError(f'refuse to remove a file outside the prior generated configuration: {former}')
+    former.unlink()
 
 
 def _positive(value, label, integer=False):
@@ -77,8 +91,10 @@ def validate_model(model):
         _positive(b['size_bytes'], 'file size', True)
         if b['size_bytes'] % 4096:
             raise ValueError('file size must be 4 KiB aligned')
-    if 'baseline' not in model['profiles']:
-        raise ValueError('baseline profile required')
+    if 'current' not in model['profiles']:
+        raise ValueError('current workload configuration required')
+    if model.get('access_engine') == 'user' and set(model['profiles']) != {'current'}:
+        raise ValueError('User workloads must contain only the current access plan')
     used = set()
     for profile, phases in model['profiles'].items():
         _name(profile)
@@ -191,29 +207,46 @@ def _header(model, data_root, prepare):
     return lines
 
 
-def config_texts(model, data_root, rate, *, runtime_root=None):
+def _user_preparation(model, data_root):
+    from .user_prepare import plan
+
+    [container] = model['bins']
+    if container['files'] != 1:
+        raise ValueError('a User workload prepares one physical container')
+    return plan(Path(data_root)/container['id']/'vdb.1_1.dir'/'vdb_f0000.file', container['size_bytes'])
+
+
+def config_texts(model, data_root, rate, *, runtime_root=None, settings=None):
     if model.get('id')=='graph_zipf':
         from .graph_zipf import config_texts as graph_texts
-        return graph_texts(model,data_root,rate,runtime_root)
+        return graph_texts(model,data_root,rate,runtime_root,settings=settings)
     validate_model(model)
     file_counts = {b['id']: b['files'] for b in model['bins']}
     if rate != 'max':
         _positive(rate, 'target mean IOPS')
     texts = {}
-    lines = _header(model, data_root, True)
-    lines.append('fwd=format,threads=1,xfersize=4m')
-    for b in model['bins']:
-        lines.append(f"fwd=prep_{b['id']},fsd={b['id']},operation=read,threads=1")
-    for start in range(0, len(model['bins']), BATCH_SIZE):
-        names = ','.join('prep_' + b['id'] for b in model['bins'][start:start+BATCH_SIZE])
-        lines.append(f'rd=prepare_{start//BATCH_SIZE:03d},fwd=({names}),format=(restart,only),fwdrate=max')
-    texts['prepare_data.vdb'] = '\n'.join(lines) + '\n'
+    if model.get('access_engine')=='user':
+        from . import user_engine, user_prepare, user_runtime
+        runtime = runtime_root or DEFAULT_CONFIG_ROOT/model['id']/'rendered'
+        settings = settings or user_runtime.client_settings()
+        fingerprint = user_runtime.compiled(user_engine.build_key(model))[3]['jar_sha256']
+        texts[user_prepare.CONFIG] = user_prepare.config_text(
+            _user_preparation(model, data_root), runtime, fingerprint)
+    else:
+        lines = _header(model, data_root, True)
+        lines.append('fwd=format,threads=1,xfersize=4m')
+        for b in model['bins']:
+            lines.append(f"fwd=prep_{b['id']},fsd={b['id']},operation=read,threads=1")
+        for start in range(0, len(model['bins']), BATCH_SIZE):
+            names = ','.join('prep_' + b['id'] for b in model['bins'][start:start+BATCH_SIZE])
+            lines.append(f'rd=prepare_{start//BATCH_SIZE:03d},fwd=({names}),format=(restart,only),fwdrate=max')
+        texts['prepare_data.vdb'] = '\n'.join(lines) + '\n'
     profiles = {}
     for profile, phases in model['profiles'].items():
         if model.get('access_engine')=='user':
             from .user_engine import implementation
-            runtime=runtime_root if runtime_root is not None else DEFAULT_CONFIG_ROOT/model['id']/'rendered'
-            texts[f'run_{profile}.vdb'],profiles[profile]=implementation(model).render_profile(model,data_root,phases,rate,runtime)
+            texts[f'run_{profile}.vdb'],profiles[profile]=implementation(model).render_profile(
+                model, data_root, phases, rate, runtime, settings, fingerprint)
             continue
         if model.get('access_engine')=='sd_wd':
             from .sd_wd import render_profile
@@ -253,13 +286,20 @@ def render(model, *, data_root, output, rate=100, data_file=None, clients=None, 
         from .graph_zipf import render as render_graph
         return render_graph(model,data_root=data_root,output=output,rate=rate,data_file=data_file,
                             clients=clients,threads=threads,stock_home=stock_home)
-    if data_file is not None or clients is not None or threads!=64 or stock_home is not None:
-        raise ValueError('existing-file/client options apply only to the graph Zipf workload')
+    if data_file is not None:
+        raise ValueError('--data-file applies only to the graph Zipf workload')
+    user = model.get('access_engine') == 'user'
+    if not user and (clients is not None or threads!=64):
+        raise ValueError('client options require a User workload')
     data_root, output = safe_path(data_root), safe_path(output)
     if output == data_root or data_root in output.parents or output in data_root.parents:
         raise ValueError('configuration and data directories must be separate')
     capacity = validate_model(model)
-    texts, profiles = config_texts(model, data_root, rate, runtime_root=output)
+    settings = None
+    if user:
+        from . import user_runtime
+        settings = user_runtime.client_settings(clients, threads, stock_home)
+    texts, profiles = config_texts(model, data_root, rate, runtime_root=output, settings=settings)
     layout = [{'id':b['id'], 'files':b['files'], 'size_bytes':b['size_bytes'], 'anchor':str(data_root/b['id'])} for b in model['bins']]
     manifest = {'schema':1, 'id':model['id'], 'data_root':str(data_root), 'capacity_bytes':capacity,
                 'file_count':sum(b['files'] for b in layout), 'bins':layout, 'profiles':profiles,
@@ -274,8 +314,15 @@ def render(model, *, data_root, output, rate=100, data_file=None, clients=None, 
         manifest['total_run_wd']=max(sum(p['wd_count'] for p in phases) for phases in profiles.values())
     output.mkdir(parents=True, exist_ok=True)
     if model.get('access_engine')=='user':
-        from .user_engine import implementation
-        manifest['asset_sha256']=implementation(model).materialize(model,output)
+        from . import user_engine, user_runtime
+        runtime_assets = user_runtime.assets(user_engine.build_key(model), output, settings['stock_home'])
+        retire_baseline(output, model['id'])
+        manifest.update(runtime=settings, sd_count=len(settings['clients']), user_jar=user_engine.extension_jar(model),
+                        preparation=_user_preparation(model, data_root), max_prepare_fwd=0)
+        manifest['asset_sha256'] = {
+            **user_engine.implementation(model).materialize(model, output),
+            **user_runtime.materialize(output, runtime_assets),
+        }
     for name, text in {**texts, 'model.json':json_text(model), 'manifest.json':json_text(manifest)}.items():
         destination = safe_path(output/name)
         destination.write_text(text)
@@ -285,13 +332,16 @@ def render(model, *, data_root, output, rate=100, data_file=None, clients=None, 
 
 def validate_bundle(output):
     """Verify all emitted bytes against the pure model, not only stored checksums."""
-    output = Path(output)
+    output = safe_path(output)
     manifest = json.loads((output/'manifest.json').read_text())
+    if manifest.get('id')=='bigdata_fast':
+        from .fast_container import load_bundle
+        return load_bundle(output)
     if manifest.get('id')=='graph_zipf':
         from .graph_zipf import validate_bundle as validate_graph
         return validate_graph(output)
     model = json.loads((output/'model.json').read_text())
-    if digest(json_text(model)) != manifest['model_sha256']:
+    if model['id'] != manifest['id'] or digest(json_text(model)) != manifest['model_sha256']:
         raise ValueError('model checksum differs from manifest')
     if validate_model(model) != manifest['capacity_bytes']:
         raise ValueError('capacity mismatch')
@@ -299,7 +349,15 @@ def validate_bundle(output):
     layout = [{'id':b['id'], 'files':b['files'], 'size_bytes':b['size_bytes'], 'anchor':str(data_root/b['id'])} for b in model['bins']]
     if layout != manifest['bins'] or digest(json_text(layout)) != manifest['layout_sha256']:
         raise ValueError('layout mismatch')
-    texts, profiles = config_texts(model, data_root, manifest['rate'], runtime_root=output)
+    settings = None
+    if model.get('access_engine')=='user':
+        from . import user_runtime
+        runtime = manifest['runtime']
+        settings = user_runtime.client_settings(runtime['clients'], runtime['threads'], runtime['stock_home'],
+                                                ssh_user=runtime['ssh_user'])
+        if manifest.get('sd_count') != len(settings['clients']) or settings != runtime:
+            raise ValueError('User client settings differ from the SD inventory')
+    texts, profiles = config_texts(model, data_root, manifest['rate'], runtime_root=output, settings=settings)
     if profiles != manifest['profiles'] or set(texts) != set(manifest['config_sha256']):
         raise ValueError('profile/config inventory mismatch')
     if model.get('access_engine') in ('sd_wd','user'):
@@ -309,15 +367,23 @@ def validate_bundle(output):
                 or manifest.get('total_run_wd')!=max(sum(p['wd_count'] for p in ps) for ps in profiles.values())):
             raise ValueError('spatial engine/channel inventory mismatch')
     if model.get('access_engine')=='user':
-        from .user_engine import implementation
-        implementation(model).validate_assets(model,output,manifest.get('asset_sha256'))
+        from . import user_engine, user_runtime
+        runtime_assets = user_runtime.assets(user_engine.build_key(model), output, manifest['runtime']['stock_home'])
+        hashes = manifest['asset_sha256']
+        runtime_hashes = {name: hashes[name] for name in runtime_assets}
+        user_runtime.validate_assets(output, runtime_hashes, runtime_assets)
+        user_engine.implementation(model).validate_assets(
+            model, output, {name: value for name, value in hashes.items() if name not in runtime_assets})
+        if (manifest['preparation'] != _user_preparation(model,data_root)
+                or manifest['user_jar'] != user_engine.extension_jar(model) or manifest['max_prepare_fwd'] != 0):
+            raise ValueError('User preparation manifest differs from the layout')
     from .validate_vdbench import validate_prepare_text, validate_run_text
     for name, expected in texts.items():
         actual = (output/name).read_text()
         if actual != expected or digest(actual) != manifest['config_sha256'][name]:
             raise ValueError(f'generated configuration was changed: {name}')
-        if name.startswith('prepare'):
+        if name.startswith('prepare') and model.get('access_engine')!='user':
             validate_prepare_text(actual)
-        else:
+        elif not name.startswith('prepare'):
             validate_run_text(actual, max_sd_wd_channels=max_wd_channels(model))
     return manifest

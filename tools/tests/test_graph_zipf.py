@@ -41,7 +41,7 @@ class GraphZipfTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             models.build('flashgraph')
 
-    def test_render_uses_exact_existing_file_and_never_emits_prepare(self):
+    def test_render_prepares_and_reads_the_same_exact_file_in_separate_runs(self):
         module = self.module()
         from idfs_workload import core
         with tempfile.TemporaryDirectory() as d:
@@ -52,8 +52,10 @@ class GraphZipfTests(unittest.TestCase):
             self.assertEqual(m['data_file'], str(file))
             self.assertEqual(m['file_count'], 1)
             self.assertEqual(m['capacity_bytes'], 4398046511104)
-            self.assertEqual(set(m['config_sha256']), {'run_current.vdb', 'run_baseline.vdb'})
-            self.assertFalse((out/'prepare_data.vdb').exists())
+            self.assertEqual(set(m['config_sha256']), {'prepare_data.vdb', 'run_current.vdb'})
+            prep = (out/'prepare_data.vdb').read_text()
+            self.assertIn(f'lun={file},size=4398046511104,', prep)
+            self.assertIn('seekpct=eof,rdpct=0,user=(idfscommon.ContainerPrepare,', prep)
             text = (out/'run_current.vdb').read_text()
             sd = [l for l in text.splitlines() if l.startswith('sd=')]
             self.assertEqual(len(sd), 1)
@@ -62,6 +64,7 @@ class GraphZipfTests(unittest.TestCase):
             self.assertIn('openflags=o_direct', sd[0])
             self.assertIn('xfersize=32,', text)
             self.assertIn('rdpct=100,', text)
+            self.assertNotIn('ContainerPrepare', text)
             self.assertIn('iorate=max,elapsed=600,interval=1,warmup=0', text)
             self.assertEqual(sum(l.startswith('rd=') for l in text.splitlines()), 1)
             self.assertEqual(core.validate_bundle(out)['data_file'], str(file))
@@ -140,10 +143,9 @@ class GraphZipfTests(unittest.TestCase):
                  patch.object(lifecycle,'mount_info',return_value=mount),\
                  patch.object(module.os,'getxattr',side_effect=OSError(errno.ENOTSUP,'unsupported')):
                 result=lifecycle.check_ready(bundle)
-                self.assertEqual(result['state'],'existing-file-ready')
-                self.assertEqual(result['required_free_bytes'],0)
+                self.assertEqual(result['state'],'ready')
                 self.assertIsNone(result['layout'])
-                self.assertIn('not exposed by NFS',result['layout_verification'])
+                self.assertEqual(result['layout_verification'],'unavailable')
                 self.assertEqual(lifecycle.preflight(bundle)['required_free_bytes'],0)
             self.assertEqual(file.read_bytes(),b'offline-metadata-fixture-only')
             self.assertFalse((data/lifecycle.READY).exists())
@@ -186,8 +188,8 @@ class GraphZipfTests(unittest.TestCase):
                 lifecycle.run(bundle,vdbench=entry,output=base/'result',execute=True)
             self.assertFalse(record.exists())
             with patch.dict(os.environ,{'RECORD':str(record)}),\
-                 patch.object(lifecycle,'check_ready',return_value={'state':'existing-file-ready'}):
-                result=lifecycle.run(bundle,profile='current',vdbench=entry,output=base/'result',execute=True)
+                 patch.object(lifecycle,'check_ready',return_value={'state':'ready'}):
+                result=lifecycle.run(bundle,vdbench=entry,output=base/'result',execute=True)
             args=json.loads(record.read_text())
             self.assertIn(str(stock/'vdbench.jar')+os.pathsep+str(bundle/'graph-zipf-user.jar'),args)
             self.assertIn('Vdb.Vdbmain',args)
@@ -234,7 +236,8 @@ class GraphZipfTests(unittest.TestCase):
     def test_java_sampler_and_original_user_adapter_without_storage_io(self):
         if not JAR.is_file():
             self.skipTest('stock5.04.06 JAR is unavailable')
-        sources = sorted((ROOT/'idfs_workload/graph_zipf_java/idfsgraphzipf').glob('*.java'))
+        from idfs_workload.user_build import source_files
+        sources = source_files('graph')
         sources += [ROOT/'tests/java/idfsgraphzipf/ZipfTests.java',
                     ROOT/'tests/java/Vdb/GraphZipfAdapterTests.java']
         with tempfile.TemporaryDirectory() as d:
@@ -247,7 +250,7 @@ class GraphZipfTests(unittest.TestCase):
                 for p in Path(d).rglob('*.class'):
                     rel=p.relative_to(d).as_posix()
                     if (rel.startswith('idfsgraphzipf/ZipfDistribution')
-                            or rel=='idfsgraphzipf/ZipfWorkload.class'):
+                            or rel in ('idfsgraphzipf/ZipfWorkload.class', 'idfscommon/RuntimeIdentity.class')):
                         archive.write(p,rel)
             fingerprint=hashlib.sha256(extension.read_bytes()).hexdigest()
             for main in ['idfsgraphzipf.ZipfTests', 'Vdb.GraphZipfAdapterTests']:
